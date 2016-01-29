@@ -1,0 +1,21 @@
+\begin{questionmult}{multi-provinciesteden11}
+\NL{In welke provincie ligt Delfzijl?}
+\DE{In welcher Provinz liegt Delfzijl?}
+\EN{In which province lies Delfzijl?}
+  \begin{multicols}{4}
+  \begin{choices}
+    \wrongchoice{Noord Holland}
+    \wrongchoice{Zuid Holland}
+    \correctchoice{Groningen}
+    \wrongchoice{Drenthe}
+    \wrongchoice{Overijsel}
+    \wrongchoice{Flevoland}
+    \wrongchoice{Utrecht}
+    \wrongchoice{Gelderland}
+    \wrongchoice{Noord Brabant}
+    \wrongchoice{Limburg}
+    \wrongchoice{Luik}
+    \wrongchoice{Zeeuws Vlaanderen}
+  \end{choices}
+\end{multicols}
+\end{questionmult}

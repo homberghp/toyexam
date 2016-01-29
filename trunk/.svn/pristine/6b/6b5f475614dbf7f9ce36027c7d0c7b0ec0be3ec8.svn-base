@@ -1,0 +1,31 @@
+%% Question portugal1
+%% figure is small and should be next to question text.
+%% \usepackage{wrapfigure} in preamble.
+%% You can 'pull the image up' by adding negative \vspace at the start
+%% like in the example. For best effect, put figure definition righ in front of question text.
+\begin{question}{geography-portugal1}
+
+\begin{wrapfigure}{r}{32mm}
+  \vspace{-2\baselineskip}
+  \begin{center}
+    \includegraphics[width=18mm]{\QuestionBaseDir/figures/portugal1.pdf}
+    \caption{\AMClabel{geography:portugal1}Outline of European country}
+  \end{center}
+\end{wrapfigure}
+\EN{Which continental European country is west-most
+  and has an outline like in figure~\AMCref{geography:portugal1}.}
+\NL{Welk continentaal europees land ligt met mest westelijk en heeft
+  een vorm  als  in figuur~\AMCref{geography:portugal1}.}
+\DE{Which continental European country is west-most
+  and has an outline like in figure~\AMCref{geography:portugal1}.}
+  \begin{choices}
+    \correctchoice{Portugal}
+    \wrongchoice{Ireland}
+    \wrongchoice{Greece}
+    \wrongchoice{Scotland}
+  \end{choices}
+\end{question}
+
+\vspace{9\baselineskip}
+
+

@@ -1,0 +1,19 @@
+%% include this file to create a set of handouts
+%% required (expanded) commands are:
+%   \weektitle : put on top of each page
+% \today (defaults to gues what 'today' )
+% the pdf-file to process. This is assumed to be a
+% beamer style slides file. The 'slides' should be produced with the
+% handout option of the beamer documentclass
+
+\begin{document}
+\lhead[\weektitle]{\today}
+\rhead[\today]{\weektitle}
+\includepdf[pages=-,scale=0.9,
+  pagecommand={\thispagestyle{fancy}},
+  picturecommand={\setlength\unitlength{1mm}
+    \multiput(138,15)(0,10){27}{\line(1,0){60}}
+  },
+  nup=1x3,frame,delta=3mm 1mm,
+  offset=-30mm 0mm]{\sheetfile}
+\end{document}

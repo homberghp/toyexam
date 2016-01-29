@@ -1,0 +1,44 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{luainputenc}
+
+\usepackage[box,completemulti]{automultiplechoice}
+\begin{document}
+\directlua{math.randomseed(397471391)}
+
+\onecopy{10}{
+
+%%% head
+
+\noindent{\bf QCM  \hfill TEST}
+
+\vspace*{.5cm}
+\begin{minipage}{.4\linewidth}
+  \centering\large\bf LuaLaTeX sample exam
+\end{minipage}
+\namefield{\fbox{\begin{minipage}{.5\linewidth}
+Name :
+
+\vspace*{.5cm}\dotfill
+\vspace*{1mm}
+\end{minipage}}}
+
+%%%
+
+\directlua{a=math.random(400,800)}
+\directlua{a=math.floor(a)}
+
+\begin{question}{square-root}
+  What is nearest to the square root of \directlua{tex.print(a)}?
+
+  \begin{choices}
+    \correctchoice{\directlua{tex.print(math.floor(math.sqrt(a)))}}
+    \wrongchoice{\directlua{tex.print(math.floor(math.sqrt(2*a)))}}
+    \wrongchoice{\directlua{tex.print(math.floor(math.sqrt(a*0.5)))}}
+    \wrongchoice{\directlua{tex.print(math.floor(math.sqrt(a*1.2)))}}
+  \end{choices}
+\end{question}
+
+\clearpage
+}
+
+\end{document}

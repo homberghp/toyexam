@@ -1,0 +1,12 @@
+\begin{question}{math-inverse}
+  \pgfmathrandominteger{\x}{1}{50}
+       
+  How much is the reciprocal of $x=\x$?
+
+  \begin{choices}
+    \correctchoice{\pgfmathparse{1/\x}\pgfmathresult }
+    \wrongchoice{\pgfmathparse{1/(\x +1))}\pgfmathresult}
+    \wrongchoice{\pgfmathparse{cos(\x)} \pgfmathresult}
+    \wrongchoice{\pgfmathparse{\x^(-0.5)}\pgfmathresult}
+  \end{choices}
+\end{question}

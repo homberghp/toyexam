@@ -1,0 +1,35 @@
+\input{\ExamBaseDir/coverpage}
+\input{\ExamBaseDir/formHead}
+\InputIfFileExists{\ExamBaseDir/packages.tex}{}{}
+\InputIfFileExists{\ExamBaseDir/macros.tex}{}{}
+\newcommand\DE[1]{}
+\newcommand\NL[1]{}
+\newcommand\EN[1]{#1}
+\begin{document}
+\AMCboxColor{green}
+\AMCrandomseed{1237893}
+\makeatletter
+\def\AMC@loc@qf#1{\makebox[3.5em]{\textbf{\scriptsize\sffamily{Question{} \hfill{}#1:}}}}
+\cfoot[\examcode\ \examdate - Copy \the\AMCid@etud ]{\examcode\
+  \examdate \\ page \thepage - exam \# \the\AMCid@etud}
+\AMCcodeHspace=2pt
+\AMCcodeVspace=2pt
+\makeatother
+\input{\ExamInstanceDir/questions.tex}
+
+\begin{examcopy}[1]
+\coverpage
+\setcounter{figure}{0}
+\ifNoShuffle\else\shufflegroup{geography}\fi
+\insertgroup{geography}
+\AMClabel{lastpage}
+\AMCcleardoublepage
+\setlength\parsep{0pt}
+\AMCformBegin
+\answerFormHead
+\begin{multicols}{2}
+\AMCform
+\end{multicols}
+\AMCcleardoublepage
+\end{examcopy}
+

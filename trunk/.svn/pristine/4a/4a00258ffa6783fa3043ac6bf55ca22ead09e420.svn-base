@@ -1,0 +1,116 @@
+\newcount\QA@counter
+\QA@counter=20
+\@whilenum\QA@counter>0\do{%
+  \expandafter\newtoks\csname qa@q\romannumeral\QA@counter\endcsname%
+  \expandafter\newtoks\csname qa@a\romannumeral\QA@counter\endcsname%
+  \expandafter\newtoks\csname qa@r\romannumeral\QA@counter\endcsname%
+  \advance\QA@counter\m@ne%
+}
+% \qa@ri={c.......1}
+% \qa@rii={.c......2}
+% \qa@riii={..c.....3}
+% \qa@riv={...c....4}
+% \qa@rv={....c...5}
+% \qa@rvi={.....c..6}
+% \qa@rvii={......c.7}
+% \qa@rviii={.......c8}
+
+\qa@ri={1}
+\qa@rii={2}
+\qa@riii={3}
+\qa@riv={4}
+\qa@rv={5}
+\qa@rvi={6}
+\qa@rvii={7}
+\qa@rviii={8}
+
+\newcommand{\shuffletokpairs}[3]{%[\@ne]{%
+  \AMC@sti=#1\relax%
+  \AMC@stil=#1\relax%
+  \advance\AMC@stil\@ne%
+%  \advance\AMC@stil -#1\relax%
+  \@whilenum\AMC@sti>0\do{%
+    \AMC@SRmax{\AMC@stil}\advance\AMC@SRnum 1\relax%
+    \typeout{\the\csname #2\romannumeral\AMC@SRnum\endcsname, %
+    \the\csname #3\romannumeral\AMC@SRnum\endcsname\ swap %
+    \the\csname #2\romannumeral\AMC@sti\endcsname, %
+    \the\csname #3\romannumeral\AMC@sti\endcsname}%
+    \AMCsw@p{\csname #2\romannumeral\AMC@SRnum\endcsname}%
+            {\csname #2\romannumeral\AMC@sti\endcsname}%
+    \AMCsw@p{\csname #3\romannumeral\AMC@SRnum\endcsname}%
+            {\csname #3\romannumeral\AMC@sti\endcsname}%
+    \advance\AMC@sti\m@ne\relax%
+    \advance\AMC@stil\m@ne\relax%
+  }}
+
+\newcount\AMCQApair@nswer@counter
+\newcommand\QArow[2]{
+  \AMC@sti=#1\relax%
+  \AMC@stil=#2\relax%
+  \advance\AMC@stil\@ne%
+  \edef\x@{}
+  \typeout{QArow #1 #2 }
+  \AMCQApair@nswer@counter=1\relax%
+  \@whilenum\AMCQApair@nswer@counter<\AMC@sti\do{%
+    \edef\x@{\x@& .\ } %
+    \advance\AMCQApair@nswer@counter\@ne%
+  }
+  \edef\x@{\x@& C \ }%
+  \advance\AMCQApair@nswer@counter\@ne%
+  \@whilenum\AMCQApair@nswer@counter<\AMC@stil\do{%
+   \edef\x@{\x@& .\ }%
+    \advance\AMCQApair@nswer@counter\@ne%
+  }
+  \x@\\%
+}
+\newcommand\QArowd[2]{%
+    \typeout{QArow #1 #2}%
+    row(#1, #2)%
+}
+\newcommand\qapair[2]{%
+  \advance\QA@counter\@ne\relax%
+  \csname qa@q\romannumeral\QA@counter\endcsname={#1}%
+  \csname qa@a\romannumeral\QA@counter\endcsname={#2}%
+  \def\ctr{\the\QA@counter}%
+%  \csname qa@r\romannumeral\QA@counter\endcsname={\QArow{\ctr}{8}}%
+  \typeout{\csname qa@q\romannumeral\QA@counter\endcsname \& %
+    \the\csname qa@q\romannumeral\QA@counter\endcsname,%
+    \csname qa@a\romannumeral\QA@counter\endcsname \& %
+    \the\csname qa@a\romannumeral\QA@counter\endcsname \ctr}%
+}
+
+\newcommand{\dumpQApair}{%
+  \QA@counter=8\relax%
+    \@whilenum\QA@counter>0\do{%
+    \typeout{\csname qa@q@\romannumeral\QA@counter\endcsname and %
+      \csname qa@a@\romannumeral\QA@counter\endcsname}%
+   \the\csname qa@q\romannumeral\QA@counter\endcsname, %
+   \the\csname qa@a\romannumeral\QA@counter\endcsname\newline %
+    \advance\QA@counter\m@ne}
+}
+
+\newcommand{\dumpQRpair}{%
+  \QA@counter=8\relax%
+    \@whilenum\QA@counter>0\do{%
+    \typeout{\csname qa@q@\romannumeral\QA@counter\endcsname and %
+      \csname qa@r@\romannumeral\QA@counter\endcsname}%
+   \the\csname qa@q\romannumeral\QA@counter\endcsname, %
+   \QArow{\the\csname qa@r\romannumeral\QA@counter\endcsname}{8} \newline%
+    \advance\QA@counter\m@ne}
+}
+
+\newenvironment{qamatrix}{
+}{pre shuffle\\
+  \dumpQApair%
+  \par 
+  \dumpQRpair
+  \shuffletokpairs{8}{qa@a}{qa@r}%
+  \shuffletokpairs{8}{qa@q}{qa@r}%
+  \par post shuffle\\
+  \dumpQApair%
+  \par
+  \begin{tabular}{cccccccc}\\
+  \dumpQRpair\\
+  \end{tabular}
+  \QArow{2}{8}
+}

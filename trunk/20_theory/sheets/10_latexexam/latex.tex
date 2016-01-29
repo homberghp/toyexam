@@ -1,0 +1,30 @@
+\lstset{language=tex,morekeywords={\usepackage}}
+\section{\LaTeX{} basics}
+\subsection{Reuse}
+\begin{frame}{Reuse is one of the strengths}
+  
+  Languages such as Java and PHP are so popular, not only because they
+  are particularly good, but because they promote reuse \alert{AND}
+  have a very rich library.
+
+  With \LaTeX{}:
+  \begin{itemize}
+  \item there are numerous packages to solve almost anything
+  \item you can write own macros
+  \item reuse macros in other macros as kind of glue code
+  \item can properly separate style from structure and contents (link
+    with html+css).
+  \item you can (de)compose a document into smaller (reusable) parts
+    by \lstinline{\\input} or \lstinline{\\input} or \lstinline{\\usepackage}
+  \end{itemize}
+\end{frame}
+
+\subsection{Coding \LaTeX}
+\begin{frame}{Properties of a \LaTeX source file}
+  \begin{itemize}
+  \item Most of the source is the text you want to publish.
+  \item There are a few special characters, most notably the
+    \lstinline{\\}, the backslash; it introduces a macro call as in \lstinline{\\input\{filename\}}.
+  \end{itemize}
+\end{frame}
+\end{document}

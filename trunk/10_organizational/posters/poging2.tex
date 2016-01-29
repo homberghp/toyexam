@@ -1,0 +1,146 @@
+\documentclass[22pt,a1paper, portrait,
+blockverticalspace=10mm, colspace=12mm]{tikzposter} %Options for format
+                                %can be included here
+\usepackage[utf8]{inputenc}
+\usepackage{helvet}
+\usepackage{hyperref}
+\usepackage{breakurl}
+ % Title, Author, Institute
+\title{A M C : Less work, better exams}
+\newcommand\alert[1]{{\color{red}#1}}
+\newcommand\okis[1]{{\color{green!40!black}#1}}
+\author{Pieter van den Hombergh}
+\institute{Fontys Hogeschool voor Techniek en Logistiek, Team Informatica}
+%\titlegraphic{LogoGraphic Inserted Here}
+
+ %Choose Layout
+\usecolorpalette{GreenGrayViolet}
+
+%\usetheme{Wave}
+\usetheme{Envelope}
+\begin{document}
+\sffamily
+
+ % Title block with title, author, logo, etc.
+\maketitle[width=.95\textwidth]
+ % \block{Title}{Auto multiple choice}
+\begin{columns}
+
+
+\column{0.49}% Width set relative to text width
+\block{Robust exam setting}{
+\begin{itemize}
+\item There is nothing more robust then a paper and pen/pencil \includegraphics[height=\baselineskip]{pencil-500.png} exam,
+  exam-wise.
+\item Both paper and pencil always work or are easily replaced.
+\end{itemize}
+}
+\block{Prevent Cheating}{
+  Give each candidate a personalised exam:
+  \begin{itemize}
+  \item Name and ID pre-printed.
+    \begin{itemize}
+    \item Prevents exam question leaking.
+    \end{itemize}
+
+  \item Randomise questions per student.
+  \item Randomise answer choice per question.
+  \item Parametric questions and choices.
+  \end{itemize}
+}\note[radius=105mm,angle=-10,rotate=8]{\raggedright{}A fair exam setting is in the interest of students}
+
+\block{Quick results\ldots}{
+even with \okis{large exam volume}.
+  \begin{itemize}
+  \item Scan the answer sheets.
+  \item  Automatic correction to grades.
+  \item Automation prevents boredom \includegraphics[height=20pt]{Smiley.png}
+  \item Prefers, but not limited to, multiple choice.
+    \begin{itemize}
+    \item Improves objectiveness.
+    \item Multiple question types are possible.
+    \end{itemize}
+  \end{itemize}
+}
+\note[radius=100mm,angle=18,rotate=-2]{\raggedright{}Corrected and in
+  \textbf{{\color{red}progress}\ } before student is home}
+
+\block{Less work, Better exams}{
+  \begin{itemize}
+  \item when properly used, the exam will be less work
+  \item and be of a better quality, even optically.
+  \end{itemize}
+}
+\block{Exam (Quality) Analysis}{
+  \begin{itemize}
+  \item Analyse the exam and question quality
+    \begin{itemize}
+    \item is the question fair?
+    \item does a question properly discriminate?
+    \end{itemize}
+  \item \okis{Detailed spreadsheet} output for scores
+    \begin{itemize}
+    \item statistics per individual question (even over multiple exams)
+    \item simple copy-submitting results to \textbf{{\color{red}progress}}
+    \end{itemize}
+  \end{itemize}
+}
+
+\column{.49}
+\block{Reusable questions}{
+  \begin{itemize}
+  \item Over time you will gather a catalogue of exams in a ``database''.
+  \item Easy to create and maintain variants of questions.
+  \item No copy and \textbf{W}aste problem.
+  \item Easy sharing work with colleagues.
+  \item The used questions are in a simple list.
+  \end{itemize}
+}
+
+\block{Costs}{
+  \begin{itemize}
+  \item \textbf{Auto Multiple Choice} (AMC) is open source.
+  \item The main author is Alexis Bienvenüe.
+  \item see \url{http://home.gna.org/auto-qcm/}
+    \begin{itemize}
+    \item The developers are quite responsive.
+    \end{itemize}
+
+  \item It uses \LaTeX\footnote{there is a simpler, less powerful
+      mode} so you need some smartness \includegraphics[height=20pt]{Smiley.png}.
+  \end{itemize}
+}
+\note[radius=112mm,angle=40,rotate=-5]{\raggedright{}\textbf{AMC} 
+  is {\Large{}\okis{\textbf{free}}}, just add some thinking\ldots}
+
+\block{Fontys Informatica Venlo}{
+  \begin{itemize}
+  \item The informatica team of FHTenL has gained experience with
+    several years of AMC exams.
+  \item \LaTeX is well known (t)here.
+\end{itemize}
+}
+\block{Runs on\ldots}{
+  \begin{itemize}
+  \item Linux, tested and current practice.
+    \begin{itemize}
+    \item Tested at the informatics team Venlo.
+    \item Runs on a server, to share maintenance work, experience and best practices.
+    \item Can be run in a virtual machine,\\e.g. for running under Windows.
+    \end{itemize}
+  \item Apple Mac-OS-X.
+    \begin{itemize}
+    \item Currently \alert{un}tested in Venlo.
+    \end{itemize}
+  \end{itemize}
+}\note[radius=135mm,angle=32,rotate=25]{\raggedright{}Write your questions on any platform}
+
+\block{Campus Venlo\\ Innovation in\\ Education and Examination}{
+\centering  {\textbf{\color{green!20!black}Towards less effort with better results}!!}
+}
+\end{columns}
+% \setlength{\unitlength}{1mm}
+%  \begin{picture}(300,330)(0,380)
+%    \put(80,0){\includegraphics[width=100mm]{PencilPaper-752x500.jpg}}
+%  \end{picture}
+\end{document}

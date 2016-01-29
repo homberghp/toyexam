@@ -1,0 +1,19 @@
+%% Question benelux1
+%% simple mc, one correct answer
+%% demo of horizontal choices
+\begin{question}{geography-benelux1}
+  \EN{Which country of the benelux has a capital named the same as the
+    country?}
+  \NL{Welk van de Benelux heeft als hoofdstad een stad met dezelfde naam
+    als het land?}
+  \DE{Welches Land der Benelux hat als Haubstadt eine Stadt mit
+    gleicher Name wie das Land?}
+  \begin{choiceshoriz}
+    \correctchoice{Luxemburg}
+    \wrongchoice{Lichtenstein}
+    \wrongchoice{Bruxelles}
+    \wrongchoice{Limburg}
+    \wrongchoice{Namur}
+  \end{choiceshoriz}
+\end{question}
+

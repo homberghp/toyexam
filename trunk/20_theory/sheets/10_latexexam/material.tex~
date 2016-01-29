@@ -1,0 +1,12 @@
+\input{pagetitle}
+\title{\weektitle}
+
+\newcommand{\Keyword}[1]{{\color{fontys}\bfseries#1}}
+%\includeonly{umlstate}
+\begin{document}
+\frame{\titlepage}
+
+\include{umlstate}
+
+\include{embedded}
+\end{document}

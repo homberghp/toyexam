@@ -1,0 +1,12 @@
+\begin{question}{math-inverse3}
+  \pgfmathrandominteger{\x}{1}{50}
+  \pgfkeys{/pgf/number format/.cd,fixed,fixed zerofill,precision=5}
+  How much is the reciprocal of $x=\pgfmathprintnumber{\x}$?
+
+  \begin{choices}
+    \correctchoice{\pgfmathparse{1/\x}\pgfmathprintnumber{\pgfmathresult}} 
+    \wrongchoice{\pgfmathparse{1/(\x +1))} \pgfmathprintnumber{\pgfmathresult}}
+    \wrongchoice{\pgfmathparse{cos(\x)} \pgfmathprintnumber{\pgfmathresult}}
+    \wrongchoice{\pgfmathparse{\x^(-0.5)} \pgfmathprintnumber{\pgfmathresult}}
+  \end{choices}
+\end{question}

@@ -1,0 +1,53 @@
+%% Example source file AMC exam
+%% with fontys Venlo Specific Includes.
+
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}    
+\usepackage[completemulti,separateanswersheet,outsidebox,box]{automultiplechoice}
+
+%% The command inputted at the end assumes the following substructure
+%% ├── builds
+%% │   ├── instance, e.g. 20120628
+%% │
+%% └── questions, and resources e.g.
+%%     ├── figures
+%%     ├── q1h01
+
+%% absolute path to the parent dir of exams and questions
+% \def\CourseDir{/home/hom/fthv/hi/sen2/trunk/40_exam}
+% \def\ExamInstance{20120628}
+\def\CourseDir{/home/hom/fthv/hi/toyexam/trunk/40_exam}
+\def\ExamInstance{exam2}
+%% random seed used to randomize.
+%% use different random prime for each different exam.
+\def\RandomSeed{345612936}
+%% Exam title and other details for the front page.
+\def\examdate{\NL{28 juni 2012}\DE{28. Juni 2012}\EN{June 28$^{th}$ 2012}}
+\def\examtime{14:00-15:00}
+\def\examtitle{SEN2 : Software Engineering/Testing}
+\def\examtype{\EN{Resit}\NL{Herexamen}\DE{Nachschreibklausur}}
+\def\examcode{SEN2TI}
+\def\Subtitle{SEN2 : Software Engineering/Testing}
+\def\Doelgroep{TIKA}
+\def\Questioncount{30}
+\def\MCQuestioncount{30}
+\def\PointsPerMCQuestion{2}
+\def\MCQuestionPoints{60}
+\def\OpenQuestionPoints{0}
+\def\Lecturer{Pieter~van~den~Hombergh}
+
+%% provided are one a two colum forms. uncomment one of the next two lines.
+%\def\FormType{onecolumnform}
+\def\FormType{twocolumnform}
+
+%% AMC settings for 2 points per questions 
+%% for other options or score dependent on question see AMC doc.
+\scoringDefaultM{haut=2}
+\scoringDefaultS{mz=2}
+
+%% Picks up the file from the default LaTeX path
+%% on my (HOM) ubuntu installation  this file resides in (as in
+%% checked out into)
+%% /usr/share/texmf/tex/latex/fontexam/
+
+\input{processExamsWithCsv}

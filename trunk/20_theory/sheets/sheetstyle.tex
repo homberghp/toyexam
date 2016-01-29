@@ -1,0 +1,86 @@
+%\documentclass[t]{beamer}
+%üä
+%\usepackage[polish,english,german,dutch]{babel}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage[utf8]{inputenc}
+\usepackage{pifont}
+\usepackage{tikz}
+\usepackage{ulem}
+\usepackage{colortbl}
+\usepackage{array}
+\newcolumntype{I}{!{\vrule width 1pt}}
+\newlength\savedwidth
+\newcommand\whline{\noalign{\global\savedwidth\arrayrulewidth
+    \global\arrayrulewidth 1pt}%
+  \hline \noalign{\global\arrayrulewidth\savedwidth}}
+
+
+%\usepackage{upquote}
+
+\definecolor{darkgreen}{rgb}{0,0.6,0}
+\definecolor{darkblue}{rgb}{0,0,0.8}
+\definecolor{keyword}{rgb}{0.5,0,0.5}
+\newcommand\keyword[1]{{\color{keyword}\ttfamily\bfseries#1}}
+\newcommand\Okis[1]{{\color{darkgreen}\bfseries#1}}
+\newcommand\Stereotype[1]{\guillemotleft{}\texttt{#1}\guillemotright{}}
+\lstset{keywordstyle=\color{blue}\bfseries,%
+         morendkeywords={param,exception,return},
+         basicstyle={\ttfamily},
+         language=Java,numberstyle=\tiny,commentstyle=\color{darkgreen}}
+\usepackage{beamerthemesplit}
+\usetheme{Warsaw}
+%\usecolortheme{rose}
+\definecolor{fontys}{rgb}{0,0.5,.5}
+%\setbeamercolor*{structure}{fg=fontys,bg=black!50!fontys}
+\usecolortheme[named=fontys]{structure}
+\lstset{stringstyle={\color{fontys}}}
+\newcommand\Mwha[1]{\includegraphics[width=#1]{../figures/mwha}}
+\newcommand\Yuk[1]{\includegraphics[width=#1]{../figures/yuk}}
+\newcommand\Smiley[1]{\includegraphics[width=#1]{../figures/Smiley}}
+\newcommand\Warn[1]{\includegraphics[width=#1]{../figures/warning}}
+\newcommand\Cinical[1]{\includegraphics[width=#1]{../figures/cinical}}
+\newcommand\Stop[1]{\includegraphics[width=#1]{../figures/stopsign}}
+\newcommand\Go[1]{\includegraphics[width=#1]{../figures/gosign}}
+\newcommand\Def[1]{{\textit{\color{fontys}#1{}}}}
+\newcommand\Code[1]{{\color{darkblue}\texttt{#1{}}}}
+\newcommand\InlineMwha{\raisebox{-.5ex}{\Mwha{1\baselineskip}}}
+\newcommand\InlineYuk{\raisebox{-.5ex}{\Yuk{1\baselineskip}}}
+\newcommand\InlineCinical{\raisebox{-.5ex}{\Cinical{1\baselineskip}}}
+\newcommand\InlineSmiley{\raisebox{-.5ex}{\Smiley{1\baselineskip}}}
+\title{Algorithms and Datastructures}
+\institute[FHTBM]{Fontys Hogeschool voor Techniek en Bedrijfsmanagement\\
+Software Engineering}
+\author[HOM]{Pieter van den Hombergh}
+\date{\today}
+\logo{\includegraphics[width=20pt,angle=90]{../figures/fontys}}
+\newcommand{\NL}[1]{#1}
+\newcommand{\DE}[1]{#1}
+\newcommand{\EN}[1]{#1}
+
+\makeatletter
+\newcommand{\fontys@footline}{%
+  \insertshortauthor/\insertshortinstitute
+  \hfill
+  \insertshorttitle
+  \ifx\insertsubtitle\@empty\else, \insertshortsubtitle\fi
+  \hfill
+  \today
+  \hfill
+  \insertframenumber/\inserttotalframenumber}
+\setbeamercolor{fontys@ftcolor}{parent=palette secondary}
+
+\setbeamertemplate{footline}{%
+  \usebeamerfont{structure}
+  \begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex]{fontys@ftcolor}%
+    \Tiny\hspace*{4mm}\fontys@footline\hspace{4mm}
+  \end{beamercolorbox}}
+\newcommand{\setfootline}[1]{\renewcommand{\fontys@footline}{#1}}
+\makeatother
+
+\setbeamertemplate{navigation symbols}{}
+
+%%% Local Variables: 
+%%% mode: plain-tex
+%%% TeX-master: t
+%%% End: 

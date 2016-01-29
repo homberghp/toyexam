@@ -1,0 +1,599 @@
+\section{UML state representation}
+\begin{frame}{UML State representation}
+  Uses and application
+  \begin{itemize}
+
+  \item In UML state behaviour is modeled with state charts (diagrams)
+    or activity diagrams
+  \item State charts are mostly used in reactive systems (systems that
+    wait for and react to asynchronous input changes)
+  \item Activity diagrams are used in systems where activies are a
+    sequential pattern of synchrous activities
+  \item Pattern matchers and compilers are an other large application
+    area of state diagrams
+  \end{itemize}
+\end{frame}
+\subsection{State chart syntax}
+\begin{frame}{State chart components}
+  \begin{itemize}
+  \item State: A stable condition that persists for a significant period
+    of time (disjoint with other such conditions)
+  \item Transition: The change of one state into another in
+    practically no time usually initiated by an event. When state
+    remains the same it is a ``self transition''
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Statechart components (Cont’d)}
+  \begin{itemize}
+
+  \item Event: A time discrete occurrence of interest
+  \item Guard: Conditions that must be met for a transition to be taken
+  \item Action: Quick operation executed in practically no time establishing a relevant change or result
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Execution of actions}
+  Actions can be executed when:
+  \begin{itemize}
+  \item A state is entered. Specified with \Okis{\texttt{entry:}} in the state container
+  \item A transition is made. Specified besides the transition
+  \item A state is left. Specified with \Okis{\texttt{exit:}} in the state container.
+  \end{itemize}
+\end{frame}
+
+\subsection{Transition notation}
+\begin{frame}{Specification of transitions}
+  \textbf{  Labelsyntax: eventname [guard] / actionlist }
+  \begin{description}
+  \item[eventname] Name of the event triggering the transition
+  \item[guard] Boolean expression that must evaluate to \Okis{TRUE} for the transition to be taken
+  \item[actionlist] Dot-comma separated list of actions executed as
+    a result of the transtion taken
+  \end{description}
+\end{frame}
+
+\begin{frame}{Initial and terminal pseudo states}
+  \begin{itemize}
+  \item Are almost, but not quite, states. States with a transient
+    character (i.e. not triggered by event).
+  \item We know the following pseudo states:\\
+    \Okis{Initial state}: Indicates the initial or default state.
+    The associated transition to must be made unconditionally (no
+    guard). Drawn as filled dot. \includegraphics[height=.8\baselineskip]{../figures/stateInitial}\\
+    \Okis{Terminal state}: Indicates destruction of the object
+    (at the outermost level). Drawn as encircled dot. \includegraphics[height=.8\baselineskip]{../figures/stateFinal}\\
+    \Okis{Choice state}: Selects the next state dependent on some
+    condition. Used to simplify the diagram by reducing the number
+    of outgoing transitions of a state. \includegraphics[height=.8\baselineskip]{../figures/stateChoice}
+  \end{itemize}
+\end{frame}
+
+% \begin{frame}{/ FanOff;CoolOff;HeatOff evOff
+
+%     STANDBY evTimer / FanOff Delay
+
+%     evFan / CoolOff;FanOff
+
+%     FanOff / StartTimer(30 sec);HeatOff
+
+%     evFan / FanOff evFan / FanOn FanOn / StopTimer;HeatOn
+
+%     COOLING HEATING evTemp[ switch == cool ] / CoolOn
+
+%     evTemp[ switch == heat ] / heatOn
+
+%     evTemp / CoolOff FAN evTemp / heatOff
+
+%     12-10-2004
+
+%     (c) Fontys, Cees van Tilborg
+
+%     32
+\subsection{Composite states}
+\begin{frame}{Composed states}
+  \begin{itemize}
+  \item A Super state or container state may be composed of two or more
+    (sequential) sub states
+  \item If state machine reaches super state S, consisting of two
+    (sequential) substates S11 and S12, then it reaches either sub state
+    S11 \textbf{OR} sub state S12.
+  \item If a state is not further composed of other states it is called
+    a leaf state.
+  \item Group transition: A transition connected to the edge of a
+    composed state (or: non leave state).
+    \begin{itemize}
+    \item Incoming: The sub state entered is determined by initial (or:
+      history if present) pseudo state
+    \item Leaving: The last actual sub state
+      is stored in the history connector (if present at all)
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{flat std example}
+  \begin{center}
+    \includegraphics[height=65mm]{../figures/CruiseControlSTD1}
+  \end{center}
+\end{frame} % TIL 34 
+
+\begin{frame}{Hierarchical std example}
+  \begin{center}
+    \includegraphics[height=65mm]{../figures/CruiseControlSTD2}
+  \end{center}
+\end{frame}% TIL       35
+
+\begin{frame}{History pseudo state}
+  \begin{itemize}
+  \item First time, if no history exists, the connected state is
+    initially entered (like the initial pseudo state).
+  \item Later on the last occupied sub state is entered. Two
+    variants:
+    \begin{itemize}
+    \item Shallow history: Applied to the newly entered state only
+    \item Deep history (with star): Applied to the newly entered state
+      and all its child states
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{State machine operation}
+  \begin{itemize}
+  \item In a state machine the state changes only due to an event
+    occurrence
+  \item If an event occurs in a state where an leaving transition
+    exists with that particular event name next to it, the transition
+    is triggered. A triggered transition is taken only:
+    \begin{itemize}
+    \item when no guard is present
+    \item if a guard is present and the guard conditions are met.
+    \end{itemize}
+  \item When the transition is taken a chain of actions is executed:
+    The actions from action lists associated with the states left
+    (inside out), the transition and the states entered (outside in).
+  \item Also when the transition is taken the state is changed unless it
+    is a self transition. In that case the state remains the same, but
+    some action can be taken.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Order of actions}
+  \begin{center}
+    \includegraphics[height=65mm]{../figures/OrderOfActions}
+  \end{center}
+\end{frame}
+ % TIL 38
+
+\begin{frame}[shrink]{Order of actions with direct to inner state}
+  With a direct trasition to an inner state, the initial state is bypassed.
+  \begin{center}
+    \includegraphics[height=60mm]{../figures/OrderOfActions2}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Order of actions with direct to inner state(2)}
+  This also applies to diagrams with history states.
+  \begin{center}
+    \includegraphics[height=55mm]{../figures/OrderOfActions24}
+  \end{center}
+  Quiz: Criticize this diagram.
+\end{frame} % TIL 40
+
+
+\begin{frame}{Recommendations}
+  \begin{itemize}
+  \item {\color{red}Wrong}
+    \begin{itemize}
+    \item Unlabeled transitions (no event)
+    \item Guard on initial/history action list
+    \item State with
+      \begin{itemize}
+      \item only incoming transitions
+      \item only transitions leaving
+      \item more transitions leaving responding to the same event with
+        no or non mutual exclusive guards
+      \item Overlapping guard conditions
+      \end{itemize}
+    \end{itemize}
+  \item {\color{orange}Better not}
+    \begin{itemize}
+    \item Apply an entry action list and als an initial action list
+    \item Add an action list to a history state
+    \item Use the deep history state (it is not clear on lower levels)
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{More UML Modeling}
+  Besides statecharts we will use:
+  \begin{itemize}
+  \item Use Case Diagram/descriptions
+  \item Class Diagram
+  \item Sequence Diagram
+  \end{itemize}
+  \textit{
+  A consistent and coherent set of diagrams and descriptions together
+  form a model of your system. This model helps you to make sure you
+  understand the problems to be solved and the needs to be fulfilled and
+  to make the step towards the implementation smaller.}
+\end{frame}
+
+\begin{frame}{Use case diagram/description}
+  \begin{itemize}
+
+  \item Use case
+    \begin{itemize}
+    \item Depicted by an oval. Each use case has an associated
+      description. Described is the interaction of an actor with the
+      system to obtain some result from the system or to establish a
+      change to the system without revealing the systems internal
+      structure.
+    \end{itemize}
+  \item  Actor: Participant from outside the system
+  \item The \Stereotype{uses} Relation (default) \Stereotype{extend}
+    Relation \Stereotype{includes} Relation
+  \end{itemize}
+\end{frame}
+
+
+% \begin{frame}{Withdraw Funds \Stereotype{includes}}
+
+% \Stereotype{includes} Query Account Customer \Stereotype{includes} Validate PIN
+
+% Add Cash Transfer Funds
+
+% Startup
+
+% Operator
+
+% Shutdown
+
+% 12-10-2004
+
+% (c) Fontys, Cees van Tilborg
+
+% 45
+
+\begin{frame}{Use case description}
+  A use case is described in a table, showing:
+  \begin{itemize}
+  \item Name (as in diagram!)
+  \item Summary
+  \item Dependency (extend/include relations)
+  \item Actors
+  \item Preconditions (assumptions)
+  \item Description
+  \item Alternatives (another or exceptional sequence)
+  \item Post-conditions (Result)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Class diagram}
+  \begin{itemize}
+  \item Classes
+  \item Attributes
+  \item Operations (or: methods)
+  \item Relations
+    \begin{itemize}
+    \item Associations (bidirectional, unidirectional)
+    \item Composition and aggregation (whole-part)
+    \item Inheritance (Generalization/specialization)
+    \item Realization (Inheritance of abstract classes) Dependency
+    \end{itemize}
+  \item Multiplicity (cardinality)
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Aggregation and composition}
+  \begin{itemize}
+  \item Whole part relationship
+  \item The \textbf{aggregation} relationship expresses a collection
+    (e.g. books in library) where as the \textbf{composition} expresses a more
+    rigid relation (e.g. a cow has four legs)
+  \item Major difference is the lifetime coupling
+    \begin{description}
+    \item[Aggregation] Parts may be constructed and/or destructed during the lifetime of the whole object
+    \item[Composition] Parts are constructed as part of the
+      construction of the whole and destructed as part of destruction
+      of the whole object
+    \end{description}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Aggregation and composition (cont’d)}
+  \begin{itemize}
+
+  \item Composition implementation:
+    \begin{itemize}
+    \item Part is a member variable of whole
+    \item Part is instantiated in constructor of whole and discarded
+      in the destructor of the whole object.
+    \end{itemize}
+  \item Aggregation implementation:
+    \begin{itemize}
+    \item Part may be instantiated or discarded from any method or
+      operation of the whole object as required. However all existing
+      parts are discarded from the destructor of the whole object
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+% \begin{frame}{Specification: Properties of the relation
+
+% 12-10-2004
+
+% (c) Fontys, Cees van Tilborg
+
+% 51
+
+% \begin{frame}{Composition: Aggregation plus containment by value
+
+% 12-10-2004
+
+% (c) Fontys, Cees van Tilborg
+
+% 52
+
+\begin{frame}{Aggregation and composition (Cont’d)}
+  \begin{itemize}
+  \item The cardinality of a composition relation should be fixed since
+    the lifetime is tightly coupled to the whole lifetime. If
+    cardinality is omitted, it defaults to one.
+  \item The cardinality of an aggregation should not be fixed. The
+    number of parts may change during the lifetime of the whole
+    object. If cardinality is omitted it defaults to $0\ldots*$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Sequence/collaboration diagram}
+  \begin{itemize}
+  \item Shows dynamic interaction between objects (class instances),
+    ordered in a time sequence
+  \item The sequence is usually initiated by an actor and eventually
+    brings a result back to the actor
+  \item Only the cluster of objects involved is shown and together have
+    to establish a specific task
+  \item Several sequences may be required to show different scenarios
+    (e.g. in case of an error) for a specific task
+  \item The collaboration diagram is equivalent to a sequence diagram,
+    it shows another representation of the same interaction
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Diagram relations (some examples)}
+  \begin{itemize}
+
+  \item An incoming arrow on an class instance in the sequence diagram implies that:
+    \begin{itemize}
+    \item That class exists on the class diagram
+    \item That class on the class diagram shows an operation with the
+      same name and signature
+    \item That class is associated with the class instance on the
+      other end of the arrow
+    \end{itemize}
+  \item A statechart specifies the state behaviour of a class,
+    therefore it must always be clear to what class a statechart
+    belongs
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Implementing model diagrams}
+  \begin{itemize}
+  \item If syntactical and semantic rules are clear, diagrams can
+    be implemented
+  \item If rules are more formal and strict, the implementation can
+    be generated in an automated way
+  \item Upper case tools use this to generate code from the model
+    (for a certain execution environment)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Example std}
+\includegraphics[height=70mm]{../figures/StateMachineDiagram1}
+\end{frame}
+% \begin{frame}{CSample + AttribA : Boolean = false # AttribB : Integer = 0 - AttribC : Integer = 0 + MethodA(par1 : Boolean = false) : Boolean # MethodB(p1 : Double = 0) : Boolean - MethodC()
+
+% More and less detailed views are available in Rose.
+
+% C++ style class definition: class CSample { public: CSample(); ~CSample(); bool MethodA(bool par1 = false); bool AttribA; protected: int AttribB; bool MethodB(double p1 = 0.0); private: int AttribC; void MethodC(); }
+
+% Class
+% 58
+
+% 12-10-2004
+
+
+% \begin{frame}{Aggregation}
+
+% The contained classes (parts) are not shown in the attributes field of the containing class (whole).
+
+% Composition
+
+% CW hole1
+
+% CW hole2
+
+% 0..200 CPart1A CPart2A
+
+% 1
+
+% 2 CPart2B
+
+% C++ Style: class CWhole1 { public: CWhole() { npart1a = 0; for (int i=0;i<200;i++) part1a[i]=NULL; } ~CWhole() { while (--npart1a >= 0) { if (part1a[npart1a] != NULL) delete part1a[npart1a]; } } bool addpart(int& id) { //when there is a free spot, //create part and add it } bool rempart(int id) { //remove identified part, when not null } private: npart1a; CPart1A *part1a[200]; };
+
+% C++ Style: class CWhole2 { private: CPart2A part2a; CPart2B part2b[2]; }
+
+% Alternative is to create objects in constructor of Whole2 and to delete them in the ddestructor of W hole2
+
+% Aggregation/Composition
+% 59
+
+% 12-10-2004
+
+% (c) Fontys, Cees van Tilborg
+
+% \begin{frame}{bidirectional association.
+
+% unidirectional association.
+
+% C3
+
+% C4
+
+% C1
+
+% C2
+
+% C++ Style: class C3 { private: C4 *p; }
+
+% C++ Style: class C4 { private: C3 *p; }
+
+% C++ Style: class C1 { private: C2 *p; }
+
+% public role
+
+% C5
+
+% +theC6
+
+% C6
+
+% C++ Style: class C5 { public: C6 *theC6; }
+
+% Association
+% (c) Fontys, Cees van Tilborg 60
+
+% 12-10-2004
+
+% \begin{frame}{Company
+
+% +Empoyer +Employee
+
+% Person
+
+% Job - salary - Ident + getjobdata() + setjobdata()
+
+% Association class
+% \end{frame} 61
+
+% \begin{frame}{CArticle In client.h and CSupplier.h a forward declaration is inserted: class CArticle;
+
+% CSupplier CClient +buyer + buy() +seller + takeorder() + handout() + acceptmoney()
+
+% In client.c an include statement is inserted: #include "CClient.h" #include "CSupplier.h" CClient::buy(CArticle p) { CSupplier &seller=p.getsupplier(); seller.takeorder(p); }
+
+% Dependency
+% \end{frame} 62
+
+% \begin{frame}{Genralization/specialization. Is a kind of . . .
+
+% General CBase
+
+% CDerived1
+
+% CDerived2
+
+% Special C++ Style notation: class CBase { } class CDerive1 : CBase { } class CDerive2 : CBase { }
+
+% Inheritance
+% 63
+
+% 12-10-2004
+
+% (c) Fontys, Cees van Tilborg
+
+% \begin{frame}{Cannot be instantiated CAbstract + hi()
+
+% CConcrete Can be instantiated
+
+% C++ Style: class CAbstract { public: virtual void hi() =0; } class CConcrete : public CAbstact { public: void hi() { cout \Stereotype{ "hello world" \Stereotype{ endl; } }
+
+% Realizes
+% 64
+
+% 12-10-2004
+
+% (c) Fontys, Cees van Tilborg
+
+% \begin{frame}{/ a0 S1 entry/ a1 e1 / a6 e1 e3 / a5 S2 exit/ a2 e6 / a13
+
+% Implementing a statechart
+% e5 / a7
+
+% S3 entry/ a3 exit/ a4 S31 entry/ a9 exit/ a10 e2
+
+% e4
+
+% e6 / a8
+
+% e2 e2[ g==true ] / a12 S32
+
+% S33
+
+% e2[ g==false ] / a11
+
+% H
+
+% 12-10-2004
+
+% (c) Fontys, Cees van Tilborg
+
+% 65
+
+\begin{frame}[shrink]{States in table like notation}
+\texttt{
+Initial: S3H=S32 \\
+T1 SI:{a0;a1}:S1\\
+T2 S1:e1:{a6}:S2 \\
+T3 S1:e5{a7;a3;[S3H==S31]a9}:S3H \\
+T4 S2:e3:{a2;a5;a3;a9}:S31 \\
+T5 S2:e1:{a2;a1}:s1\\
+T6 S2:e6:{a2;a13;a3;[S3H==S31]a9}:S3H \\
+T7 S2:e4:{a2}:ST \\
+T8 S31:e6:{a10;a4;a8}:S2 \\
+T9 S31:e2:{a10}:S32 \\
+T10 S32:e6:{a4;a8}:S2 \\
+T11 S32:e2[g==true]:{a12;a9}:S31 \\
+T12 S32:e2[g==false]:{a11}:S33 \\
+T13 S33:e6{a4;a8}:S2 \\
+T14 S33:e2{a9}:S31}
+\end{frame}
+\lstset{basicstyle={\scriptsize\ttfamily}}
+\begin{frame}{Simple state implementation}
+
+  Nested state, then event. Const definitions
+  \lstinputlisting[firstline=1,lastline=15]{../code/java/simplestate/SimpleStateMachine.java}
+\end{frame}  
+
+\begin{frame}{Simple state implementation, cont'd}
+  simple state
+  \lstinputlisting[firstline=17,lastline=35]{../code/java/simplestate/SimpleStateMachine.java}
+\end{frame}  
+
+\begin{frame}{Simple state implementation, cont'd}
+  nested state
+  \lstinputlisting[firstline=36,lastline=48]{../code/java/simplestate/SimpleStateMachine.java}
+\end{frame}  
+
+\begin{frame}{State impl example 2}
+  Having a method per event reduces the nesting level of the state
+  machine.
+  
+  This is the same as event then evaluate state.
+  \lstinputlisting[firstline=12,lastline=27]{../code/java/simplestate/SimpleEventMethods.java}
+  
+  
+\end{frame}
+\begin{frame}{State impl example 2}
+  \lstinputlisting[firstline=28,lastline=48]{../code/java/simplestate/SimpleEventMethods.java}
+\end{frame}
+\begin{frame}{Implementing statecharts}
+  \begin{itemize}
+  \item Presented are two simple examples of statechart implementation
+    strategies, you will see them back during the laboratory work
+  \item True object oriented implementations (e.g. based on the state
+    pattern) will be introduced during the patterns part.
+  \end{itemize}
+\end{frame}

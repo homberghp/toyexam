@@ -1,0 +1,108 @@
+\documentclass[25pt,a1paper, portrait]{tikzposter} %Options for format can be included here
+\usepackage[utf8]{inputenc}
+\usepackage{helvet}
+\usepackage{hyperref}
+\usepackage{breakurl}
+ % Title, Author, Institute
+\title{Less work, better exams}
+
+\author{Pieter van den Hombergh}
+\institute{Fontys Hogeschool voor Techniek en Logistiek, Team Informatica}
+%\titlegraphic{LogoGraphic Inserted Here}
+
+ %Choose Layout
+%\usetheme{Default}
+\usetheme{Wave}
+\begin{document}
+\sffamily
+
+ % Title block with title, author, logo, etc.
+\maketitle[width=.95\textwidth]
+ % \block{Title}{Auto multiple choice}
+\begin{columns}
+
+ % FIRST column
+\column{0.49}% Width set relative to text width
+\block{Problem aspects}{
+  \begin{itemize}
+  \item Robust exam setting
+  \item Prevent Cheating
+  \item Large exam volume
+  \item Exam and question analysis
+  \item Boring correction work
+  \item Reusable questions
+  \end{itemize}
+}
+\block{Robust exam setting}{
+\begin{itemize}
+\item   There is nothing more robust then a paper and pen/pencil exam.
+\item Both paper and pencil seldom break and are easily replaced.
+\end{itemize}
+}
+\block{Prevent Cheating}{
+  Give each candidate a personal exam:
+  \begin{itemize}
+  \item Randomise questions per student
+  \item Randomise options per question
+  \end{itemize}
+}
+\block{Large exam volume}{
+  \begin{itemize}
+  \item  Automate the correction.
+  \item Prefer multiple choice.
+    \begin{itemize}
+    \item Improves objectiveness.
+    \item Multiple question types are possible
+    \end{itemize}
+  \item Automation prevents boredom
+  \end{itemize}
+}
+\block{Less work, Better exams}{
+
+  when properly used, your exams will be less work
+  and will be of a better quality, even optically.
+}
+\column{.49}
+\block{Exam and question analysis}{
+  \begin{itemize}
+  \item Analyse the exam and question quality
+    \begin{itemize}
+    \item is it fair?
+    \item do the question properly discriminate?
+    \end{itemize}
+  \item statistics per question
+  \item simple copy submitting results to \textbf{progress}
+  \end{itemize}
+}
+\block{Reusable question}{
+  \begin{itemize}
+  \item Over time you gather a catalogue of exams in a ``database''.
+  \item No copy and \textbf{W}aste probem
+  \end{itemize}
+}
+
+\block{Costs}{
+  \begin{itemize}
+  \item The software is free and open source.
+  \item The author is Alexis Bienvenëu 
+  \item see \url{http://home.gna.org/auto-qcm/}
+  \item It uses \LaTeX\footnote{there is a simpler, less powerful
+      mode} so you need some smartness \includegraphics[height=20pt]{Smiley.png}.
+  \end{itemize}
+}
+
+\block{Fontys Informatics Venlo}{
+  \begin{itemize}
+  \item The informatics team of FHTenL has gained experience with several
+  exams.
+\item \LaTeX is well known (t)here
+\end{itemize}
+}
+
+
+\end{columns}
+\setlength{\unitlength}{1mm}
+ \begin{picture}(300,330)(0,380)
+   \put(80,0){\includegraphics[width=100mm]{PencilPaper-752x500.jpg}}
+ \end{picture}
+\end{document}

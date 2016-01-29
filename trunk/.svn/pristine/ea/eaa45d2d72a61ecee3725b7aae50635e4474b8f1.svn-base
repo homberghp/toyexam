@@ -1,0 +1,13 @@
+%% Question benelux2
+%% simple mc, one correct answer
+\begin{questionmult}{geography-benelux2}
+  Which (partial) province name(s) can be found in both in Belgium and the
+  Netherlands?
+  \begin{choices}
+    \correctchoice{Limburg}
+    \correctchoice{Brabant}
+    \wrongchoice{Luxemburg}
+    \wrongchoice{Holland}
+  \end{choices}
+\end{questionmult}
+

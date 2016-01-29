@@ -1,0 +1,3 @@
+#!/bin/bash
+find ../../questions/ -name o*.tex| sort -n |./file2quest.pl > questions.tex 
+

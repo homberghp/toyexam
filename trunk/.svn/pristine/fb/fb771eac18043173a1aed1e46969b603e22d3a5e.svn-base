@@ -1,0 +1,35 @@
+\documentclass{article}
+
+\usepackage{longtable}
+\newcounter{xyz}\newcounter{uvw}
+
+\makeatletter
+\newtoks\@tabtoks
+\newtoks\he@dtoks
+\newcommand\addtabtoks[1]{\@tabtoks\expandafter{\the\@tabtoks#1}}
+\newcommand*\resettabtoks{\@tabtoks{}}
+\newcommand*\printtabtoks{\the\@tabtoks}
+\newcommand\addheadtoks[1]{\he@dtoks\expandafter{\the\he@dtoks#1}}
+\newcommand*\resetheadtoks{\he@dtoks{|}}
+\newcommand*\printheadtoks{\the\he@dtoks}
+\makeatother
+
+\pagestyle{empty}
+\begin{document}
+
+\resettabtoks
+\loop\ifnum\theuvw<4\relax
+  \stepcounter{uvw}
+  \addtabtoks{&\thexyz\stepcounter{xyz}}% \\\hline}%
+\repeat
+\setcounter{uvw}{0}
+\loop\ifnum\theuvw<4\relax
+  \stepcounter{uvw}
+  \addheadtoks{c|}% \\\hline}%
+\repeat
+\show{\printheadtoks}
+\begin{longtable}{\printheadtoks}\hline
+\printtabtoks\\\hline
+\end{longtable}
+
+\end{document}

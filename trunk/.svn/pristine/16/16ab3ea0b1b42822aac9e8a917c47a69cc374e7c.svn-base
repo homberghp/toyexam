@@ -1,0 +1,13 @@
+\usepackage{ecltree}
+\usepackage{epic}
+%% alternative listing highlighting package
+\usepackage[section,cache,cachedir=./.cache]{minted}
+\definecolor{listbg}{rgb}{.9,.95,.85}
+\usemintedstyle{emacs}
+
+\setminted[java]{bgcolor=listbg}
+\newmintedfile{java}{bgcolor=listbg,fontsize=\scriptsize,frame=lines}
+%% end minted
+\input{sheetstyle}
+
+\author[PvdH]{Pieter~van~den~Hombergh}

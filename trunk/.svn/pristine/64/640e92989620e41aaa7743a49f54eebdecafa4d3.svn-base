@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[box,completemulti]{automultiplechoice}
+\usepackage{shuffler}
+\begin{document}
+
+Design:
+assume at most 20 qa pairs per matrix.
+For each pair, a matrix row can be created. In the given original
+order, the matrix with correct choices ticked would be empty, except
+for the diagonal.
+
+\begin{table}
+\begin{center}
+\caption{Preshuffle matrix. Row, capital is question, column, lower
+  case is answer}
+\begin{tabular}{|r|c|c|c|c|c|c|c|c|c|c|}\hline
+    & a & b & c & d & e & f & g & h & i & j \\\hline
+  A & x &   &   &   &   &   &   &   &   &   \\\hline
+  B &   & x &   &   &   &   &   &   &   &   \\\hline
+  C &   &   & x &   &   &   &   &   &   &   \\\hline
+  D &   &   &   & x &   &   &   &   &   &   \\\hline
+  E &   &   &   &   & x &   &   &   &   &   \\\hline
+  F &   &   &   &   &   & x &   &   &   &   \\\hline
+  G &   &   &   &   &   &   & x &   &   &   \\\hline
+  H &   &   &   &   &   &   &   & x &   &   \\\hline
+  I &   &   &   &   &   &   &   &   & x &   \\\hline
+  J &   &   &   &   &   &   &   &   &   & x \\\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+Shuffling the (anwser, row) pairs creates a new matrix and answer
+order, in which the ticks are in more or less random position, where
+the ticked column matches the question number in the original order. 
+
+\begin{table}
+\begin{center}
+\caption{Shuffling answers and rows alike}
+\begin{tabular}{|r|c|c|c|c|c|c|c|c|c|c|}\hline
+    & d & j & h & g & a & c & b & f & e & i \\\hline
+  A &   &   &   &   & x &   &   &   &   &   \\\hline
+  B &   &   &   &   &   &   & x &   &   &   \\\hline
+  C &   &   &   &   &   & x &   &   &   &   \\\hline
+  D & x &   &   &   &   &   &   &   &   &   \\\hline
+  E &   &   &   &   &   &   &   &   & x &   \\\hline
+  F &   &   &   &   &   &   &   & x &   &   \\\hline
+  G &   &   &   & x &   &   &   &   &   &   \\\hline
+  H &   &   & x &   &   &   &   &   &   &   \\\hline
+  I &   &   &   &   &   &   &   &   &   & x \\\hline
+  J &   & x &   &   &   &   &   &   &   &   \\\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}
+\begin{center}
+\caption{Shuffling questions and rows alike}
+\begin{tabular}{|r|c|c|c|c|c|c|c|c|c|c|}\hline
+    & d & j & h & g & a & c & b & f & e & i \\\hline
+  D & x &   &   &   &   &   &   &   &   &   \\\hline
+  C &   &   &   &   &   & x &   &   &   &   \\\hline
+  G &   &   &   & x &   &   &   &   &   &   \\\hline
+  J &   & x &   &   &   &   &   &   &   &   \\\hline
+  F &   &   &   &   &   &   &   & x &   &   \\\hline
+  A &   &   &   &   & x &   &   &   &   &   \\\hline
+  H &   &   & x &   &   &   &   &   &   &   \\\hline
+  B &   &   &   &   &   &   & x &   &   &   \\\hline
+  I &   &   &   &   &   &   &   &   &   & x \\\hline
+  E &   &   &   &   &   &   &   &   & x &   \\\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+distribute questions and answers over the AMC allocated tokens,
+e.g. questions from 1 to 20, answers from 21 to 40, matrix rows from
+41 to 60. This reuses the defined token registers.
+
+First let us see if we grasp the randomisation.
+
+\loadQApair{Athens}{Greece}
+\loadQApair{Paris}{France}
+
+\end{document}

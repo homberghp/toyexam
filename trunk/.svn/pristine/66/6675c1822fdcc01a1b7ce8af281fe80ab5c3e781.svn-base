@@ -1,0 +1,47 @@
+\newcount\QA@counter
+\QA@counter=20
+\@whilenum\QA@counter>0\do{%
+  \expandafter\newtoks\csname qa@q\romannumeral\QA@counter\endcsname%
+  \expandafter\newtoks\csname qa@a\romannumeral\QA@counter\endcsname%
+  \expandafter\newtoks\csname qa@r\romannumeral\QA@counter\endcsname%
+  \advance\QA@counter\m@ne%
+}
+\qa@qi={A}
+\newcommand{\shuffletokpairs}[4][\@ne]{%
+  \AMC@sti=#2\relax%
+  \AMC@stil=#2\relax%
+  \advance\AMC@stil\@ne%
+  \advance\AMC@stil -#1\relax%
+  \@whilenum\AMC@sti>#1\do{%
+    \AMC@SRmax{\AMC@stil}\advance\AMC@SRnum #1\relax%
+    \AMCsw@p{\csname #3\romannumeral\AMC@SRnum\endcsname}%
+            {\csname #3\romannumeral\AMC@sti\endcsname}%
+    \AMCsw@p{\csname #4\romannumeral\AMC@SRnum\endcsname}%
+            {\csname #4\romannumeral\AMC@sti\endcsname}%
+    \advance\AMC@sti\m@ne\relax%
+    \advance\AMC@stil\m@ne\relax%
+  }}
+
+\newcount\AMCQApair@nswer@counter
+
+\newcommand\qapair[2]{%
+  \advance\QA@counter\@ne\relax%
+  \csname qa@q\romannumeral\QA@counter\endcsname={#1}%
+  \csname qa@a\romannumeral\QA@counter\endcsname={#2}%
+  \typeout{\csname qa@q\romannumeral\QA@counter\endcsname \& %
+    \the\csname qa@q\romannumeral\QA@counter\endcsname,%
+    \csname qa@a\romannumeral\QA@counter\endcsname \& %
+    \the\csname qa@a\romannumeral\QA@counter\endcsname}%
+}
+
+\newcommand{\dumpQApair}{%
+    \@whilenum\QA@counter>0\do{%
+    \typeout{\csname qa@q@\romannumeral\QA@counter\endcsname and %
+      \csname qa@a@\romannumeral\QA@counter\endcsname}%
+   \the\csname qa@q\romannumeral\QA@counter\endcsname %
+   \the\csname qa@a\romannumeral\QA@counter\endcsname %
+    \advance\QA@counter\m@ne}
+}
+
+\newenvironment{qamatrix}{
+}{\dumpQApair}

@@ -1,0 +1,16 @@
+\begin{question}{math-addition}
+  \FPeval\VQa{trunc(1+random*80,0)}  
+  \FPeval\VQb{trunc(4+random*50,0)}
+  \FPeval\VQsomme{clip(VQa+VQb)}  
+  \FPeval\VQnonA{clip(VQa+VQb-1)}  
+  \FPeval\VQnonB{clip(VQa*VQb)}
+  \FPeval\VQnonC{clip(VQa-VQb)}
+
+  What is the sum of \VQa{} and \VQb{} ?
+  \begin{choiceshoriz}
+    \correctchoice{\VQsomme}
+    \wrongchoice{\VQnonA}
+    \wrongchoice{\VQnonB}
+    \wrongchoice{\VQnonC}
+  \end{choiceshoriz}
+\end{question}

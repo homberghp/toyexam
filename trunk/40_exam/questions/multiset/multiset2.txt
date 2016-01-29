@@ -1,0 +1,22 @@
+# dit is commentaar
+# deze file bevat een aantal antwoorden op een set van vragen.
+# de antwoorden mogen afleiders bevatten, dat wil zeggen geen enkele vraag juist beantwoorden
+# De mogelijke keuzes worden getoond bij elke vraag.
+# wanneer de keuze bij de vraag past word hij als juist aangemerkt.
+# wanneer het antwoord op de vraag niet bij de keuze past moet de
+# student 'geen antwoord is juist' kiezen om punten te krijgen.
+choices:Noord Holland,Zuid Holland,Groningen,Drenthe,Overijsel,Flevoland,Utrecht,Gelderland,Noord Brabant,Limburg,Luik,Zeeuws Vlaanderen
+Alkmaar;Noord Holland
+Delft;Zuid Holland
+Delfzijl;Groningen
+Hoogeveen;Drenthe
+Houten;Utrecht
+Dronten;Flevoland
+Deventer;Overijsel
+Elst;Gelderland
+Oirschot;Noord Brabant
+Venlo;Limburg
+Cadzand;Zeeland
+Drachten;Friesland
+Aalst;Oost Vlaanderen
+Hasselt;Limburg (B)

@@ -1,0 +1,50 @@
+\documentclass[a4paper]{article}
+\usepackage{multicol}
+\usepackage[utf8]{inputenc}
+\usepackage{times}
+%\usepackage[dutch,german]{babel}
+\usepackage[outsidebox,noshuffle,postcorrect]{automultiplechoice}    
+%\selectlanguage{german}
+\begin{document}
+\def\examBaseDir{/home/hom/fthv/hi/toyexam/trunk/40_exam/builds/blindexam}
+\AMCboxColor{lightgray}
+\AMCrandomseed{8931237}
+\makeatletter
+\def\AMC@loc@draft{}
+\def\AMC@loc@qf#1{\makebox[4em]{\textbf{\scriptsize\sffamily{Question \hfill{}#1:}}}}
+\def\AMC@loc@q#1#2{\makebox[4em]{\textbf{\scriptsize\sffamily{Question \hfill{}#1:}}}#2}
+\cfoot[Tentamen 2012-07-04]{Tentamen 2012-07-04}
+\makeatother
+\AMCinterIrep=2ex
+\AMCinterBrep=2ex
+
+
+\begin{examcopy}[1]
+
+\noindent
+\begin{tabular}{|l|}
+\hline
+student nummer\\
+\AMCcode{StudentNum}{7}\\
+\hline
+\end{tabular}
+\hfill\namefield{\fbox{    
+    \begin{minipage}{.5\linewidth}
+      Name:
+      
+      \vspace*{.5cm}\dotfill
+      
+      \vspace*{.5cm}\dotfill
+      \vspace*{1mm}
+    \end{minipage}
+  }}\hfill
+
+
+\vspace{.5cm}
+%\noindent\hrulefill
+
+%\begin{multicols}{2}\columnseprule=.4pt
+\input{\examBaseDir/questions25}
+%\end{multicols}
+\end{examcopy}
+\end{document}

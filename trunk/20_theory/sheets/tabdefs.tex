@@ -1,0 +1,40 @@
+\newif\iftabularheader\tabularheaderfalse
+\def\preserveBackSlash#1{\let\temp=\\#1\let\\=\temp}
+\def\tabularcellfontstuff{%
+    \fontsize{9}{10pt}\selectfont\setlength{\rightskip}{0pt plus 1fil}}
+\def\tabularheadfontstuff{\sf\bfseries{\Large}}
+\def\tabularstylesf{%
+  \sf\tabularcellfontstuff
+  \iftabularheader\tabularheadfontstuff\fi}
+
+\def\tabularstylett{
+  \iftabularheader\tabularcellfontstuff\tabularheadfontstuff%
+  \else\tt\tabularcellfontstuff
+  \fi}
+
+\newcolumntype{R}{>{\tabularstylesf}r<{}}
+\newcolumntype{P}[1]{>{\tabularstylesf\hspace{0pt}\arraybackslash}p{#1}<{}}
+\newcolumntype{L}{>{\tabularstylesf}l<{}}
+\newcolumntype{C}{>{\tabularstylesf}c<{}}
+\newcolumntype{T}{>{\tabularstylett}l<{}}
+\newcolumntype{t}{>{\tabularstylett}r<{}}
+% %\newcolumntype{H}{>{\columncolor{dpunktgray}\sf\bfseries\large\strut}L}
+\newcolumntype{H}{>{\columncolor{dpunktgray}\sf\bfseries\strut}L}
+
+% %\extrarowheight=2pt
+\def\arraystretch{1.2}
+
+\def\tabularheader#1{\sf\bfseries{\large\strut}#1}
+
+\def\tabulargray{\special{ps: gsave .87 setgray}\aftergroup\restoregray}
+\def\restoregray{\special{ps: grestore}}
+
+\def\tabularhead#1\\#2\endtabularhead{\CC@{\@preamble}{#1}{#2}}
+
+\newlength\tabbottomskip
+\tabbottomskip=\smallskipamount
+\newlength\tabtopskip
+\tabtopskip=\tabbottomskip
+\advance\tabtopskip by-\baselineskip
+\def\topseparation{\\[\tabtopskip]}
+\def\bottomseparationline{\\[\tabbottomskip]\hline}

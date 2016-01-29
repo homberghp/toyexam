@@ -1,0 +1,778 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.5.13)  2 JUN 2014 21:43
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**t.tex
+(./t.tex
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 36 languages loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
+))
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/ucs.sty
+Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
+
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-global.def
+File: uni-global.def 2013/05/13 UCS: Unicode global data
+)
+\uc@secondtry=\count87
+\uc@combtoks=\toks16
+\uc@combtoksb=\toks17
+\uc@temptokena=\toks18
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks19
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen103
+\captionmargin@=\dimen104
+\captionwidth=\dimen105
+\caption@tempdima=\dimen106
+\caption@indent=\dimen107
+\caption@parindent=\dimen108
+\caption@hangindent=\dimen109
+)
+\c@ContinuedFloat=\count88
+)
+\c@KVtest=\count89
+\sf@farskip=\skip43
+\sf@captopadj=\dimen110
+\sf@capskip=\skip44
+\sf@nearskip=\skip45
+\c@subfigure=\count90
+\c@subfigure@save=\count91
+\c@lofdepth=\count92
+\c@subtable=\count93
+\c@subtable@save=\count94
+\c@lotdepth=\count95
+\sf@top=\skip46
+\sf@bottom=\skip47
+)
+(/usr/share/texmf/tex/latex/AMC/automultiplechoice.sty
+Package: automultiplechoice 
+
+(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count96
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip48
+\f@ncyO@elh=\skip49
+\f@ncyO@erh=\skip50
+\f@ncyO@olh=\skip51
+\f@ncyO@orh=\skip52
+\f@ncyO@elf=\skip53
+\f@ncyO@erf=\skip54
+\f@ncyO@olf=\skip55
+\f@ncyO@orf=\skip56
+)
+(/usr/share/texlive/texmf-dist/tex/latex/bophook/bophook.sty
+Package: bophook 2001/03/29 v0.02 beginning-of-page hook, K. Tinnefeld
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+\XKV@toks=\toks20
+\XKV@tempa@toks=\toks21
+\XKV@depth=\count97
+File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/rotating/rotating.sty
+Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+)
+\Gin@req@height=\dimen111
+\Gin@req@width=\dimen112
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count98
+\rotFPtop=\skip57
+\rotFPbot=\skip58
+\rot@float@box=\box26
+\rot@mess@toks=\toks22
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancybox/fancybox.sty
+Package: fancybox 2010/05/15 1.4
+
+Style option: `fancybox' v1.4 <2010/05/15> (tvz)
+\@fancybox=\box27
+\shadowsize=\dimen113
+\@Sbox=\box28
+\do@VerbBox=\toks23
+\the@fancyput=\toks24
+\this@fancyput=\toks25
+\EndVerbatimTokens=\toks26
+\Verbatim@Outfile=\write3
+\Verbatim@Infile=\read1
+)
+\AMC@logfile=\write4
+\openout4 = `t.amc'.
+
+\AMCload@counter=\count99
+\AMCid@quest=\count100
+\AMCid@check=\count101
+\AMCid@etud=\count102
+\AMCid@etudstart=\count103
+\AMCid@etudfin=\count104
+\AMCnum@copies=\count105
+\AMCformVSpace=\dimen114
+\AMCformHSpace=\dimen115
+\AMCinterIrep=\dimen116
+\AMCinterBrep=\dimen117
+\AMCinterIquest=\dimen118
+\AMCinterBquest=\dimen119
+\AMCids@width=\dimen120
+\AMCids@height=\dimen121
+\AMC@SR=\count106
+\AMC@SR@count=\count107
+\AMC@SRnum=\count108
+\AMC@sti=\count109
+\AMC@stil=\count110
+\AMCsw@p@=\toks27
+\AMC@numerotation=\count111
+\AMC@XYspecial=\write5
+\AMC@tmpXY=\write6
+\AMC@ovalbox@R=\box29
+\AMC@ovalbox@RF=\box30
+\AMC@ovalbox@=\box31
+\AMC@ovalbox@F=\box32
+\c@AMC@ncase=\count112
+\AMC@boxedrule=\skip59
+\AMC@boxeddown=\skip60
+\AMC@boxedwidth=\skip61
+\AMC@boxedheight=\skip62
+\AMC@oval@radius=\skip63
+\AMC@outside@sep=\skip64
+\AMC@CBtaille=\skip65
+\AMCbin@sequence=\toks28
+\AMCbin@number=\count113
+\AMCbin@ndigits=\count114
+\AMCbin@id=\count115
+\AMCbin@digit=\count116
+\AMCtok@k=\count117
+\AMCtok@max=\count118
+\AMCtok@size=\count119
+\AMC@imax=\count120
+\AMCtok@ik=\count121
+\AMCloop@k=\count122
+\AMCrep@count=\count123
+\reponse@cxcix=\toks29
+\reponse@cxcviii=\toks30
+\reponse@cxcvii=\toks31
+\reponse@cxcvi=\toks32
+\reponse@cxcv=\toks33
+\reponse@cxciv=\toks34
+\reponse@cxciii=\toks35
+\reponse@cxcii=\toks36
+\reponse@cxci=\toks37
+\reponse@cxc=\toks38
+\reponse@clxxxix=\toks39
+\reponse@clxxxviii=\toks40
+\reponse@clxxxvii=\toks41
+\reponse@clxxxvi=\toks42
+\reponse@clxxxv=\toks43
+\reponse@clxxxiv=\toks44
+\reponse@clxxxiii=\toks45
+\reponse@clxxxii=\toks46
+\reponse@clxxxi=\toks47
+\reponse@clxxx=\toks48
+\reponse@clxxix=\toks49
+\reponse@clxxviii=\toks50
+\reponse@clxxvii=\toks51
+\reponse@clxxvi=\toks52
+\reponse@clxxv=\toks53
+\reponse@clxxiv=\toks54
+\reponse@clxxiii=\toks55
+\reponse@clxxii=\toks56
+\reponse@clxxi=\toks57
+\reponse@clxx=\toks58
+\reponse@clxix=\toks59
+\reponse@clxviii=\toks60
+\reponse@clxvii=\toks61
+\reponse@clxvi=\toks62
+\reponse@clxv=\toks63
+\reponse@clxiv=\toks64
+\reponse@clxiii=\toks65
+\reponse@clxii=\toks66
+\reponse@clxi=\toks67
+\reponse@clx=\toks68
+\reponse@clix=\toks69
+\reponse@clviii=\toks70
+\reponse@clvii=\toks71
+\reponse@clvi=\toks72
+\reponse@clv=\toks73
+\reponse@cliv=\toks74
+\reponse@cliii=\toks75
+\reponse@clii=\toks76
+\reponse@cli=\toks77
+\reponse@cl=\toks78
+\reponse@cxlix=\toks79
+\reponse@cxlviii=\toks80
+\reponse@cxlvii=\toks81
+\reponse@cxlvi=\toks82
+\reponse@cxlv=\toks83
+\reponse@cxliv=\toks84
+\reponse@cxliii=\toks85
+\reponse@cxlii=\toks86
+\reponse@cxli=\toks87
+\reponse@cxl=\toks88
+\reponse@cxxxix=\toks89
+\reponse@cxxxviii=\toks90
+\reponse@cxxxvii=\toks91
+\reponse@cxxxvi=\toks92
+\reponse@cxxxv=\toks93
+\reponse@cxxxiv=\toks94
+\reponse@cxxxiii=\toks95
+\reponse@cxxxii=\toks96
+\reponse@cxxxi=\toks97
+\reponse@cxxx=\toks98
+\reponse@cxxix=\toks99
+\reponse@cxxviii=\toks100
+\reponse@cxxvii=\toks101
+\reponse@cxxvi=\toks102
+\reponse@cxxv=\toks103
+\reponse@cxxiv=\toks104
+\reponse@cxxiii=\toks105
+\reponse@cxxii=\toks106
+\reponse@cxxi=\toks107
+\reponse@cxx=\toks108
+\reponse@cxix=\toks109
+\reponse@cxviii=\toks110
+\reponse@cxvii=\toks111
+\reponse@cxvi=\toks112
+\reponse@cxv=\toks113
+\reponse@cxiv=\toks114
+\reponse@cxiii=\toks115
+\reponse@cxii=\toks116
+\reponse@cxi=\toks117
+\reponse@cx=\toks118
+\reponse@cix=\toks119
+\reponse@cviii=\toks120
+\reponse@cvii=\toks121
+\reponse@cvi=\toks122
+\reponse@cv=\toks123
+\reponse@civ=\toks124
+\reponse@ciii=\toks125
+\reponse@cii=\toks126
+\reponse@ci=\toks127
+\reponse@c=\toks128
+\reponse@xcix=\toks129
+\reponse@xcviii=\toks130
+\reponse@xcvii=\toks131
+\reponse@xcvi=\toks132
+\reponse@xcv=\toks133
+\reponse@xciv=\toks134
+\reponse@xciii=\toks135
+\reponse@xcii=\toks136
+\reponse@xci=\toks137
+\reponse@xc=\toks138
+\reponse@lxxxix=\toks139
+\reponse@lxxxviii=\toks140
+\reponse@lxxxvii=\toks141
+\reponse@lxxxvi=\toks142
+\reponse@lxxxv=\toks143
+\reponse@lxxxiv=\toks144
+\reponse@lxxxiii=\toks145
+\reponse@lxxxii=\toks146
+\reponse@lxxxi=\toks147
+\reponse@lxxx=\toks148
+\reponse@lxxix=\toks149
+\reponse@lxxviii=\toks150
+\reponse@lxxvii=\toks151
+\reponse@lxxvi=\toks152
+\reponse@lxxv=\toks153
+\reponse@lxxiv=\toks154
+\reponse@lxxiii=\toks155
+\reponse@lxxii=\toks156
+\reponse@lxxi=\toks157
+\reponse@lxx=\toks158
+\reponse@lxix=\toks159
+\reponse@lxviii=\toks160
+\reponse@lxvii=\toks161
+\reponse@lxvi=\toks162
+\reponse@lxv=\toks163
+\reponse@lxiv=\toks164
+\reponse@lxiii=\toks165
+\reponse@lxii=\toks166
+\reponse@lxi=\toks167
+\reponse@lx=\toks168
+\reponse@lix=\toks169
+\reponse@lviii=\toks170
+\reponse@lvii=\toks171
+\reponse@lvi=\toks172
+\reponse@lv=\toks173
+\reponse@liv=\toks174
+\reponse@liii=\toks175
+\reponse@lii=\toks176
+\reponse@li=\toks177
+\reponse@l=\toks178
+\reponse@xlix=\toks179
+\reponse@xlviii=\toks180
+\reponse@xlvii=\toks181
+\reponse@xlvi=\toks182
+\reponse@xlv=\toks183
+\reponse@xliv=\toks184
+\reponse@xliii=\toks185
+\reponse@xlii=\toks186
+\reponse@xli=\toks187
+\reponse@xl=\toks188
+\reponse@xxxix=\toks189
+\reponse@xxxviii=\toks190
+\reponse@xxxvii=\toks191
+\reponse@xxxvi=\toks192
+\reponse@xxxv=\toks193
+\reponse@xxxiv=\toks194
+\reponse@xxxiii=\toks195
+\reponse@xxxii=\toks196
+\reponse@xxxi=\toks197
+\reponse@xxx=\toks198
+\reponse@xxix=\toks199
+\reponse@xxviii=\toks200
+\reponse@xxvii=\toks201
+\reponse@xxvi=\toks202
+\reponse@xxv=\toks203
+\reponse@xxiv=\toks204
+\reponse@xxiii=\toks205
+\reponse@xxii=\toks206
+\reponse@xxi=\toks207
+\reponse@xx=\toks208
+\reponse@xix=\toks209
+\reponse@xviii=\toks210
+\reponse@xvii=\toks211
+\reponse@xvi=\toks212
+\reponse@xv=\toks213
+\reponse@xiv=\toks214
+\reponse@xiii=\toks215
+\reponse@xii=\toks216
+\reponse@xi=\toks217
+\reponse@x=\toks218
+\reponse@ix=\toks219
+\reponse@viii=\toks220
+\reponse@vii=\toks221
+\reponse@vi=\toks222
+\reponse@v=\toks223
+\reponse@iv=\toks224
+\reponse@iii=\toks225
+\reponse@ii=\toks226
+\reponse@i=\toks227
+\AMCnum@questions=\count124
+\AMCrep@@count=\count125
+\AMC@mn@test=\skip66
+\AMC@mn@sep=\skip67
+\AMC@mn@leftmargin=\skip68
+\AMC@mn@rightmargin=\skip69
+\AMC@sz@width=\skip70
+\AMC@sz@height=\skip71
+\AMC@sz@depth=\skip72
+\AMC@sza@width=\skip73
+\AMC@sza@height=\skip74
+\AMC@sza@depth=\skip75
+\c@AMCquestionaff=\count126
+\ouverte@vs=\dimen122
+\AMC@chiffres=\count127
+\AMCcodeHspace=\dimen123
+\AMCcodeVspace=\dimen124
+\AMCnumeric@Hspace=\dimen125
+\AMCnumeric@Vspace=\dimen126
+\AMC@numeric@lastdigit=\count128
+\AMC@integer@modulo=\count129
+\AMC@numeric@integer=\count130
+\AMC@numeric@calcdigit=\count131
+\AMC@numeric@digits=\count132
+\AMC@numeric@decd=\count133
+\AMC@numeric@value=\count134
+\AMC@numeric@x=\count135
+\AMC@numeric@base=\count136
+\AMC@numeric@exact=\count137
+\AMC@numeric@approx=\count138
+\AMCopen@Hspace=\dimen127
+\AMCopen@LineHeight=\dimen128
+\AMCopen@Lines=\count139
+\AMCopen@boxmargin=\dimen129
+\AMCopen@boxframerule=\dimen130
+\AMCopen@framerule=\dimen131
+ (/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2013/04/01 v0.3 A new environment syntax
+
+(/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+)
+\@envbody=\toks228
+)
+(/usr/share/texlive/texmf-dist/tex/latex/etex-pkg/etex.sty
+Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
+\et@xins=\count140
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count141
+\Gm@cntv=\count142
+\c@Gm@tempcnt=\count143
+\Gm@bindingoffset=\dimen132
+\Gm@wd@mp=\dimen133
+\Gm@odd@mp=\dimen134
+\Gm@even@mp=\dimen135
+\Gm@layoutwidth=\dimen136
+\Gm@layoutheight=\dimen137
+\Gm@layouthoffset=\dimen138
+\Gm@layoutvoffset=\dimen139
+\Gm@dimlist=\toks229
+))
+(./shuffler.sty
+\QA@counter=\count144
+\qa@qxx=\toks230
+\qa@axx=\toks231
+\qa@rxx=\toks232
+\qa@qxix=\toks233
+\qa@axix=\toks234
+\qa@rxix=\toks235
+\qa@qxviii=\toks236
+\qa@axviii=\toks237
+\qa@rxviii=\toks238
+\qa@qxvii=\toks239
+\qa@axvii=\toks240
+\qa@rxvii=\toks241
+\qa@qxvi=\toks242
+\qa@axvi=\toks243
+\qa@rxvi=\toks244
+\qa@qxv=\toks245
+\qa@axv=\toks246
+\qa@rxv=\toks247
+\qa@qxiv=\toks248
+\qa@axiv=\toks249
+\qa@rxiv=\toks250
+\qa@qxiii=\toks251
+\qa@axiii=\toks252
+\qa@rxiii=\toks253
+\qa@qxii=\toks254
+\qa@axii=\toks255
+Normal \toks register pool exhausted, switching to extended pool.
+\qa@rxii=\toks256
+\qa@qxi=\toks257
+\qa@axi=\toks258
+\qa@rxi=\toks259
+\qa@qx=\toks260
+\qa@ax=\toks261
+\qa@rx=\toks262
+\qa@qix=\toks263
+\qa@aix=\toks264
+\qa@rix=\toks265
+\qa@qviii=\toks266
+\qa@aviii=\toks267
+\qa@rviii=\toks268
+\qa@qvii=\toks269
+\qa@avii=\toks270
+\qa@rvii=\toks271
+\qa@qvi=\toks272
+\qa@avi=\toks273
+\qa@rvi=\toks274
+\qa@qv=\toks275
+\qa@av=\toks276
+\qa@rv=\toks277
+\qa@qiv=\toks278
+\qa@aiv=\toks279
+\qa@riv=\toks280
+\qa@qiii=\toks281
+\qa@aiii=\toks282
+\qa@riii=\toks283
+\qa@qii=\toks284
+\qa@aii=\toks285
+\qa@rii=\toks286
+\qa@qi=\toks287
+\qa@ai=\toks288
+\qa@ri=\toks289
+\AMCQApair@nswer@counter=\count145
+\@tabtoks=\toks290
+) (./t.aux)
+\openout1 = `t.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
+File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: rotating package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count146
+\scratchdimen=\dimen140
+\scratchbox=\box33
+\nofMPsegments=\count147
+\nofMParguments=\count148
+\everyMPshowfont=\toks291
+\MPscratchCnt=\count149
+\MPscratchDim=\dimen141
+\MPnumerator=\count150
+\makeMPintoPDFobject=\count151
+\everyMPtoPDFconversion=\toks292
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 443.57848pt, 85.35826pt)
+* v-part:(T,H,B)=(99.58464pt, 624.25346pt, 71.13188pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=443.57848pt
+* \textheight=624.25346pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-38.12675pt
+* \headheight=56.9055pt
+* \headsep=8.5359pt
+* \topskip=10.0pt
+* \footskip=28.45274pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 32.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 32.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 82.
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+]
+\qa@qi \& a Athens,\qa@ai \& A Greece1
+\qa@qii \& b Paris,\qa@aii \& B France2
+\qa@qiii \& c London,\qa@aiii \& C England3
+\qa@qiv \& b Berlin,\qa@aiv \& D Germany4
+\qa@qv \& e Lisbon,\qa@av \& E Portugal5
+\qa@qvi \& f Dublin,\qa@avi \& F Ireland6
+\qa@qvii \& g Rome,\qa@avii \& G Italy7
+\qa@qviii \& h Dubrovnik,\qa@aviii \& H Croatia8
+\qa@q@viii and \qa@a@viii 
+\qa@q@vii and \qa@a@vii 
+\qa@q@vi and \qa@a@vi 
+\qa@q@v and \qa@a@v 
+\qa@q@iv and \qa@a@iv 
+\qa@q@iii and \qa@a@iii 
+\qa@q@ii and \qa@a@ii 
+\qa@q@i and \qa@a@i 
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--95
+
+ []
+
+B France, 2\ swap H Croatia, 8
+B France, 2\ swap G Italy, 7
+H Croatia, 8\ swap F Ireland, 6
+D Germany, 4\ swap E Portugal, 5
+D Germany, 4\ swap E Portugal, 5
+A Greece, 1\ swap C England, 3
+C England, 3\ swap F Ireland, 6
+C England, 3\ swap F Ireland, 6
+f Dublin, 8\ swap h Dubrovnik, 7
+b Paris, 6\ swap g Rome, 2
+e Lisbon, 5\ swap h Dubrovnik, 7
+h Dubrovnik, 7\ swap h Dubrovnik, 7
+g Rome, 2\ swap b Berlin, 4
+a Athens, 3\ swap c London, 1
+a Athens, 3\ swap b Berlin, 4
+a Athens, 3\ swap c London, 1
+\qa@q@viii and \qa@a@viii 
+\qa@q@vii and \qa@a@vii 
+\qa@q@vi and \qa@a@vi 
+\qa@q@v and \qa@a@v 
+\qa@q@iv and \qa@a@iv 
+\qa@q@iii and \qa@a@iii 
+\qa@q@ii and \qa@a@ii 
+\qa@q@i and \qa@a@i 
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
+
+ []
+
+QArow 5 8 
+QArow 2 8 
+[2
+
+] (./t.aux) ) 
+Here is how much of TeX's memory you used:
+ 5841 strings out of 494325
+ 86986 string characters out of 6161492
+ 190074 words of memory out of 5000000
+ 9033 multiletter control sequences out of 15000+600000
+ 7323 words of font info for 20 fonts, out of 8000000 for 9000
+ 392 hyphenation exceptions out of 8191
+ 44i,22n,85p,325b,498s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/hom/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk>
+ </home/hom/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/hom/.
+texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/hom/.texmf-var/fon
+ts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </home/hom/.texmf-var/fonts/pk/ljfour/
+jknappen/ec/ectt1000.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+latxfont/lcircle1.pfb>
+Output written on t.pdf (2 pages, 50284 bytes).
+PDF statistics:
+ 159 PDF objects out of 1000 (max. 8388607)
+ 32 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

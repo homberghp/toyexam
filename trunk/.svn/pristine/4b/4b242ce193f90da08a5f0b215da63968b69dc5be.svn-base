@@ -1,0 +1,21 @@
+\begin{questionmult}{multi-provinciesteden10}
+\NL{In welke provincie ligt Drachten?}
+\DE{In welcher Provinz liegt Drachten?}
+\EN{In which province lies Drachten?}
+  \begin{multicols}{4}
+  \begin{choices}
+    \wrongchoice{Noord Holland}
+    \wrongchoice{Zuid Holland}
+    \wrongchoice{Groningen}
+    \wrongchoice{Drenthe}
+    \wrongchoice{Overijsel}
+    \wrongchoice{Flevoland}
+    \wrongchoice{Utrecht}
+    \wrongchoice{Gelderland}
+    \wrongchoice{Noord Brabant}
+    \wrongchoice{Limburg}
+    \wrongchoice{Luik}
+    \wrongchoice{Zeeuws Vlaanderen}
+  \end{choices}
+\end{multicols}
+\end{questionmult}

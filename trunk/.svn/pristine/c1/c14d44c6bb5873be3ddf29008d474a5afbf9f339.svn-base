@@ -1,0 +1,40 @@
+%% with fontys Venlo Specific Includes.
+%% $Id$
+\documentclass[a4paper]{article}
+%% UTF encode files to allow umlauts in names etc.
+\usepackage[utf8]{inputenc}    
+\usepackage[T1]{fontenc}
+\usepackage[completemulti,separateanswersheet,outsidebox,box]{automultiplechoice}
+
+%%
+%% The command inputted at the end assumes the following substructure
+%% <CourseDir>
+%% ├── builds
+%% │   ├── <ExamInstance>, e.g. 20120628
+%% │
+%% └── questions, and resources e.g.
+%%     ├── figures
+%%     ├── q1h01
+
+%% absolute path to the parent dir of exams and questions
+\def\CourseDir{/home/hom/fthv/hi/toyexam/trunk/40_exam}
+\def\ExamInstance{exam1}
+%% if you have any special macros you want to reuse for all 
+%% exams for this module put it in \CourseDir/builds/macros.tex
+%% if you have need special packages you want to reuse for all 
+%% exams for this module put it in \CourseDir/builds/packages.tex
+
+%% if some defs are same for all your exams, put them in
+%% exams for this module put it in \CourseDir/builds/defaults.tex
+\InputIfFileExists{\CourseDir/builds/defaults.tex}{}{}
+%% random seed used to randomize.
+%% use different random prime for each different exam.
+\def\RandomSeed{293634561}
+\def\examdate{\NL{1 april 2012}\DE{1. April 2012}\EN{April 1$^{st}$ 2012}}
+\def\examtime{14:00-15:00}
+
+%% Picks up the file from the default LaTeX path
+%% on my (HOM) ubuntu installation  this file resides in (as in
+%% checked out into) dir /usr/share/texmf/tex/latex/fontexam/
+\input{processExamsWithCsv}
+

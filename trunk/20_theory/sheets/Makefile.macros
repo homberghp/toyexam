@@ -1,0 +1,38 @@
+DIRNAME:=`basename $(PWD)`
+SHEETS=sheets_en.pdf 
+HANDOUTS=handout_en.pdf 
+HELPFILE=handoutsheets_en.pdf 
+PUBLISHURL=fontysvenlo.org:/home/mod2/public_html/pdffiles/
+
+PDFLATEX=pdflatex
+#
+%.pdf : ../%.tex
+	$(PDFLATEX) -jobname=$(*F) $<
+	$(PDFLATEX) -jobname=$(*F) $<
+
+first: .depend $(SHEETS)
+
+all: first $(HANDOUTS)
+
+handout_en.pdf: ../handoutsheets_en.tex handoutsheets_en.pdf
+
+handoutsheets_en.pdf: ../handoutsheets_en.tex
+
+sheets_en.pdf: ../sheets_en.tex
+
+publish: $(SHEETS) $(HANDOUTS)
+	scp $(SHEETS) $(PUBLISHURL)/$(DIRNAME)_$(SHEETS)
+	scp $(HANDOUTS)  $(PUBLISHURL)/$(DIRNAME)_$(HANDOUTS)
+
+.depend: ../*.tex *.tex
+	texdepdf ../sheets_en | sed -e 's/^\.\.\///' > .depend
+	texdepdf ../handoutsheets_en | sed -e 's/^\.\.\///' >> .depend
+	texdepdf ../handout_en | sed -e 's/^\.\.\///' >> .depend
+
+include .depend
+
+clean:
+	rm -f *.aux *.log *.vrb *.nav *.out *.snm *.toc *~ 
+
+distclean: clean
+	rm -f $(SHEETS) $(HANDOUTS) $(HELPFILE)

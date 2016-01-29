@@ -1,0 +1,10 @@
+%% short open question 
+%% This question shows a well defined tick box for the corrector to
+%% fill in.
+%% If you want it hidden, look at question .../geography/netherlands2.tex
+\begin{question}{geopraphy-netherlands2}
+  What is the capital of the Netherlands?
+\def\AMCotextGoto{\par{\bf\emph{Please write the answer on the separate answer sheet.}}}
+  \AMCOpen{lines=5,lineup=true,dots=true,annotate=true,question={NL2},answer={Amsterdam},lineheight=20mm,framerule=1pt,framerulecol=green}{\wrongchoice[W]{w}\scoring{0}\correctchoice[C]{c}\scoring{2}}
+  
+\end{question}

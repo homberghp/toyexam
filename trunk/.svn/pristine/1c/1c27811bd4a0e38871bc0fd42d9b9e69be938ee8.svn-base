@@ -1,0 +1,21 @@
+\begin{questionmult}{multi-provinciesteden8}
+\NL{In welke provincie ligt Venlo?}
+\DE{In welcher Provinz liegt Venlo?}
+\EN{In which province lies Venlo?}
+  \begin{multicols}{4}
+  \begin{choices}
+    \wrongchoice{Noord Holland}
+    \wrongchoice{Zuid Holland}
+    \wrongchoice{Groningen}
+    \wrongchoice{Drenthe}
+    \wrongchoice{Overijsel}
+    \wrongchoice{Flevoland}
+    \wrongchoice{Utrecht}
+    \wrongchoice{Gelderland}
+    \wrongchoice{Noord Brabant}
+    \correctchoice{Limburg}
+    \wrongchoice{Luik}
+    \wrongchoice{Zeeuws Vlaanderen}
+  \end{choices}
+\end{multicols}
+\end{questionmult}

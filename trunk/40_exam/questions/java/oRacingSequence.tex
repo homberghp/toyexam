@@ -1,0 +1,32 @@
+\begin{questionmult}{intro-oRacingSequence}\scoring{haut=4}
+  \NL{Welke van de onderstaande klassen is/zijn \textbf{Thread Safe}?}
+  \DE{Welche der untenstehende Klassen ist/sind \textbf{Thread Safe}?}
+  \EN{Which of the classes below is/are Thread Safe?}
+  \lstset{basicstyle={\scriptsize}}
+  \begin{choiceshoriz}
+    \correctchoice{%
+      \begin{minipage}{.4\textwidth}
+        \lstinputlisting[caption={\AMClabel{lst:seq1}Sequence},firstline=3,xleftmargin=-1em%
+        ]{\QuestionBaseDir/code/ExamCode/src/racingsequence/r2/Sequence.java}
+      \end{minipage}
+    }
+    \correctchoice{%
+      \begin{minipage}{.4\textwidth}
+        \lstinputlisting[caption={Sequence},firstline=3,xleftmargin=-1em%
+        ]{\QuestionBaseDir/code/ExamCode/src/racingsequence/r3/Sequence.java}
+      \end{minipage}
+    }
+    \wrongchoice{%
+      \begin{minipage}{.4\textwidth}
+        \lstinputlisting[caption={Sequence},firstline=3,xleftmargin=-1em%
+        ]{\QuestionBaseDir/code/ExamCode/src/racingsequence/r1/Sequence.java}
+      \end{minipage}
+    }
+    \wrongchoice{%
+      \begin{minipage}{.4\textwidth}
+        \lstinputlisting[caption={Sequence},firstline=3,xleftmargin=-1em%
+        ]{\QuestionBaseDir/code/ExamCode/src/racingsequence/r4/Sequence.java}
+      \end{minipage}
+    }
+  \end{choiceshoriz}
+\end{questionmult}

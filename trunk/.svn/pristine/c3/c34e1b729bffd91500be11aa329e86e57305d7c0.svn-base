@@ -1,0 +1,49 @@
+\newcommand\answerFormHead{
+  \setlength\parindent{0pt}
+  \begin{picture}(195,65)
+    \put(0,90){\begin{minipage}{\linewidth}
+        \begin{center}
+          {\large\bf\sf \DE{Anwortblatt}\NL{Antwoordblad}\EN{Answer form}}
+        \end{center}
+      \end{minipage}
+    }
+
+    \put(0,40){\begin{minipage}{.55\linewidth}
+      {\textbf{\sf{}Student number}}
+      
+      \vspace{.5\baselineskip}
+      \color{red}\AMCcode{snummer}{7}\color{black}
+      \vspace{.3\baselineskip}
+    \end{minipage}}
+
+    \put(79,50){\namefield{\fbox{    
+        \begin{minipage}{.45\linewidth}
+          \DE{Vor- und Nachname,}\NL{Voor- en achternaam}\EN{Name and surname}\\
+
+          \vspace*{3mm}\dotfill\\
+          Studentnummer:\\
+
+          \vspace*{3mm}\dotfill
+          \vspace*{1mm}
+        \end{minipage}
+      }
+    }}
+  \put(79,20){\begin{minipage}{.45\linewidth}
+      \sf\EN{Encode your student number in the boxes on the left. Make
+      all boxes on this page that apply completely black with pencil or felt tip.}
+    \DE{Tragen Sie ihre studentnummer in den Kästchen auf der
+      linke Seite. Machen Sie die Kästchen auf dieser Seite die zutreffen völlig
+      Schwarz.}
+    \NL{Vul je studentnummer in de hokjes aan de linkerzijde in. Maak
+      alle juiste hokjes op deze pagina volledig zwart.}
+      
+    \end{minipage}
+  }
+  \put(0,5){\rule{1\linewidth}{1pt}}
+  \end{picture}
+}
+%% AMC tweeking
+\AMCformVSpace=1ex
+\AMCformHSpace=0em
+%\AMCboxDimensions{size=2ex,down=.4ex,rule=.5pt}
+\setlength{\columnseprule}{.3pt}

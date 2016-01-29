@@ -1,0 +1,32 @@
+\documentclass{article}
+
+\usepackage{longtable}
+\newcounter{xyz}\newcounter{uvw}
+
+\makeatletter
+\newtoks\@tabtoks
+\newtoks\he@dtoks
+\newcommand\addtabtoks[1]{\@tabtoks\expandafter{\the\@tabtoks#1}}
+\newcommand*\resettabtoks{\@tabtoks{}}
+\newcommand*\printtabtoks{\the\@tabtoks}
+\makeatother
+
+\pagestyle{empty}
+\begin{document}
+
+\resettabtoks
+\loop\ifnum\theuvw<4\relax
+  \stepcounter{uvw}
+  \addtabtoks{&\thexyz\stepcounter{xyz}}% \\\hline}%
+\repeat
+\setcounter{uvw}{0}
+\loop\ifnum\theuvw<4\relax
+  \stepcounter{uvw}
+  \addheadtoks{c|}% \\\hline}%
+\repeat
+
+\begin{longtable}{|*4{c|}}\hline
+\printtabtoks\\\hline
+\end{longtable}
+
+\end{document}

@@ -1,0 +1,21 @@
+\begin{questionmult}{multi-provinciesteden5}
+\NL{In welke provincie ligt Oirschot?}
+\DE{In welcher Provinz liegt Oirschot?}
+\EN{In which province lies Oirschot?}
+  \begin{multicols}{4}
+  \begin{choices}
+    \wrongchoice{Noord Holland}
+    \wrongchoice{Zuid Holland}
+    \wrongchoice{Groningen}
+    \wrongchoice{Drenthe}
+    \wrongchoice{Overijsel}
+    \wrongchoice{Flevoland}
+    \wrongchoice{Utrecht}
+    \wrongchoice{Gelderland}
+    \correctchoice{Noord Brabant}
+    \wrongchoice{Limburg}
+    \wrongchoice{Luik}
+    \wrongchoice{Zeeuws Vlaanderen}
+  \end{choices}
+\end{multicols}
+\end{questionmult}

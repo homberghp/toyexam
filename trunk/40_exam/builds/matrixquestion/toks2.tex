@@ -1,0 +1,55 @@
+\documentclass{article}
+
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{forloop}
+\usepackage{xstring}
+
+\makeatletter
+
+
+% http://tex.stackexchange.com/a/87420
+\newcommand{\columnheader}[1]{%
+ \gdef\thisheader##1{}%
+    % if i remove the "&" it works as a whole string but not splitted in columns
+    % HERE IS THE BUG WITH THE "&"
+    \@for \el:=#1\do{\protected@xdef\thisheader{\thisheader&\el}%
+}}
+
+
+
+\newcommand{\generatecolumns}[1]{
+
+    % getting the column count automatically would be really nice like \commalength{#1}
+    \multicolumn{\LT@cols}{l}{\emph{Continuation of \tablename\ \thetable{}}} \\
+    \toprule
+\noalign{\columnheader{#1}}\thisheader \\ \midrule
+    \endhead
+
+    \hline 
+    \multicolumn{5}{l}{\emph{Continued on next page}} \\
+    \bottomrule
+    \endfoot
+}
+
+\makeatother
+\begin{document}
+\xdef\H{l|l|l|l|}
+\xdef\H{r|}
+\newcounter{i}
+
+\forloop{i}{1}{\value{i}<4}{
+  \xdef\H{\H |l}
+}
+\begin{longtable}{r|*4{l|}}
+
+    % this are the column titles
+    \generatecolumns{Column1,Column2,Column3,Column4,Column5}
+
+    \forloop{i}{1}{\value{i} < 100}{
+        \arabic{i} & a & b & c & d \tabularnewline
+    }
+
+\end{longtable}
+
+\end{document}

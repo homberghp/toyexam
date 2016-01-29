@@ -1,0 +1,15 @@
+\begin{question}{math-interval}
+  \FPeval\VQa{trunc(2 + random * 4,0)}
+  \FPeval\VQb{trunc(6 + random * 5,0)}
+  \FPeval\VQr{VQa/(VQa+VQb)}
+  
+  Let $X$ and $Y$ be two independent random variables, following the exponential distribution with
+respective parameters \VQa{} and \VQb{}.
+  To which interval does the probability $\mathbb{P}[X<Y]$ belong ?
+
+  \begin{multicols}{5}
+    \begin{choices}[o]
+      \AMCIntervals{\VQr}{0}{1}{0.1}  
+    \end{choices}
+  \end{multicols}
+\end{question}

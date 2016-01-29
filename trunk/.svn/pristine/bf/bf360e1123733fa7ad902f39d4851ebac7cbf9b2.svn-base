@@ -1,0 +1,28 @@
+%% Question denmark1
+%% simple mc, one correct answer with a figure.
+%% figure is small and should be next to question text.
+%% \usepackage{wrapfigure} in preamble.
+%% You can 'pull the image up' by adding negative \vspace at the start
+%% like in the example. For best effect, put figure definition just in front of question text.
+\begin{question}{geography-denmark1}
+
+\begin{wrapfigure}{r}{32mm}
+  \vspace{-2\baselineskip}
+  \begin{center}
+    \includegraphics[width=30mm]{\QuestionBaseDir/figures/denmark1.pdf}
+    \caption{\AMClabel{geography:denmark1}Outline of European country}
+  \end{center}
+\end{wrapfigure}
+  Which country lies north of Germany, west of Lithuania, south of Norway
+  and east of England and has an outline like in
+  figure~\AMCref{geography:denmark1}.
+  \begin{choices}
+    \wrongchoice{The Netherlands}
+    \correctchoice{Denmark}
+    \wrongchoice{Sweden}
+    \wrongchoice{Finland}
+  \end{choices}
+\end{question}
+\vspace{5\baselineskip}
+
+

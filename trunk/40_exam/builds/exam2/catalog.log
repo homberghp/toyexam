@@ -1,0 +1,2097 @@
+This is LuaTeX, Version beta-0.70.2-2012062323 (TeX Live 2012/Debian) (format=lualatex 2013.10.1)  26 JAN 2014 11:11
+ restricted \write18 enabled.
+**../catalog.tex
+(../catalog.tex
+LaTeX2e <2011/06/27>
+LuaTeX adaptation of babel <v3.8m-luatex-1.5> and hyphenation patterns for engl
+ish, dumylang, nohyphenation, dutch, french, basque, ngerman, german, swissgerm
+an, ngerman-x-2012-05-30, german-x-2012-05-30, loaded.
+(./source.tex (/usr/share/texmf/tex/latex/fontexam/catalogpreamble.tex
+(/usr/share/texmf/tex/latex/fontexam/exampreamble.tex
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2011/01/03 v2.1 e-TeX tools for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/etex-pkg/etex.sty
+Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
+\et@xins=\count87
+)
+\etb@tempcnta=\count88
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+(/usr/share/texlive/texmf-dist/tex/lualatex/luainputenc/luainputenc.sty
+Package: luainputenc 2010/11/19 v0.973 inputenc package for LuaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/usr/share/texlive/texmf-dist/tex/luatex/luatexbase/luatexbase.sty
+Package: luatexbase 2010/10/06 v0.3 Module utilities for LuaTeX
+
+(/usr/share/texlive/texmf-dist/tex/luatex/luatexbase/luatexbase-compat.sty
+Package: luatexbase-compat 2010/10/10 v0.3 Compatibility tools for LuaTeX
+)
+(/usr/share/texlive/texmf-dist/tex/luatex/luatexbase/luatexbase-loader.sty
+Package: luatexbase-loader 2010/10/10 v0.3 Lua module loader for LuaTeX
+
+(/usr/share/texlive/texmf-dist/tex/luatex/luatexbase/luatexbase.loader.lua))
+(/usr/share/texlive/texmf-dist/tex/luatex/luatexbase/luatexbase-regs.sty
+Package: luatexbase-regs 2010/10/10 v0.3 Registers allocation for LuaTeX
+)
+(/usr/share/texlive/texmf-dist/tex/luatex/luatexbase/luatexbase-attr.sty
+Package: luatexbase-attr 2011/05/21 v0.31 Attributes allocation for LuaTeX
+
+(/usr/share/texlive/texmf-dist/tex/luatex/luatexbase/attr.lua))
+(/usr/share/texlive/texmf-dist/tex/luatex/luatexbase/luatexbase-cctb.sty
+Package: luatexbase-cctb 2010/10/10 v0.3 Catcodetable allocation for LuaTeX
+
+(/usr/share/texlive/texmf-dist/tex/luatex/luatexbase/cctb.lua)
+\lltxb@catcodetable@alloc=\count277
+\CatcodeTableIniTeX=\luatexcatcodetable1
+\CatcodeTableString=\luatexcatcodetable3
+\CatcodeTableOther=\luatexcatcodetable5
+\CatcodeTableLaTeX=\luatexcatcodetable7
+\CatcodeTableLaTeXAtLetter=\luatexcatcodetable9
+\CatcodeTableExpl=\luatexcatcodetable11
+)
+(/usr/share/texlive/texmf-dist/tex/luatex/luatexbase/luatexbase-mcb.sty
+Package: luatexbase-mcb 2010/10/10 v0.3 Callback management for LuaTeX
+
+(/usr/share/texlive/texmf-dist/tex/luatex/luatexbase/luatexbase-modutils.sty
+Package: luatexbase-modutils 2010/10/10 v0.3 Module utilities for LuaTeX
+
+(/usr/share/texlive/texmf-dist/tex/luatex/luatexbase/modutils.lua))
+(/usr/share/texlive/texmf-dist/tex/luatex/luatexbase/mcb.lua)
+Lua module: luatexbase-mcb 2010/05/12 0.2 register several functions in a callb
+ack
+))
+(/usr/share/texlive/texmf-dist/tex/lualatex/luainputenc/luainputenc.lua)
+Lua module: luainputenc 2010/05/10 0.97 Lua simple inputenc package.
+\inpenc@prehook=\toks16
+\inpenc@posthook=\toks17
+
+(/usr/share/texlive/texmf-dist/tex/lualatex/luainputenc/lutf8.def
+File: lutf8.def 2010/05/10 v0.97 UTF-8 support for luainputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encodingT1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encodingOT1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encodingOMS
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    RedeclaringfontencodingT1 on input line 43.
+))
+(/usr/share/texmf/tex/latex/AMC/automultiplechoice.sty
+Package: automultiplechoice 
+
+(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/luatex-loader.sty
+Package: luatex-loader 2010/03/09 v0.4 Lua module loader (HO)
+
+(/usr/share/texlive/texmf-dist/scripts/oberdiek/oberdiek.luatex.lua))
+(/usr/share/texlive/texmf-dist/scripts/oberdiek/pdftexcmds.lua)
+\pdftexcmds@toks=\toks18
+)
+\Gread@gobject=\count278
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip256
+\f@ncyO@elh=\skip257
+\f@ncyO@erh=\skip258
+\f@ncyO@olh=\skip259
+\f@ncyO@orh=\skip260
+\f@ncyO@elf=\skip261
+\f@ncyO@erf=\skip262
+\f@ncyO@olf=\skip263
+\f@ncyO@orf=\skip264
+)
+(/usr/share/texlive/texmf-dist/tex/latex/bophook/bophook.sty
+Package: bophook 2001/03/29 v0.02 beginning-of-page hook, K. Tinnefeld
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+\XKV@toks=\toks19
+\XKV@tempa@toks=\toks20
+\XKV@depth=\count279
+File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/keyval.tex)))
+(/usr/share/texlive/texmf-dist/tex/latex/rotating/rotating.sty
+Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+)
+\Gin@req@height=\dimen256
+\Gin@req@width=\dimen257
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count280
+\rotFPtop=\skip265
+\rotFPbot=\skip266
+\rot@float@box=\box256
+\rot@mess@toks=\toks21
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancybox/fancybox.sty
+Package: fancybox 2010/05/15 1.4
+
+Style option: `fancybox' v1.4 <2010/05/15> (tvz)
+\@fancybox=\box257
+\shadowsize=\dimen258
+\@Sbox=\box258
+\do@VerbBox=\toks22
+\the@fancyput=\toks23
+\this@fancyput=\toks24
+\EndVerbatimTokens=\toks25
+\Verbatim@Outfile=\write3
+\Verbatim@Infile=\read1
+)
+\AMC@logfile=\write4
+\AMCload@counter=\count281
+\AMCid@quest=\count282
+\AMCid@check=\count283
+\AMCid@etud=\count284
+\AMCid@etudstart=\count285
+\AMCid@etudfin=\count286
+\AMCnum@copies=\count287
+\AMCformVSpace=\dimen259
+\AMCformHSpace=\dimen260
+\AMCinterIrep=\dimen261
+\AMCinterBrep=\dimen262
+\AMCinterIquest=\dimen263
+\AMCinterBquest=\dimen264
+\AMCids@width=\dimen265
+\AMCids@height=\dimen266
+\AMC@SR=\count288
+\AMC@SR@count=\count289
+\AMC@SRnum=\count290
+\AMC@sti=\count291
+\AMCsw@p@=\toks26
+\AMC@numerotation=\count292
+\AMC@XYspecial=\write5
+\AMC@tmpXY=\write6
+\AMC@ovalbox@R=\box259
+\AMC@ovalbox@RF=\box260
+\AMC@ovalbox@=\box261
+\AMC@ovalbox@F=\box262
+\c@AMC@ncase=\count293
+\AMC@boxedrule=\skip267
+\AMC@boxeddown=\skip268
+\AMC@boxedwidth=\skip269
+\AMC@boxedheight=\skip270
+\AMC@oval@radius=\skip271
+\AMC@outside@sep=\skip272
+\AMC@CBtaille=\skip273
+\AMCbin@sequence=\toks27
+\AMCbin@number=\count294
+\AMCbin@ndigits=\count295
+\AMCbin@id=\count296
+\AMCbin@digit=\count297
+\AMCtok@k=\count298
+\AMCtok@max=\count299
+\AMCtok@ik=\count300
+\AMCrep@count=\count301
+\reponse@cxcix=\toks28
+\reponse@cxcviii=\toks29
+\reponse@cxcvii=\toks30
+\reponse@cxcvi=\toks31
+\reponse@cxcv=\toks32
+\reponse@cxciv=\toks33
+\reponse@cxciii=\toks34
+\reponse@cxcii=\toks35
+\reponse@cxci=\toks36
+\reponse@cxc=\toks37
+\reponse@clxxxix=\toks38
+\reponse@clxxxviii=\toks39
+\reponse@clxxxvii=\toks40
+\reponse@clxxxvi=\toks41
+\reponse@clxxxv=\toks42
+\reponse@clxxxiv=\toks43
+\reponse@clxxxiii=\toks44
+\reponse@clxxxii=\toks45
+\reponse@clxxxi=\toks46
+\reponse@clxxx=\toks47
+\reponse@clxxix=\toks48
+\reponse@clxxviii=\toks49
+\reponse@clxxvii=\toks50
+\reponse@clxxvi=\toks51
+\reponse@clxxv=\toks52
+\reponse@clxxiv=\toks53
+\reponse@clxxiii=\toks54
+\reponse@clxxii=\toks55
+\reponse@clxxi=\toks56
+\reponse@clxx=\toks57
+\reponse@clxix=\toks58
+\reponse@clxviii=\toks59
+\reponse@clxvii=\toks60
+\reponse@clxvi=\toks61
+\reponse@clxv=\toks62
+\reponse@clxiv=\toks63
+\reponse@clxiii=\toks64
+\reponse@clxii=\toks65
+\reponse@clxi=\toks66
+\reponse@clx=\toks67
+\reponse@clix=\toks68
+\reponse@clviii=\toks69
+\reponse@clvii=\toks70
+\reponse@clvi=\toks71
+\reponse@clv=\toks72
+\reponse@cliv=\toks73
+\reponse@cliii=\toks74
+\reponse@clii=\toks75
+\reponse@cli=\toks76
+\reponse@cl=\toks77
+\reponse@cxlix=\toks78
+\reponse@cxlviii=\toks79
+\reponse@cxlvii=\toks80
+\reponse@cxlvi=\toks81
+\reponse@cxlv=\toks82
+\reponse@cxliv=\toks83
+\reponse@cxliii=\toks84
+\reponse@cxlii=\toks85
+\reponse@cxli=\toks86
+\reponse@cxl=\toks87
+\reponse@cxxxix=\toks88
+\reponse@cxxxviii=\toks89
+\reponse@cxxxvii=\toks90
+\reponse@cxxxvi=\toks91
+\reponse@cxxxv=\toks92
+\reponse@cxxxiv=\toks93
+\reponse@cxxxiii=\toks94
+\reponse@cxxxii=\toks95
+\reponse@cxxxi=\toks96
+\reponse@cxxx=\toks97
+\reponse@cxxix=\toks98
+\reponse@cxxviii=\toks99
+\reponse@cxxvii=\toks100
+\reponse@cxxvi=\toks101
+\reponse@cxxv=\toks102
+\reponse@cxxiv=\toks103
+\reponse@cxxiii=\toks104
+\reponse@cxxii=\toks105
+\reponse@cxxi=\toks106
+\reponse@cxx=\toks107
+\reponse@cxix=\toks108
+\reponse@cxviii=\toks109
+\reponse@cxvii=\toks110
+\reponse@cxvi=\toks111
+\reponse@cxv=\toks112
+\reponse@cxiv=\toks113
+\reponse@cxiii=\toks114
+\reponse@cxii=\toks115
+\reponse@cxi=\toks116
+\reponse@cx=\toks117
+\reponse@cix=\toks118
+\reponse@cviii=\toks119
+\reponse@cvii=\toks120
+\reponse@cvi=\toks121
+\reponse@cv=\toks122
+\reponse@civ=\toks123
+\reponse@ciii=\toks124
+\reponse@cii=\toks125
+\reponse@ci=\toks126
+\reponse@c=\toks127
+\reponse@xcix=\toks128
+\reponse@xcviii=\toks129
+\reponse@xcvii=\toks130
+\reponse@xcvi=\toks131
+\reponse@xcv=\toks132
+\reponse@xciv=\toks133
+\reponse@xciii=\toks134
+\reponse@xcii=\toks135
+\reponse@xci=\toks136
+\reponse@xc=\toks137
+\reponse@lxxxix=\toks138
+\reponse@lxxxviii=\toks139
+\reponse@lxxxvii=\toks140
+\reponse@lxxxvi=\toks141
+\reponse@lxxxv=\toks142
+\reponse@lxxxiv=\toks143
+\reponse@lxxxiii=\toks144
+\reponse@lxxxii=\toks145
+\reponse@lxxxi=\toks146
+\reponse@lxxx=\toks147
+\reponse@lxxix=\toks148
+\reponse@lxxviii=\toks149
+\reponse@lxxvii=\toks150
+\reponse@lxxvi=\toks151
+\reponse@lxxv=\toks152
+\reponse@lxxiv=\toks153
+\reponse@lxxiii=\toks154
+\reponse@lxxii=\toks155
+\reponse@lxxi=\toks156
+\reponse@lxx=\toks157
+\reponse@lxix=\toks158
+\reponse@lxviii=\toks159
+\reponse@lxvii=\toks160
+\reponse@lxvi=\toks161
+\reponse@lxv=\toks162
+\reponse@lxiv=\toks163
+\reponse@lxiii=\toks164
+\reponse@lxii=\toks165
+\reponse@lxi=\toks166
+\reponse@lx=\toks167
+\reponse@lix=\toks168
+\reponse@lviii=\toks169
+\reponse@lvii=\toks170
+\reponse@lvi=\toks171
+\reponse@lv=\toks172
+\reponse@liv=\toks173
+\reponse@liii=\toks174
+\reponse@lii=\toks175
+\reponse@li=\toks176
+\reponse@l=\toks177
+\reponse@xlix=\toks178
+\reponse@xlviii=\toks179
+\reponse@xlvii=\toks180
+\reponse@xlvi=\toks181
+\reponse@xlv=\toks182
+\reponse@xliv=\toks183
+\reponse@xliii=\toks184
+\reponse@xlii=\toks185
+\reponse@xli=\toks186
+\reponse@xl=\toks187
+\reponse@xxxix=\toks188
+\reponse@xxxviii=\toks189
+\reponse@xxxvii=\toks190
+\reponse@xxxvi=\toks191
+\reponse@xxxv=\toks192
+\reponse@xxxiv=\toks193
+\reponse@xxxiii=\toks194
+\reponse@xxxii=\toks195
+\reponse@xxxi=\toks196
+\reponse@xxx=\toks197
+\reponse@xxix=\toks198
+\reponse@xxviii=\toks199
+\reponse@xxvii=\toks200
+\reponse@xxvi=\toks201
+\reponse@xxv=\toks202
+\reponse@xxiv=\toks203
+\reponse@xxiii=\toks204
+\reponse@xxii=\toks205
+\reponse@xxi=\toks206
+\reponse@xx=\toks207
+\reponse@xix=\toks208
+\reponse@xviii=\toks209
+\reponse@xvii=\toks210
+\reponse@xvi=\toks211
+\reponse@xv=\toks212
+\reponse@xiv=\toks213
+\reponse@xiii=\toks214
+\reponse@xii=\toks215
+\reponse@xi=\toks216
+\reponse@x=\toks217
+\reponse@ix=\toks218
+\reponse@viii=\toks219
+\reponse@vii=\toks220
+\reponse@vi=\toks221
+\reponse@v=\toks222
+\reponse@iv=\toks223
+\reponse@iii=\toks224
+\reponse@ii=\toks225
+\reponse@i=\toks226
+\AMCnum@questions=\count302
+\AMCrep@@count=\count303
+\c@AMCquestionaff=\count304
+\ouverte@vs=\dimen267
+\AMC@chiffres=\count305
+\AMCcodeHspace=\dimen268
+\AMCcodeVspace=\dimen269
+\AMCnumeric@Hspace=\dimen270
+\AMCnumeric@Vspace=\dimen271
+\AMC@numeric@lastdigit=\count306
+\AMC@integer@modulo=\count307
+\AMC@numeric@integer=\count308
+\AMC@numeric@calcdigit=\count309
+\AMC@numeric@digits=\count310
+\AMC@numeric@decd=\count311
+\AMC@numeric@value=\count312
+\AMC@numeric@x=\count313
+\AMC@numeric@base=\count314
+\AMC@numeric@exact=\count315
+\AMC@numeric@approx=\count316
+\AMCopen@Hspace=\dimen272
+\AMCopen@LineHeight=\dimen273
+\AMCopen@Lines=\count317
+\AMCopen@boxmargin=\dimen274
+\AMCopen@boxframerule=\dimen275
+\AMCopen@framerule=\dimen276
+ (/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2008/06/18 v0.2 A new way to define environments
+\@emptytoks=\toks227
+\@envbody=\toks228
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+\Gm@cnth=\count318
+\Gm@cntv=\count319
+\c@Gm@tempcnt=\count320
+\Gm@bindingoffset=\dimen277
+\Gm@wd@mp=\dimen278
+\Gm@odd@mp=\dimen279
+\Gm@even@mp=\dimen280
+\Gm@layoutwidth=\dimen281
+\Gm@layoutheight=\dimen282
+\Gm@layouthoffset=\dimen283
+\Gm@layoutvoffset=\dimen284
+\Gm@dimlist=\toks229
+))
+(/usr/share/texmf/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texmf/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texmf/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks230
+)
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box263
+
+(/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2010/10/25 v2.10 (rcs-revision 1.24)
+))
+Package: pgf 2008/01/15 v2.10 (rcs-revision 1.12)
+
+(/usr/share/texmf/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texmf/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
+
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks231
+\pgfkeys@temptoks=\toks232
+
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks233
+))
+\pgf@x=\dimen285
+\pgf@y=\dimen286
+\pgf@xa=\dimen287
+\pgf@ya=\dimen288
+\pgf@xb=\dimen289
+\pgf@yb=\dimen290
+\pgf@xc=\dimen291
+\pgf@yc=\dimen292
+\w@pgf@writea=\write7
+\r@pgf@reada=\read2
+\c@pgf@counta=\count321
+\c@pgf@countb=\count322
+\c@pgf@countc=\count323
+\c@pgf@countd=\count324
+
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Package pgfsys Info: Driver file for pgf: pgfsys-pdftex.def on input line 900.
+
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2009/05/22  (rcs-revision 1.26)
+
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2008/05/19  (rcs-revision 1.10)
+)))
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
+\pgfsyssoftpath@smallbuffer@items=\count325
+\pgfsyssoftpath@bigbuffer@items=\count326
+)
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
+
+(/usr/share/texmf/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen293
+\pgfmath@count=\count327
+\pgfmath@box=\box264
+\pgfmath@toks=\toks234
+\pgfmath@stack@operand=\toks235
+\pgfmath@stack@operation=\toks236
+)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.random.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.base.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.round.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex)))
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count328
+))
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
+\pgf@picminx=\dimen294
+\pgf@picmaxx=\dimen295
+\pgf@picminy=\dimen296
+\pgf@picmaxy=\dimen297
+\pgf@pathminx=\dimen298
+\pgf@pathmaxx=\dimen299
+\pgf@pathminy=\dimen300
+\pgf@pathmaxy=\dimen301
+\pgf@xx=\dimen302
+\pgf@xy=\dimen303
+\pgf@yx=\dimen304
+\pgf@yy=\dimen305
+\pgf@zx=\dimen306
+\pgf@zy=\dimen307
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2010/08/03  (rcs-revision 1.24)
+\pgf@path@lastx=\dimen308
+\pgf@path@lasty=\dimen309
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
+\pgf@shorten@end@additional=\dimen310
+\pgf@shorten@start@additional=\dimen311
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
+\pgfpic=\box265
+\pgf@hbox=\box266
+\pgf@layerbox@main=\box267
+\pgf@picture@serial@count=\count329
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
+\pgflinewidth=\dimen312
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2009/06/10  (rcs-revision 1.11)
+\pgf@pt@x=\dimen313
+\pgf@pt@y=\dimen314
+\pgf@pt@temp=\dimen315
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2008/10/09  (rcs-revision 1.8)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
+\pgf@max=\dimen316
+\pgf@sys@shading@range@num=\count330
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
+
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2010/09/01  (rcs-revision 1.17)
+\pgfexternal@startupbox=\box268
+))
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2010/08/27  (rcs-revision 1.2)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2008/01/17  (rcs-revision 1.2)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2009/07/02  (rcs-revision 1.3)
+)))
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2010/09/09  (rcs-revision 1.13)
+\pgfnodeparttextbox=\box269
+)
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2010/10/22  (rcs-revision 1.8)
+)
+(/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v2.10 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen317
+\pgf@nodesepend=\dimen318
+)
+(/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
+))
+(/usr/share/texmf/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texmf/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texmf/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
+\pgffor@iter=\dimen319
+\pgffor@skip=\dimen320
+\pgffor@stack=\toks237
+\pgffor@toks=\toks238
+))
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
+
+(/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
+\pgf@plot@mark@count=\count331
+\pgfplotmarksize=\dimen321
+)
+\tikz@lastx=\dimen322
+\tikz@lasty=\dimen323
+\tikz@lastxsaved=\dimen324
+\tikz@lastysaved=\dimen325
+\tikzleveldistance=\dimen326
+\tikzsiblingdistance=\dimen327
+\tikz@figbox=\box270
+\tikz@tempbox=\box271
+\tikztreelevel=\count332
+\tikznumberofchildren=\count333
+\tikznumberofcurrentchild=\count334
+\tikz@fig@count=\count335
+
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
+\pgfmatrixcurrentrow=\count336
+\pgfmatrixcurrentcolumn=\count337
+\pgf@matrix@numberofcolumns=\count338
+)
+\tikz@expandcount=\count339
+
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopat
+hs.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
+))) (/home/hom/fthv/hi/toyexam/trunk/40_exam/builds/packages.tex
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen328
+\WF@size=\dimen329
+\c@WF@wrappedlines=\count340
+\WF@box=\box272
+\WF@everypar=\toks239
+Package: wrapfig 2003/01/31  v 3.6
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count341
+\lst@gtempboxa=\box273
+\lst@token=\toks240
+\lst@length=\count342
+\lst@currlwidth=\dimen330
+\lst@column=\count343
+\lst@pos=\count344
+\lst@lostspace=\dimen331
+\lst@width=\dimen332
+\lst@newlines=\count345
+\lst@lineno=\count346
+\lst@maxwidth=\dimen333
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+\c@lstnumber=\count347
+\lst@skipnumbers=\count348
+\lst@framebox=\box274
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2007/02/22 1.4 listings configuration
+))
+Package: listings 2007/02/22 1.4 (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp.sty
+Package: fp 1995/04/02
+
+`Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
+(/usr/share/texlive/texmf-dist/tex/latex/fp/defpattern.sty
+Package: defpattern 1994/10/12
+\actioncount=\count349
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-basic.sty
+Package: fp-basic 1996/05/13
+\FP@xs=\count350
+\FP@xia=\count351
+\FP@xib=\count352
+\FP@xfa=\count353
+\FP@xfb=\count354
+\FP@rega=\count355
+\FP@regb=\count356
+\FP@regs=\count357
+\FP@times=\count358
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-addons.sty
+Package: fp-addons 1995/03/15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-snap.sty
+Package: fp-snap 1995/04/05
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-exp.sty
+Package: fp-exp 1995/04/03
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-trigo.sty
+Package: fp-trigo 1995/04/14
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-pas.sty
+Package: fp-pas 1994/08/29
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-random.sty
+Package: fp-random 1995/02/23
+\FPseed=\count359
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-eqn.sty
+Package: fp-eqn 1995/04/03
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-upn.sty
+Package: fp-upn 1996/10/21
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-eval.sty
+Package: fp-eval 1995/04/03
+))
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+NowhandlingfontencodingTS1...
+...processingUTF-8mappingfileforfontencodingTS1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.dfu
+File: ts1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+))
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 311.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 312.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 313.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 314.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 315.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 316.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 317.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 318.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 319.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 320.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 321.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 322.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 323.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 324.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 326.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 327.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 328.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 329.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 330.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 331.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 332.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 333.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 334.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 335.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 336.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 337.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2012/02/19 v3.2f Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
+\captionmargin=\dimen334
+\captionmargin@=\dimen335
+\captionwidth=\dimen336
+\caption@indent=\dimen337
+\caption@parindent=\dimen338
+\caption@hangindent=\dimen339
+)
+\c@ContinuedFloat=\count360
+Package caption Info: listings package is loaded.
+Package caption Info: rotating package is loaded.
+Package caption Info: wrapfig package is loaded.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+))
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/builds/macros.tex)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/builds/defaults.tex)))
+(/usr/share/texmf/tex/latex/fontexam/processExamsWithCsv.tex
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2008/07/08 v3.8m The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/english.ldf
+Language: english 2005/03/30 v3.3o English support from the babel system
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2008/07/08 v3.8m Babel common definitions
+\babel@savecnt=\count361
+\U@D=\dimen340
+)
+luatex-hyphen: using data file: /var/lib/texmf/tex/generic/config/language.dat.
+lua
+\l@british = a dialect from \language\l@english 
+\l@UKenglish = a dialect from \language\l@english 
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/dutch.ldf
+Language: dutch 2005/03/30 v3.8i Dutch support from the babel system
+Package babel Info: Making " an active character on input line 132.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/germanb.ldf
+Language: germanb 2008/06/01 v2.6m German support from the babel system
+\l@austrian = a dialect from \language\l@german 
+))
+(/usr/share/texmf/tex/latex/csvsimple/csvsimple.sty
+Package: csvsimple 2012/03/12 version 1.05 LaTeX CSV file processing
+\csv@file=\read3
+\c@csvinputline=\count362
+\c@csvrow=\count363
+\c@csvcol=\count364
+)
+(/usr/share/texmf/tex/latex/fontexam/setlang.sty)
+(/usr/share/texmf/tex/latex/fontexam/onecolumnform.tex)
+(/usr/share/texmf/tex/latex/fontexam/shortopen.tex)
+(/usr/share/texmf/tex/latex/fontexam/coverpagecsv.tex
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
+\c@tracingmulticols=\count365
+\mult@box=\box275
+\multicol@leftmargin=\dimen341
+\c@unbalance=\count366
+\c@collectmore=\count367
+\doublecol@number=\count368
+\multicoltolerance=\count369
+\multicolpretolerance=\count370
+\full@width=\dimen342
+\page@free=\dimen343
+\premulticols=\dimen344
+\postmulticols=\dimen345
+\multicolsep=\skip274
+\multicolbaselineskip=\skip275
+\partial@page=\box276
+\last@line=\box277
+\mult@rightbox=\box278
+\mult@grightbox=\box279
+\mult@gfirstbox=\box280
+\mult@firstbox=\box281
+\@tempa=\box282
+\@tempa=\box283
+\@tempa=\box284
+\@tempa=\box285
+\@tempa=\box286
+\@tempa=\box287
+\@tempa=\box288
+\@tempa=\box289
+\@tempa=\box290
+\@tempa=\box291
+\@tempa=\box292
+\@tempa=\box293
+\@tempa=\box294
+\@tempa=\box295
+\@tempa=\box296
+\@tempa=\box297
+\@tempa=\box298
+\c@columnbadness=\count371
+\c@finalcolumnbadness=\count372
+\last@try=\dimen346
+\multicolovershoot=\dimen347
+\multicolundershoot=\dimen348
+\mult@nat@firstbox=\box299
+\colbreak@box=\box300
+\multicol@sort@counter=\count373
+)
+\frontpageboxwidth=\skip276
+) (./catalog.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 23.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 23.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count374
+\scratchdimen=\dimen349
+\scratchbox=\box301
+\nofMPsegments=\count375
+\nofMParguments=\count376
+\everyMPshowfont=\toks241
+\MPscratchCnt=\count377
+\MPscratchDim=\dimen350
+\MPnumerator=\count378
+\makeMPintoPDFobject=\count379
+\everyMPtoPDFconversion=\toks242
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includehead includefoot 
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* v-part:(T,H,B)=(28.45274pt, 788.14136pt, 28.45274pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=706.23587pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-43.81725pt
+* \headheight=28.45274pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=28.45274pt
+* \marginparwidth=57.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+ABD: EveryShipout initializing macros
+\c@lstlisting=\count380
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+
+processExamsWithCsv uses instance dir /home/hom/fthv/hi/toyexam/trunk/40_exam/b
+uilds/exam2
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/builds/exam2/questions.tex
+\general@k=\count381
+\general@i=\toks243
+\general@ii=\toks244
+\general@iii=\toks245
+\general@iv=\toks246
+\general@v=\toks247
+\general@vi=\toks248
+\general@vii=\toks249
+\general@viii=\toks250
+\general@ix=\toks251
+\general@x=\toks252
+\general@xi=\toks253
+\general@xii=\toks254
+\general@xiii=\toks255
+Normal \toks register pool exhausted, switching to extended pool.
+\general@xiv=\toks256
+\general@xv=\toks257
+\general@xvi=\toks258
+\general@xvii=\toks259
+\general@xviii=\toks260
+\general@xix=\toks261
+\general@xx=\toks262
+\general@xxi=\toks263
+\general@xxii=\toks264
+\general@xxiii=\toks265
+\general@xxiv=\toks266
+\general@xxv=\toks267
+\general@xxvi=\toks268
+\general@xxvii=\toks269
+\general@xxviii=\toks270
+\general@xxix=\toks271
+\general@xxx=\toks272
+\general@xxxi=\toks273
+)
+creating exam for Language=NL
+<logo.pdf, id=4, 95.35625pt x 72.27pt>
+File: logo.pdf Graphic file (type pdf)
+ <use logo.pdf>
+Package pdftex.def Info: logo.pdf used on input line 28.
+(pdftex.def)             Requested size: 108.405pt x 82.16257pt.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 28.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 28.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 28.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 28.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 28.
+LaTeX Font Info:    Try loading font information for U+msa on input line 28.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 28.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+Underfull \hbox (badness 10000) in alignment at lines 28--28
+[][][][]
+ []
+
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 28.
+LaTeX Font Info:    Try loading font information for TS1+phv on input line 28.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
+File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
+)
+<goodmark.png, id=5, 45.16875pt x 49.18375pt>
+File: goodmark.png Graphic file (type png)
+ <use goodmark.png>
+Package pdftex.def Info: goodmark.png used on input line 28.
+(pdftex.def)             Requested size: 9.60564pt x 10.45993pt.
+
+<badmark.png, id=6, 45.16875pt x 49.18375pt>
+File: badmark.png Graphic file (type png)
+ <use badmark.png>
+Package pdftex.def Info: badmark.png used on input line 28.
+(pdftex.def)             Requested size: 9.60564pt x 10.45993pt.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 28.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 28.
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+
+ []
+
+
+Overfull \hbox (156.48721pt too wide) in paragraph at lines 28--28
+[][][] 
+ []
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+ </usr/share/texmf/tex/latex/fontexam/logo.pdf> </usr/share/texmf/tex/latex/fon
+texam/goodmark.png> </usr/share/texmf/tex/latex/fontexam/badmark.png>]
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/benelux1.tex
+LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10> not available
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 4.
+)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/benelux2.tex)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/suisse1.tex
+</home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/suisse.pdf, id=24, 2
+18.74217pt x 142.44582pt>
+File: /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/suisse.pdf Grap
+hic file (type pdf)
+
+<use /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/suisse.pdf>
+Package pdftex.def Info: /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figu
+res/suisse.pdf used on input line 13.
+(pdftex.def)             Requested size: 99.58464pt x 64.85205pt.
+)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/netherlands1.tex
+</home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/netherlands.pdf, id=
+25, 160.6pt x 189.508pt>
+File: /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/netherlands.pdf
+ Graphic file (type pdf)
+
+<use /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/netherlands.pdf>
+Package pdftex.def Info: /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figu
+res/netherlands.pdf used on input line 12.
+(pdftex.def)             Requested size: 85.35826pt x 100.72502pt.
+) (/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/netherlands2.tex
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 10.
+) (/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/netherlands3.tex
+) (/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/denmark1.tex
+</home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/denmark1.pdf, id=26,
+ 706.64pt x 586.19pt>
+File: /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/denmark1.pdf Gr
+aphic file (type pdf)
+
+<use /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/denmark1.pdf>
+Package pdftex.def Info: /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figu
+res/denmark1.pdf used on input line 12.
+(pdftex.def)             Requested size: 85.35826pt x 70.80487pt.
+)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/denmark2.tex)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/norway1.tex
+</home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/norway1.pdf, id=27, 
+597.50786pt x 845.04686pt>
+File: /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/norway1.pdf Gra
+phic file (type pdf)
+
+<use /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/norway1.pdf>
+Package pdftex.def Info: /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figu
+res/norway1.pdf used on input line 12.
+(pdftex.def)             Requested size: 85.35826pt x 120.717pt.
+
+[2
+
+ </home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/suisse.pdf> </home/
+hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/netherlands.pdf> </home/hom
+/fthv/hi/toyexam/trunk/40_exam/questions/figures/denmark1.pdf>])
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/norway2.tex)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/portugal1.tex
+</home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/portugal1.pdf, id=93
+, 139.527pt x 287.19827pt>
+File: /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/portugal1.pdf G
+raphic file (type pdf)
+
+<use /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/portugal1.pdf>
+Package pdftex.def Info: /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figu
+res/portugal1.pdf used on input line 11.
+(pdftex.def)             Requested size: 62.59605pt x 128.84799pt.
+)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/math/squareroot.tex)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/math/addition.tex ( FP-EVAL
+( FP-UPN ( FP-RANDOM ( FP-DIV ) ) ( FP-MUL ) ( FP-ADD ) ( FP-TRUNC ) ) )
+( FP-EVAL ( FP-UPN ( FP-RANDOM ( FP-DIV ) ) ( FP-MUL ) ( FP-ADD ) ( FP-TRUNC )
+) ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-EVAL ( FP-UPN ( FP-ADD
+) ( FP-SUB ) ( FP-CLIP ) ) ) ( FP-EVAL ( FP-UPN ( FP-MUL ) ( FP-CLIP ) ) )
+( FP-EVAL ( FP-UPN ( FP-SUB ) ( FP-CLIP ) ) ))
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/math/interval.tex ( FP-EVAL
+( FP-UPN ( FP-RANDOM ( FP-DIV ) ) ( FP-MUL ) ( FP-ADD ) ( FP-TRUNC ) ) )
+( FP-EVAL ( FP-UPN ( FP-RANDOM ( FP-DIV ) ) ( FP-MUL ) ( FP-ADD ) ( FP-TRUNC )
+) ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-DIV ) ) ) ( FP-EVAL ( FP-UPN ( FP-CLIP
+) ) ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-LT? ) ( FP-LT? )
+( FP-LT? ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-LT? ) ( FP-LT? )
+( FP-LT? ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-LT? ) ( FP-LT? )
+( FP-LT? ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-LT? ) ( FP-LT? )
+( FP-LT? ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-LT? ) ( FP-LT? )
+( FP-LT? ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-LT? ) ( FP-LT? )
+( FP-LT? ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-LT? ) ( FP-LT? )
+( FP-LT? ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-LT? ) ( FP-LT? )
+( FP-LT? ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-LT? ) ( FP-LT? )
+( FP-LT? ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-LT? ) ( FP-LT? )
+( FP-LT? )) (/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/math/inverse.tex
+) (/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/math/inverse3.tex)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/math/graph.tex)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/math/sqrt2.tex ( FP-EVAL
+( FP-UPN ( FP-RANDOM ( FP-DIV ) ) ( FP-MUL ) ( FP-ADD ) ( FP-TRUNC ) ) )
+( FP-EVAL ( FP-UPN ( FP-POW ) ) ))
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/java/oRacingSequence.tex
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 12.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 12--12
+[][][][][][][][] 
+ []
+
+
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/code/ExamCode/src/racingsequ
+ence/r2/Sequence.java
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 3.
+)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 18--18
+[][][][][][][][] 
+ []
+
+
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/code/ExamCode/src/racingsequ
+ence/r3/Sequence.java)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 24--24
+[][][][][][][][] 
+ []
+
+
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/code/ExamCode/src/racingsequ
+ence/r1/Sequence.java)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 30--30
+[][][][][][][][] 
+ []
+
+
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/code/ExamCode/src/racingsequ
+ence/r4/Sequence.java
+LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <7> not available
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 7.
+))
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden10.t
+ex)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden11.t
+ex)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden12.t
+ex)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden1.te
+x)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden2.te
+x)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden3.te
+x)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden4.te
+x)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden5.te
+x)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden6.te
+x)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden7.te
+x)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden8.te
+x)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden9.te
+x) [3 </home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/norway1.pdf> <
+/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/portugal1.pdf>]
+[4] [5] [6] [7]
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 28.
+
+Overfull \hbox (156.48721pt too wide) in paragraph at lines 28--28
+[][][] 
+ []
+
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <7> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 28.
+( FP-EVAL ( FP-UPN ( FP-POW ) ( FP-MUL ) ( FP-ROUND ) ) ) [8
+
+]
+creating exam for Language=DE
+File: logo.pdf Graphic file (type pdf)
+<use logo.pdf>
+Package pdftex.def Info: logo.pdf used on input line 28.
+(pdftex.def)             Requested size: 108.405pt x 82.16257pt.
+
+Underfull \hbox (badness 10000) in alignment at lines 28--28
+[][][][]
+ []
+
+File: goodmark.png Graphic file (type png)
+<use goodmark.png>
+Package pdftex.def Info: goodmark.png used on input line 28.
+(pdftex.def)             Requested size: 9.60564pt x 10.45993pt.
+File: badmark.png Graphic file (type png)
+ <use badmark.png>
+Package pdftex.def Info: badmark.png used on input line 28.
+(pdftex.def)             Requested size: 9.60564pt x 10.45993pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+
+ []
+
+
+Overfull \hbox (156.48721pt too wide) in paragraph at lines 28--28
+[][][] 
+ []
+
+[1
+
+] (/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/benelux1.tex)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/benelux2.tex)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/suisse1.tex
+File: /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/suisse.pdf Grap
+hic file (type pdf)
+
+<use /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/suisse.pdf>
+Package pdftex.def Info: /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figu
+res/suisse.pdf used on input line 13.
+(pdftex.def)             Requested size: 99.58464pt x 64.85205pt.
+)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/netherlands1.tex
+File: /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/netherlands.pdf
+ Graphic file (type pdf)
+
+<use /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/netherlands.pdf>
+Package pdftex.def Info: /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figu
+res/netherlands.pdf used on input line 12.
+(pdftex.def)             Requested size: 85.35826pt x 100.72502pt.
+) (/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/netherlands2.tex
+) (/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/netherlands3.tex
+) (/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/denmark1.tex
+File: /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/denmark1.pdf Gr
+aphic file (type pdf)
+
+<use /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/denmark1.pdf>
+Package pdftex.def Info: /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figu
+res/denmark1.pdf used on input line 12.
+(pdftex.def)             Requested size: 85.35826pt x 70.80487pt.
+)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/denmark2.tex)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/norway1.tex
+File: /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/norway1.pdf Gra
+phic file (type pdf)
+
+<use /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/norway1.pdf>
+Package pdftex.def Info: /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figu
+res/norway1.pdf used on input line 12.
+(pdftex.def)             Requested size: 85.35826pt x 120.717pt.
+
+[2
+
+]) (/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/norway2.tex)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/portugal1.tex
+File: /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/portugal1.pdf G
+raphic file (type pdf)
+
+<use /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/portugal1.pdf>
+Package pdftex.def Info: /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figu
+res/portugal1.pdf used on input line 11.
+(pdftex.def)             Requested size: 62.59605pt x 128.84799pt.
+)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/math/squareroot.tex)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/math/addition.tex ( FP-EVAL
+( FP-UPN ( FP-RANDOM ( FP-DIV ) ) ( FP-MUL ) ( FP-ADD ) ( FP-TRUNC ) ) )
+( FP-EVAL ( FP-UPN ( FP-RANDOM ( FP-DIV ) ) ( FP-MUL ) ( FP-ADD ) ( FP-TRUNC )
+) ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-EVAL ( FP-UPN ( FP-ADD
+) ( FP-SUB ) ( FP-CLIP ) ) ) ( FP-EVAL ( FP-UPN ( FP-MUL ) ( FP-CLIP ) ) )
+( FP-EVAL ( FP-UPN ( FP-SUB ) ( FP-CLIP ) ) ))
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/math/interval.tex ( FP-EVAL
+( FP-UPN ( FP-RANDOM ( FP-DIV ) ) ( FP-MUL ) ( FP-ADD ) ( FP-TRUNC ) ) )
+( FP-EVAL ( FP-UPN ( FP-RANDOM ( FP-DIV ) ) ( FP-MUL ) ( FP-ADD ) ( FP-TRUNC )
+) ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-DIV ) ) ) ( FP-EVAL ( FP-UPN ( FP-CLIP
+) ) ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-LT? ) ( FP-LT? )
+( FP-LT? ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-LT? ) ( FP-LT? )
+( FP-LT? ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-LT? ) ( FP-LT? )
+( FP-LT? ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-LT? ) ( FP-LT? )
+( FP-LT? ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-LT? ) ( FP-LT? )
+( FP-LT? ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-LT? ) ( FP-LT? )
+( FP-LT? ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-LT? ) ( FP-LT? )
+( FP-LT? ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-LT? ) ( FP-LT? )
+( FP-LT? ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-LT? ) ( FP-LT? )
+( FP-LT? ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-LT? ) ( FP-LT? )
+( FP-LT? )) (/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/math/inverse.tex
+) (/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/math/inverse3.tex)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/math/graph.tex)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/math/sqrt2.tex ( FP-EVAL
+( FP-UPN ( FP-RANDOM ( FP-DIV ) ) ( FP-MUL ) ( FP-ADD ) ( FP-TRUNC ) ) )
+( FP-EVAL ( FP-UPN ( FP-POW ) ) ))
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/java/oRacingSequence.tex
+Overfull \hbox (6.0pt too wide) in paragraph at lines 12--12
+[][][][][][][][] 
+ []
+
+
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/code/ExamCode/src/racingsequ
+ence/r2/Sequence.java)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 18--18
+[][][][][][][][] 
+ []
+
+
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/code/ExamCode/src/racingsequ
+ence/r3/Sequence.java)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 24--24
+[][][][][][][][] 
+ []
+
+
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/code/ExamCode/src/racingsequ
+ence/r1/Sequence.java)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 30--30
+[][][][][][][][] 
+ []
+
+
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/code/ExamCode/src/racingsequ
+ence/r4/Sequence.java))
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden10.t
+ex)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden11.t
+ex)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden12.t
+ex)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden1.te
+x)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden2.te
+x)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden3.te
+x)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden4.te
+x)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden5.te
+x)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden6.te
+x)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden7.te
+x)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden8.te
+x)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden9.te
+x) [3] [4] [5] [6] [7]
+Overfull \hbox (156.48721pt too wide) in paragraph at lines 28--28
+[][][] 
+ []
+
+( FP-EVAL ( FP-UPN ( FP-POW ) ( FP-MUL ) ( FP-ROUND ) ) ) [8
+
+]
+creating exam for Language=EN
+File: logo.pdf Graphic file (type pdf)
+<use logo.pdf>
+Package pdftex.def Info: logo.pdf used on input line 28.
+(pdftex.def)             Requested size: 108.405pt x 82.16257pt.
+
+Underfull \hbox (badness 10000) in alignment at lines 28--28
+[][][][]
+ []
+
+File: goodmark.png Graphic file (type png)
+<use goodmark.png>
+Package pdftex.def Info: goodmark.png used on input line 28.
+(pdftex.def)             Requested size: 9.60564pt x 10.45993pt.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 28.
+File: badmark.png Graphic file (type png)
+ <use badmark.png>
+Package pdftex.def Info: badmark.png used on input line 28.
+(pdftex.def)             Requested size: 9.60564pt x 10.45993pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+
+ []
+
+
+Overfull \hbox (156.48721pt too wide) in paragraph at lines 28--28
+[][][] 
+ []
+
+[1
+
+] (/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/benelux1.tex)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/benelux2.tex)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/suisse1.tex
+File: /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/suisse.pdf Grap
+hic file (type pdf)
+
+<use /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/suisse.pdf>
+Package pdftex.def Info: /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figu
+res/suisse.pdf used on input line 13.
+(pdftex.def)             Requested size: 99.58464pt x 64.85205pt.
+)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/netherlands1.tex
+File: /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/netherlands.pdf
+ Graphic file (type pdf)
+
+<use /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/netherlands.pdf>
+Package pdftex.def Info: /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figu
+res/netherlands.pdf used on input line 12.
+(pdftex.def)             Requested size: 85.35826pt x 100.72502pt.
+) (/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/netherlands2.tex
+) (/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/netherlands3.tex
+) (/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/denmark1.tex
+File: /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/denmark1.pdf Gr
+aphic file (type pdf)
+
+<use /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/denmark1.pdf>
+Package pdftex.def Info: /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figu
+res/denmark1.pdf used on input line 12.
+(pdftex.def)             Requested size: 85.35826pt x 70.80487pt.
+)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/denmark2.tex)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/norway1.tex
+File: /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/norway1.pdf Gra
+phic file (type pdf)
+
+<use /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/norway1.pdf>
+Package pdftex.def Info: /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figu
+res/norway1.pdf used on input line 12.
+(pdftex.def)             Requested size: 85.35826pt x 120.717pt.
+
+[2
+
+]) (/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/norway2.tex)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/geography/portugal1.tex
+File: /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/portugal1.pdf G
+raphic file (type pdf)
+
+<use /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figures/portugal1.pdf>
+Package pdftex.def Info: /home/hom/fthv/hi/toyexam/trunk/40_exam/questions/figu
+res/portugal1.pdf used on input line 11.
+(pdftex.def)             Requested size: 62.59605pt x 128.84799pt.
+)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/math/squareroot.tex)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/math/addition.tex ( FP-EVAL
+( FP-UPN ( FP-RANDOM ( FP-DIV ) ) ( FP-MUL ) ( FP-ADD ) ( FP-TRUNC ) ) )
+( FP-EVAL ( FP-UPN ( FP-RANDOM ( FP-DIV ) ) ( FP-MUL ) ( FP-ADD ) ( FP-TRUNC )
+) ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-EVAL ( FP-UPN ( FP-ADD
+) ( FP-SUB ) ( FP-CLIP ) ) ) ( FP-EVAL ( FP-UPN ( FP-MUL ) ( FP-CLIP ) ) )
+( FP-EVAL ( FP-UPN ( FP-SUB ) ( FP-CLIP ) ) ))
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/math/interval.tex ( FP-EVAL
+( FP-UPN ( FP-RANDOM ( FP-DIV ) ) ( FP-MUL ) ( FP-ADD ) ( FP-TRUNC ) ) )
+( FP-EVAL ( FP-UPN ( FP-RANDOM ( FP-DIV ) ) ( FP-MUL ) ( FP-ADD ) ( FP-TRUNC )
+) ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-DIV ) ) ) ( FP-EVAL ( FP-UPN ( FP-CLIP
+) ) ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-LT? ) ( FP-LT? )
+( FP-LT? ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-LT? ) ( FP-LT? )
+( FP-LT? ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-LT? ) ( FP-LT? )
+( FP-LT? ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-LT? ) ( FP-LT? )
+( FP-LT? ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-LT? ) ( FP-LT? )
+( FP-LT? ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-LT? ) ( FP-LT? )
+( FP-LT? ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-LT? ) ( FP-LT? )
+( FP-LT? ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-LT? ) ( FP-LT? )
+( FP-LT? ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-LT? ) ( FP-LT? )
+( FP-LT? ) ( FP-EVAL ( FP-UPN ( FP-ADD ) ( FP-CLIP ) ) ) ( FP-LT? ) ( FP-LT? )
+( FP-LT? )) (/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/math/inverse.tex
+) (/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/math/inverse3.tex)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/math/graph.tex)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/math/sqrt2.tex ( FP-EVAL
+( FP-UPN ( FP-RANDOM ( FP-DIV ) ) ( FP-MUL ) ( FP-ADD ) ( FP-TRUNC ) ) )
+( FP-EVAL ( FP-UPN ( FP-POW ) ) ))
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/java/oRacingSequence.tex
+Overfull \hbox (6.0pt too wide) in paragraph at lines 12--12
+[][][][][][][][] 
+ []
+
+
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/code/ExamCode/src/racingsequ
+ence/r2/Sequence.java)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 18--18
+[][][][][][][][] 
+ []
+
+
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/code/ExamCode/src/racingsequ
+ence/r3/Sequence.java)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 24--24
+[][][][][][][][] 
+ []
+
+
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/code/ExamCode/src/racingsequ
+ence/r1/Sequence.java)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 30--30
+[][][][][][][][] 
+ []
+
+
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/code/ExamCode/src/racingsequ
+ence/r4/Sequence.java))
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden10.t
+ex
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+[][]\T1/ptm/m/n/10 Zeeuws Vlaan-
+ []
+
+)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden11.t
+ex
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+[][]\T1/ptm/m/n/10 Zeeuws Vlaan-
+ []
+
+)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden12.t
+ex
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+[][]\T1/ptm/m/n/10 Zeeuws Vlaan-
+ []
+
+)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden1.te
+x
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+[][]\T1/ptm/m/n/10 Zeeuws Vlaan-
+ []
+
+)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden2.te
+x
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+[][]\T1/ptm/m/n/10 Zeeuws Vlaan-
+ []
+
+)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden3.te
+x
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+[][]\T1/ptm/m/n/10 Zeeuws Vlaan-
+ []
+
+)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden4.te
+x
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+[][]\T1/ptm/m/n/10 Zeeuws Vlaan-
+ []
+
+)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden5.te
+x
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+[][]\T1/ptm/m/n/10 Zeeuws Vlaan-
+ []
+
+)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden6.te
+x
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+[][]\T1/ptm/m/n/10 Zeeuws Vlaan-
+ []
+
+)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden7.te
+x
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+[][]\T1/ptm/m/n/10 Zeeuws Vlaan-
+ []
+
+)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden8.te
+x
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+[][]\T1/ptm/m/n/10 Zeeuws Vlaan-
+ []
+
+)
+(/home/hom/fthv/hi/toyexam/trunk/40_exam/questions/multiset/provinciesteden9.te
+x
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+[][]\T1/ptm/m/n/10 Zeeuws Vlaan-
+ []
+
+) [3] [4] [5] [6] [7]
+Overfull \hbox (156.48721pt too wide) in paragraph at lines 28--28
+[][][] 
+ []
+
+( FP-EVAL ( FP-UPN ( FP-POW ) ( FP-MUL ) ( FP-ROUND ) ) ) [8
+
+] (./catalog.aux) ) ) )
+
+Here is how much of LuaTeX's memory you used:
+ 20427 strings out of 494973
+ 244174,460012 words of node,token memory allocated
+ 1325 words of node memory still in use:
+   18 hlist, 1 vlist, 1 rule, 74 glue, 54 glue_spec, 6 write, 100 pdf_literal, 
+16 pdf_colorstack nodes
+   avail lists: 1:9,2:54,3:6977,4:14562,5:2772,6:6215,7:1572,9:6951,10:745
+ 21644 multiletter control sequences out of 65536+200000
+ 116 fonts using 4568383 bytes
+ 62i,11n,92p,860b,1443s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/c
+ourier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
+w/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on catalog.pdf (24 pages, 453882 bytes).
+
+PDF statistics: 223 PDF objects out of 1000 (max. 8388607)
+ 146 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 131072)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,105 @@
+\documentclass{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{subfig}
+\def\RandomSeed{93645612}
+\usepackage[box,completemulti]{automultiplechoice}
+\usepackage{shuffler}
+\begin{document}
+
+Design:
+assume at most 20 qa pairs per matrix.
+For each pair, a matrix row can be created. In the given original
+order, the matrix with correct choices ticked would be empty, except
+for the diagonal.
+
+\begin{table}
+  \begin{center}
+\subfloat[reshuffle matrix. Row, capital is question, column, lower
+      case, is answer]{\scriptsize
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}\hline
+      & a & b & c & d & e & f & g & h & i & j \\\hline
+      A & x &   &   &   &   &   &   &   &   &   \\\hline
+      B &   & x &   &   &   &   &   &   &   &   \\\hline
+      C &   &   & x &   &   &   &   &   &   &   \\\hline
+      D &   &   &   & x &   &   &   &   &   &   \\\hline
+      E &   &   &   &   & x &   &   &   &   &   \\\hline
+      F &   &   &   &   &   & x &   &   &   &   \\\hline
+      G &   &   &   &   &   &   & x &   &   &   \\\hline
+      H &   &   &   &   &   &   &   & x &   &   \\\hline
+      I &   &   &   &   &   &   &   &   & x &   \\\hline
+      J &   &   &   &   &   &   &   &   &   & x \\\hline
+    \end{tabular}}
+\quad
+    \subfloat[Shuffling answers and rows alike]{\scriptsize
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}\hline
+      & d & j & h & g & a & c & b & f & e & i \\\hline
+      A &   &   &   &   & x &   &   &   &   &   \\\hline
+      B &   &   &   &   &   &   & x &   &   &   \\\hline
+      C &   &   &   &   &   & x &   &   &   &   \\\hline
+      D & x &   &   &   &   &   &   &   &   &   \\\hline
+      E &   &   &   &   &   &   &   &   & x &   \\\hline
+      F &   &   &   &   &   &   &   & x &   &   \\\hline
+      G &   &   &   & x &   &   &   &   &   &   \\\hline
+      H &   &   & x &   &   &   &   &   &   &   \\\hline
+      I &   &   &   &   &   &   &   &   &   & x \\\hline
+      J &   & x &   &   &   &   &   &   &   &   \\\hline
+    \end{tabular}}
+
+  \end{center}
+\end{table}
+
+Shuffling the (anwser, row) pairs creates a new matrix and answer
+order, in which the ticks are in more or less random position, where
+the ticked column matches the question number in the original order. 
+
+
+\begin{table}
+  \begin{center}
+    \caption{Final, Shuffling questions and rows as pairs}\scriptsize
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}\hline
+      & d & j & h & g & a & c & b & f & e & i \\\hline
+      D & x &   &   &   &   &   &   &   &   &   \\\hline
+      C &   &   &   &   &   & x &   &   &   &   \\\hline
+      G &   &   &   & x &   &   &   &   &   &   \\\hline
+      J &   & x &   &   &   &   &   &   &   &   \\\hline
+      F &   &   &   &   &   &   &   & x &   &   \\\hline
+      A &   &   &   &   & x &   &   &   &   &   \\\hline
+      H &   &   & x &   &   &   &   &   &   &   \\\hline
+      B &   &   &   &   &   &   & x &   &   &   \\\hline
+      I &   &   &   &   &   &   &   &   &   & x \\\hline
+      E &   &   &   &   &   &   &   &   & x &   \\\hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+Distribute questions and answers over the AMC allocated tokens,
+e.g. questions from 1 to 20, answers from 21 to 40, matrix rows from
+41 to 60. This reuses the defined token registers.
+
+First let us see if we grasp the randomisation.
+
+\clearpage
+\begin{question}{t}
+
+  Which of the following cities lie in what country?\\
+  \begin{qamatrix}
+    \qapair{a Athens}{A Greece}
+    \qapair{b Paris}{B France}
+    \qapair{c London}{C England}
+    \qapair{b Berlin}{D Germany}
+    \qapair{e Lisbon}{E Portugal}
+    \qapair{f Dublin}{F Ireland}
+    \qapair{g Rome}{G Italy}
+    \qapair{h Dubrovnik}{H Croatia}
+  \end{qamatrix}
+\end{question}
+% \dumpQApair
+
+a row:\\
+\begin{tabular}{|r|*8{|c|}}
+0 &A& B& C& D& E& F& G& H\\\hline
+1\QArow{5}{8}\\\hline
+2\QArow{2}{8}
+\end{tabular}
+\end{document}

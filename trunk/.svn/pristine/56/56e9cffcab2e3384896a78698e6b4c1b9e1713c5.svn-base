@@ -1,0 +1,21 @@
+\begin{questionmult}{math-graph}
+  Let us consider the three functions which graphs are plotted below:
+  \pgfmathrandominteger{\a}{2}{4}  
+  \begin{center}
+    \begin{tikzpicture}[domain=0:4]
+      \draw[very thin,color=gray] (-0.1,-4.1) grid (3.9,3.9);
+      \draw[->] (-0.2,0) -- (4.2,0) node[right] {$x$};
+      \draw[->] (0,-4.2) -- (0,4.2) node[above] {$f(x)$};
+      \draw[color=red] plot (\x,{(1+\a/4)*\x-\a}) node[right] {$f_{1} (x)$};
+      \draw[color=blue] plot (\x,{\a*sin(\x r)}) node[right] {$f_{2}(x)$};
+      \draw[color=orange] plot (\x,{\a*cos(\x r)}) node[right] {$f_{3}(x)$};
+    \end{tikzpicture}
+  \end{center}
+  Then:
+  \begin{choices}
+    \pgfmathrandominteger{\x0}{2}{4}  
+    \correctchoice{$f_{2}(\x0)$=\pgfmathparse{\a*sin(\x0 r)} \pgfmathprintnumber{\pgfmathresult}.}
+    \correctchoice{$f_{3}(\x0)$=\pgfmathparse{\a*cos(\x0 r)} \pgfmathprintnumber{\pgfmathresult}.}
+    \wrongchoice{La fonction $f_{1}(x)$ est une fonction linéaire.}
+  \end{choices}
+\end{questionmult}
