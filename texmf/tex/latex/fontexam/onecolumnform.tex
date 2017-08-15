@@ -1,0 +1,43 @@
+%%
+%% defines answer sheet with one column.
+%% use provide command  to let form section be overridden
+\providecommand\FormColumnsStart{}
+\providecommand\FormColumnsEnd{}
+\newcommand{\subject}[1]{
+\typeout{creating exam for Language=#1}
+\AMCsetFoot{\textbf{\examcode~\examdate}{} \surname,~\name{} (\id), page~\thepage}
+
+\cfoot[\FootText]{\FootText}
+  \begin{examcopy}[1]
+    \SetLang{#1}
+    \coverpage
+    \ResetCounters
+    \ifshuffle\shufflegroup{general}\else\fi
+    \insertgroup{general}
+    \IfFileExists{\ExamInstanceDir/openquestions.tex}{
+      \clearpage
+      \hrule
+
+      \vspace{1ex}
+      \begin{center}{\Large \textbf{\sf{}%
+            \EN{Open questions}%
+            \NL{Open vragen}%
+            \DE{Offene Fragen}%
+          }}\end{center}
+
+      \bigskip
+      \insertgroup{open}
+    }{}
+    \InputIfFileExists{\ExamInstanceDir/appendix.tex}{
+    }{}
+    \AMClabel{lastpage}
+    \clearpage    
+    \AMCformBegin
+    \AMCassociation{\id}
+    \AnswerFormHeadAlt
+    \FormColumnsStart{}
+      \AMCform
+    \FormColumnsEnd{}
+
+  \end{examcopy}%
+}

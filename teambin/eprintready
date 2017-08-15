@@ -1,0 +1,26 @@
+#!/bin/bash
+# run this in a MC-Project/.../copies dir
+# rename exams to shorter names
+scriptdir=$(dirname $0)
+dirname=$(basename $(pwd))
+if [ "${dirname}" !=  "copies" ] ; then
+    echo sorry, need to be in copies directory
+    exit 1
+fi
+filecount=$(ls sheet*0S.pdf | wc -l)
+if [ $filecount -lt 1 ]; then
+    echo no exam files here
+fi
+for i in sheet*0S.pdf; do  mv ${i} $(echo ${i} | sed -e's/heet-//;s/-0S/S/') ; done
+
+# collect answerforms into one file
+filecount=$(ls sheet*1A.pdf | wc -l)
+if [ $filecount -lt 1 ]; then
+    echo no answer forms here
+fi
+uitdeel=${scriptdir}/Uitdeelinstructie-AMC-examens.pdf
+pdftk ${uitdeel} *1A.pdf cat output forms.pdf
+pdftk s0001S.pdf cat 1 output voorbeeld-voorblad.pdf
+rm *1A.pdf
+echo "collected ${filecount} files, now copy all pdf files to an usb stick for printing."
+echo "have the \"forms.pdf\" file printed single sides, the \"s*S.pfd\" files in any way you want them."

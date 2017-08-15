@@ -1,0 +1,2 @@
+#!/bin/bash
+enscript -Ejava -j -o - --color $* | ps2pdfwr - $(basename $1).pdf

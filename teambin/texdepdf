@@ -1,0 +1,93 @@
+#!/usr/bin/perl -w
+sub depfile ($$);
+
+$fn=$ARGV[0];
+$fn =~ s/\.tex$//;
+my $pdffile=$fn.".pdf";
+my $contin=" ";
+my $texpath=$ENV{TEXINPUTS};
+$level='';
+$fn .= ".tex";
+# get array of dirs where file can live
+if (defined $texpath && '' ne $texpath) {
+  my @texdir = split /:/,$texpath;
+}
+for ($i=0; $i < scalar(@texdir); $i++) {
+  $texdir[$i] =~ s/^~/$ENV{HOME}/;
+  if (($texdir[$i] eq "") or ($texdir[$i] eq ".")) {
+    $texdir[$i]=".";
+  }
+}
+print "$pdffile : " ;
+depfile($fn, 'fh00');
+my $rest; # line tail as comment
+print "\n\n";
+exit(0);
+
+sub depfile ($$)
+{
+  local ($fn,$fh) = @_;
+  $fh++;
+  $level = '  '.$level;
+  unless (open $fh ,"<$fn" ) {
+    print STDERR "Can't open $fn: $!\n";
+    return;
+  }
+  while (<$fh>) {
+    $dependency="";
+    ($_,$rest) = split'%';
+    if (/\\include\{(.*)\}/){
+      $dependency = $1;
+      if (!($dependency =~ /.tex/)) {
+	$dependency .=".tex";
+      }
+    } 
+    elsif (/.*\\input\{(.*?)\}/) {
+      $dependency = $1;
+      if (!($dependency =~ /.tex/)) {
+	$dependency .=".tex";
+      }
+    }
+    elsif (/.*\\pdfimage.*\{(.*?)\}/) {
+      $dependency = $1;
+    }
+    elsif (/.*\\verbatiminput\{(.*?)\}/) {
+      $dependency = $1;
+    }
+    elsif (/.*\\question\{(.*?)\}\{(.*?)\}/) { 
+      $dependency = "$1/"."$2";
+    }
+    elsif (/.*\\includegraphics.*\{(.*?)\}.*/) { 
+      $dependency = "$1".".pdf";
+    }
+    elsif (/.*\\lstinputlisting.*\{(.*?)\}/) { 
+      $dependency = $1;
+    }
+    if ($dependency ne "") {
+#	print "$dependency ";
+# test for file existence
+      $i=0;
+      $found=0;
+      $testfile = $dependency;
+      if (-f $testfile) {
+	print "$contin"."$level $testfile ";
+	$contin="\\\n\t";
+	depfile($testfile, $fh);
+      } else {
+	while (($i < scalar(@texdir)) and !$found) {
+	  $testfile = $texdir[$i]."/".$dependency;
+	  #	print "trying [$testfile]\n";
+	  if (-f $testfile) { 
+	      print "$contin"."$level $testfile";
+	      $contin="\\\n\t";
+	    $found = 1;
+	  } else {
+	    $i++;
+	  }
+	}
+      }
+    }
+  }
+  close $fh;
+  $level=substr($level, 2);
+}

@@ -1,0 +1,42 @@
+#!/bin/bash
+# script updates website or (pdf) resources.
+# Can be overruled by ./publish or ../publish which wil 
+#  be executed when found and executable. 
+# if file .webproperties found in cur dir, then web site is assumed
+# and a remote command un the web server updates the web site from
+# the repository in the directory named 'webroot' in the webproperties file.
+# For latex sheets they are named for the directory 
+# with _sheet_<lang>.pdf appended.
+phost=fontysvenlo.org
+webroot=~/public_html
+
+source finduptree
+p=$(findUpTree publish)
+if [ "${p}x" != "x" -a -x "${p}" ]; then
+    echo found executable \"publish\" at \"$p\"
+    exec $p
+fi
+
+p=$(findUpTree .webproperties)
+if [ -e material.tex -a "${p}x" != "x" -a -s "${p}" ] ; then
+    source ${p}
+    echo "Assuming this ($(basename $(pwd))) is a latex sheet directory."
+    echo "    Will try to upload to server [${phost}] to [${webroot}]"
+    bname=$(basename $(pwd))
+    for i in ${bname}*.pdf; do
+	# remove the target, so script is idempotent for all teachers 
+	ssh ${phost} rm -f ${webroot}/${i}
+	#, will get user ownership
+	rsync -av --chmod=u+rw,g+rw,o+r ${i} ${phost}:${webroot}/${i}
+	ssh ${phost} ls -Ql ${webroot}/${i}
+    done && exit 0
+    echo "Cannot find ${bname}*.pdf; maybe a build step, like [msheets]"
+    exit 1
+elif [ "${p}x" != "x" -a -s "${p}" ] ; then
+    source ${p}
+    ssh -A ${phost} "umask 002 ;svn update ${webroot}"
+    exit 0
+else
+    echo 'do not know where to publish to; file .webproperties missing'
+    exit 1
+fi

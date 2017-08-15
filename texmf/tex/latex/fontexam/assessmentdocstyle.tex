@@ -1,0 +1,68 @@
+\documentclass[10pt,dvipsnames]{article}
+%\usepackage[english,german,dutch]{babel}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage[utf8]{inputenc}
+\usepackage{times}
+\usepackage{rotating}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{colortbl}
+\usepackage{array}
+\usepackage{times}
+\usepackage{fancybox}
+\usepackage{lineno}
+\usepackage{hyperref}
+\usepackage{mdwlist}
+\linenumbers
+\pagewiselinenumbers
+\modulolinenumbers[3]
+% geometry for the documents in this dir.
+\usepackage[a4paper,
+%      scale={0.7,0.86},
+      bindingoffset=1cm
+      ]{geometry}
+%\usepackage{savetrees}
+%\addtolength\voffset{4mm}
+\setlength\parindent{0pt}
+\setlength\parskip{.25\baselineskip}
+\title{Exam Software Engineering 1}
+\usepackage{fancyhdr}
+\renewcommand\footrulewidth{1pt}
+\addtolength\headheight{0.2\baselineskip}
+\newcommand{\NL}[1]{#1}
+\newcommand{\DE}[1]{{\color[rgb]{0,0.5,0}#1}}
+\newcommand{\EN}[1]{#1}
+\newcommand\Code[1]{\texttt{\color{BlueViolet}\textbf{#1}}}
+\pagestyle{fancy}
+\usepackage{afterpage}
+\usepackage{fancybox}
+\usepackage{wrapfig}
+\cfoot[\thepage/\pageref{LastPage}]{\thepage/\pageref{LastPage}}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+%%Fancy listings.
+\lstset{
+%        backgroundcolor=\color{lbcolor},
+        tabsize=4,
+        rulecolor=\color{black},
+        language=java,
+        basicstyle=\scriptsize,
+        upquote=true,
+        aboveskip={1.5\baselineskip},
+        columns=fixed,
+        showstringspaces=false,
+        extendedchars=true,
+        breaklines=true,
+        prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+        frame=lines,
+        showtabs=false,
+        showspaces=false,
+        showstringspaces=false,
+        identifierstyle=\ttfamily,
+        keywordstyle=\color[rgb]{0,0,1},
+        commentstyle=\color[rgb]{0,0.545,0},
+        stringstyle=\color[rgb]{0.627,0.126,0.941}
+}
+%%% Local Variables: 
+%%% mode: plain-tex
+%%% TeX-master: t
+%%% End: 

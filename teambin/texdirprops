@@ -1,0 +1,4 @@
+out
+[0123456789]*_sheets_*.pdf
+[0123456789]*handout_*.pdf
+[0123456789]*transp_*.pdf

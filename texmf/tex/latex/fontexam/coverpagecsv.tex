@@ -1,0 +1,332 @@
+% 
+% Voorblad voor Fontys HV tentamens
+\usepackage{pifont}
+\usepackage{multicol}
+% \newcommand{\progresscode}{MCM1TT}
+\newcommand\tickno{\ding{111}}%{$\circ$}
+\newcommand\tickyes{\ding{52}}%{$\bullet$}
+\newlength\frontpageboxwidth
+\setlength\frontpageboxwidth{172mm}
+\providecommand\Papierja\tickno      \providecommand\Papiernee\tickyes
+\providecommand\Papierklad\tickno    \providecommand\Papierlijn\tickno
+\providecommand\Papierruit\tickno     
+\providecommand\Rekenappja\tickno     \providecommand\Rekenappnee\tickyes
+\providecommand\Diktaatja\tickno      \providecommand\Diktaatnee\tickyes
+\providecommand\Boekja\tickno         \providecommand\Boeknee\tickyes
+\providecommand\Anderlmja\tickno     \providecommand\Anderlmnee\tickyes
+\providecommand\Inleverenja\tickyes   \providecommand\Inleverennee\tickno
+\providecommand\Boeklijst{}
+\providecommand\Diktaatlijst{}
+\providecommand\Validator{\Lecturer}
+\providecommand\ValidatorSignature{signatures/scn_sig.png}
+\providecommand\ValidatorPicture{}
+% \providecommand\ValidatorPicture{\begin{picture}(0,0)(0,0)\put(0,0){\includegraphics[height=1.5cm]{\ValidatorSignature}}\end{picture}}
+\newcommand\goodmark{\raisebox{-.5ex}{\includegraphics[height=2ex]{goodmark.png}}}
+\newcommand\badmark{\raisebox{-.5ex}{\includegraphics[height=2ex]{badmark.png}}}
+\def\Ondertitel{Software Engineering/\NL{Bedrijfskundige
+Informatica}\DE{Wirtschaftsinformatik}\EN{Business Informatics}}
+\newcommand\aleermiddelbox{}
+\newcommand\Opmerkingen{}
+% \newcommand\Doelgroep{definieer Doelgroep!}
+\InputIfFileExists{\ExamInstanceDir/date.tex}{}{}
+\providecommand\Validator{\Lecturer}
+\setlength\unitlength{1mm}
+\providecommand\coverpage{%
+  \setlength\parindent{10mm}
+  \begin{picture}(195,225)(10,20)
+    %% Logo
+    \put(0,230){\includegraphics[width=1.5in]{logo}}
+    \put(22,240){
+      \begin{minipage}{.85\frontpageboxwidth}
+        \flushright
+        % \begin{spacing}{1.5}
+        \textbf{\Large\textsf{Hogeschool voor Techniek en
+            Logistiek\\ \vspace{.3\baselineskip}
+            \large\Ondertitel\\ \vspace{.3\baselineskip}
+            \large\examtype}}
+        % \end{spacing}
+      \end{minipage}
+    }
+    
+    % module identification
+
+    \put(-10,220){
+      \textsf{
+        \fbox{\framebox[\frontpageboxwidth][c]{
+            \NL{
+              \begin{tabular*}{.85\frontpageboxwidth}[t]{l@{\extracolsep{\fill}}r}
+                Vak: \examtitle&\\
+                ProgRESS-code: \examcode & Datum: \examdate\\
+                Docent: \Lecturer & Tijd: \examtime\\
+                Gecontroleerd door: \Validator \ValidatorPicture& \\
+                Opleiding: Informatica & Aantal bladen: \AMCpageref{lastpage}\\
+              \end{tabular*}
+            }
+            \DE{
+              \begin{tabular*}{0.85\frontpageboxwidth}[t]{l@{\extracolsep{\fill}}r}
+                Fach: \examtitle&\\
+                ProgRESS-code: \examcode & Datum: \examdate\\
+                Dozent: \Lecturer & Zeit: \examtime\\
+                Validiert von: \Validator \ValidatorPicture&\\
+                Studiengang: Informatik & Seitenzahl: \AMCpageref{lastpage}\\
+              \end{tabular*}
+            }
+            \EN{
+              \begin{tabular*}{.85\frontpageboxwidth}[t]{l@{\extracolsep{\fill}}r}
+                Module: \examtitle&\\
+                ProgRESS-code: \examcode & Date: \examdate\\
+                Teacher: \Lecturer & Time: \examtime\\
+                Validated by: \Validator \ValidatorPicture &\\
+                Course: Informatica & Page count: \AMCpageref{lastpage}\\
+              \end{tabular*}
+            }
+          }
+        }
+      }
+    }% end put        
+
+
+    \put(-10,185){
+      \fbox{
+        \framebox[\frontpageboxwidth][c]{
+          \NL{
+            \begin{tabular*}{.85\frontpageboxwidth}[t]{llll}
+              \textbf{Gegevens m.b.t. leermiddelen} &&&\\
+              Papier &\Papiernee Nee& \Papierja Ja en wel &
+                                                            \Papierklad gemarkeerd Kladpapier\\
+              &&                                   & \Papierlijn Lijntjespapier\\
+              &&                                   & \Papierruit Ruitjespapier \\
+              Rekenapparaat & \Rekenappnee Nee & \Rekenappja Ja &\\
+              Diktaten &\Diktaatnee Nee& \Diktaatja Ja en wel& \Diktaatlijst\\
+              Boeken & \Boeknee Nee & \Boekja Ja en wel& \Boeklijst\\
+              Andere leermiddelen &\Anderlmnee Nee & \Anderlmja Ja en wel& \aleermiddelbox\\
+              Tentamenopgaven inleveren & \Inleverennee Nee & \Inleverenja Ja&\\
+            \end{tabular*}
+          }
+          \EN{
+            \begin{tabular*}{0.85\frontpageboxwidth}[t]{llll}
+              \textbf{Information w.r.t. materials} &&&\\
+              Paper &\Papiernee No & \Papierja Yes and & \Papierklad
+                                                         marked scratch paper\\
+              &&                                       & \Papierlijn Lined paper \\
+              &&                                       & \Papierruit squared paper \\
+              Calculator & \Rekenappnee No & \Rekenappja Yes &\\
+              Sylabi &\Diktaatnee No& \Diktaatja Yes and& \Diktaatlijst\\
+              Books & \Boeknee No & \Boekja Yes and & \Boeklijst\\
+              Other study materials &\Anderlmnee No & \Anderlmja Yes and & \aleermiddelbox\\
+              Hand in Exam questions & \Inleverennee No & \Inleverenja Yes &\\
+            \end{tabular*}
+          }
+          \DE{
+            \begin{tabular*}{0.85\frontpageboxwidth}[t]{llll}
+              \textbf{Erlaubte Lehrmittel} &&&\\
+              Papier &\Papiernee Nein& \Papierja Ja und zwar &
+                                                               \Papierklad markiertes Schmierpapier\\
+              &&                                   & \Papierlijn liniertes Papier\\
+              &&                                   & \Papierruit kariertes Papier \\
+              Taschenrechner & \Rekenappnee Nein & \Rekenappja Ja &\\
+              Skripte &\Diktaatnee Nein& \Diktaatja Ja und zwar& \Diktaatlijst\\
+              Bücher & \Boeknee Nein & \Boekja Ja und zwar& \Boeklijst\\
+              Sonstige Lehrmittel &\Anderlmnee Nein & \Anderlmja Ja und zwar & \aleermiddelbox\\
+              Klausurbogen einlieferen & \Inleverennee Nein & \Inleverenja Ja&\\
+            \end{tabular*}
+          }
+        }
+      }
+    }
+    
+    \put(-10,101){
+      \fbox{\framebox[\frontpageboxwidth][c]{\sffamily
+          \begin{minipage}{.85\frontpageboxwidth}%
+            \raggedright\parindent\medskipamount
+            \begin{center}
+              \textbf{\EN{Remarks}\NL{Opmerkingen}\DE{Bemerkungen}}
+            \end{center}
+            
+            \begin{itemize}%
+            % \item \EN{Remember to check your name and student number on
+            %     the score form.}
+            %   \NL{Denk erom naam en studentnummer op het voorblad en
+            %     scoreblad in te vullen.}
+            %   \DE{Denken Sie daran den Namen und die Studentennummer
+            %     auf dem Vorblatt und Antwortblatt aus zu füllen.}
+            \item \EN{This exam has \amccount\ multiple choice questions earning a
+                maximum of \amcpoints\ points and
+                \amcopencount\ open questions earning a maximum of
+                \amcopenpoints\ points. The points are summed and
+                normalised to a range of 1 to 10.}
+              \NL{Dit tentamen omvat \amccount\ multiple choice
+                vragen waarmee je \amcpoints\ punten kunt verdienen en
+                \amcopencount\ open vragen waarmee je \amcopenpoints\ 
+                punten kunt verdienen. De punten worden opgeteld en
+                genormaliseerd naar een bereik van 1 to 10. }
+              \DE{Diese Klausur enthält \amccount\ Multiple-Choice Aufgaben, mit denen
+                man \amcpoints\ Punkte verdienen kann, und
+                \amcopencount\ 
+                offene Fragen, mit denen \amcopenpoints\ Punkte verdient
+                werden können. Die Punkte werden addiert und auf
+                einen Bereich von 1 bis 10 normalisiert.}  
+            \item \EN{Completely fill out the black boxes with a black
+                pencil or felt tip. Thus
+                like this:  \goodmark\ 
+                and \textit{not} like: \badmark.
+                When writing the answers to the open questions to the
+                answer sheet, please stay clear of the other boxes.
+              }
+              \NL{Vul bij het invullen van het
+                antwoordblad de hokjes volledig met zacht zwart potlood
+                of zwarte viltstift. Dus
+                zo: \goodmark\ 
+                en niet
+                zo: \badmark.                
+                Schrijf bij het invullen van de open vragen op het
+                antwoordblad niet over de hokjes van de andere antwoorden. 
+              }
+              \DE{Beim Ausfüllen des Antwortblatts die
+                Kästchen vollständig mit Bleistift oder
+                Filzschreiber ausfüllen. Also
+                so:  \goodmark\ 
+                und nicht so: \badmark.
+
+                Schreiben Sie beim Eintragen der offenen Fragen auf dem
+                Antwortblatt nicht über die Kästchen der anderen
+                Antworten.
+              }
+            \item{\large \NL{Bij sommige vragen zijn 1 of meer
+                  antwoorden mogelijk. Deze opgaven zijn gemerkt met
+                  een \multiSymbole{}. Waar het \multiSymbole\ 
+                  ontbreekt is maar één antwoord correct.}
+                \EN{With some questions one or more answers apply.
+                  Such questions as marked wit a
+                  \multiSymbole{}. Where the \multiSymbole\ is missing,
+                only one answer is correct.}
+                \DE{Bei manchen Fragen  sind eine oder mehrere
+                  Antworten möglich. Solche Fragen sind mit einem
+                  \multiSymbole{} gekennzeichnet. Wo das
+                  \multiSymbole\ fehlt ist nur eine Antwort richtig.}}
+            \item \EN{\textbf{Hint:} The multiple choice exam has a
+                separate answer form. Use the exam pages to write down your tentative
+                answers. Once you are satisfied with your the answers,
+                copy them to the answer form. Please do not fold, crush or smear the
+                correctors copy.}
+              \NL{\textbf{Tip:} Het examen heeft een los antwoordblad.
+                Schrijf je voorlopige antwoorden op het examenpapier
+                of kladpapier. Zodra je tevreden bent met je
+                antwoorden kopieer je deze naar het losse
+                antwoordblad. Zorg er voor dat het antwoordblad niet gekreukt of
+                vuil raakt.}
+              \DE{\textbf{Hinweis:} Diese Klausur enhält ein separates
+                Antwortblatt. Schreiben Sie Ihre vorläufigen Antworten zunächst
+                auf die Klausurbögen. Wenn Sie dann mit
+                Ihren Antworten zufrieden sind, übertragen Sie diese auf das
+                Antwortblatt. Bitte knittern oder verschmutzen Sie dieses
+                Blatt nicht.}
+            \item {\Large \sc\bfseries\underline{{No Paper In or Out
+                    Rule:}}}
+              \EN{Hand in all paper, including optional scrap paper, you received during the
+                exam. Not handing in your papers results in no
+                grade. All papers are put to your name and hence identifiable!}
+              \NL{Al het ontvangen papier (inclusief optioneel kladpapier) kompleet inleveren. Niet
+                ingeleverde papieren betekent geen cijfer. Alle
+                papieren zijn  op naam gesteld en identificeerbaar!}
+              \DE{Bitte alle erhaltenen Papiere, inklusive
+                  optionelles Schmierpapier, komplett
+                  abgeben. Nicht abgebene Papiere bedeutet keine
+                  Note. Alle Papiere
+                  ist personalisiert und damit identifizierbar!}
+            \end{itemize}%
+            
+            
+          \end{minipage}
+          \vspace{3mm}
+        }
+      }
+    }
+    %% student identification
+    \put(-10,28){
+      \fbox{\framebox[\frontpageboxwidth][c]{
+          \begin{minipage}{.85\frontpageboxwidth}
+            \bf
+            \vspace{5mm}
+            \NL{Naam student}\DE{Name Student}%
+            \EN{Name Student}: {\Large\sf \name~\surname}% \dotfill
+
+            \vspace{5mm}
+            \NL{Studentnummer}\DE{Studentnummer}\EN{Student number}:
+            {\Large \texttt{\id} }%\dotfill 
+
+            \NL{Klas}\DE{Klasse}\EN{Class}:  \Doelgroep\\
+          \end{minipage}
+        }}
+    }
+  \end{picture}
+  \clearpage
+} % coverpage
+% einde voorblad
+
+\newcommand\answerFormHead{
+  \setlength\parindent{0pt}
+  \begin{picture}(195,63)
+    \put(25,85){\begin{minipage}{\linewidth}
+        \begin{center}
+          {\large\bf\sf \DE{Anwortblatt}\NL{Antwoordblad}\EN{Answer form}}
+        \end{center}
+      \end{minipage}
+    }
+
+    \put(0,40){\begin{minipage}{.55\linewidth}
+%      {\textbf{\sf{}Studentnummer}}\\
+        \AMCcode{snummer}{7}
+      \vspace{.3\baselineskip}
+    \end{minipage}}
+
+    \put(79,50){\fbox{    
+        \begin{minipage}{.45\linewidth}\sf
+          \DE{Nachname und Vorname-,}\NL{Achternaam en
+            voornaam}:\surname, \name\\
+
+          Studentnummer:\id \\
+          \vspace*{2mm}
+        \end{minipage}
+    }
+  }
+  \put(79,20){\begin{minipage}{.45\linewidth}
+      \sf\EN{Encode your student number in the boxes on the left. Make
+      all boxes on this page that apply completely black with pencil or felt tip.}
+    \DE{Tragen Sie ihre studentnummer in den Kästchen auf der
+      linke Seite. Machen Sie die Kästchen auf dieser Seite die zutreffen völlig
+      Schwarz.}
+    \NL{Vul je studentnummer in de hokjes aan de linkerzijde in. Maak
+      alle juiste hokjes op deze pagina volledig zwart.}
+      
+    \end{minipage}
+  }
+ \put(0,10){\rule{1\linewidth}{1pt}}
+  \end{picture}
+
+  \vspace{-12mm}
+}
+
+\newcommand\AnswerFormHeadAlt{%
+  \begin{picture}(195,0)(0,0)
+  \put(0,25){\large\bf Answer sheet \examcode{} \NL{datum}\DE{Datum}\EN{Date} \examdate}
+  \put(0,5){  \namefield{\fbox{    
+      \begin{minipage}{.85\linewidth}
+        Name: {\Large{\bf \surname{}, \name{}} \hfill{}\texttt{\lang}~student number \textsf{\id}}
+        \vspace*{1mm}
+      \end{minipage}
+    }}}
+\end{picture}
+}
+      
+%% AMC tweeking
+\AMCformVSpace=1ex
+\AMCformHSpace=0em
+%\AMCboxDimensions{size=2ex,down=.4ex,rule=.5pt}
+\setlength{\columnseprule}{.3pt}
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 

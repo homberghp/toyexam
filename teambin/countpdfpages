@@ -1,0 +1,16 @@
+#!/usr/bin/perl -w
+use POSIX qq(floor);
+my $psum=0;
+my $ssum=0;
+my ($dummy,$pc);
+
+open PDFP, "for i in s*.pdf; do echo -n \${i}; (pdfinfo \${i} | grep -E '^Pages:'); done |" or die "cannot open \n";
+
+while(<PDFP>){
+  chomp;
+  ($dummy,$pc) = split /:\s*/;
+  $psum += $pc;
+  $ssum += floor(($pc+1)/2);
+}
+
+print qq(${psum} paginas, $ssum vellen dubbelzijdig\n);

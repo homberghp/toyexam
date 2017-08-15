@@ -1,0 +1,70 @@
+#!/bin/bash
+
+if [ $# -lt 1 ]; then 
+    arg=$(ls -t *.tex | head -1)
+else
+    arg=$1
+fi
+# if your setup is different, put this file in your local path and modify the
+# EXAMDIR const below.
+EXAMDIR=40_exam
+curdir=$(pwd)
+coursedir=${curdir}
+while [  "${coursedir}" != "/" -a -d ${coursedir} ] ; do
+    if [ $(basename ${coursedir}) = ${EXAMDIR}  ] ; then
+	break;
+    fi
+    coursedir=$(dirname ${coursedir})
+done
+if [ "${coursedir}" = "/" ] ; then
+    echo -e "failed to find exam parent \033[0;43m${EXAMDIR}\033[m\n\tplease call me in a fitting directory"
+    exit 1
+fi
+echo found coursedir=${coursedir}
+questionbasedir=${coursedir}/questions
+file=$(basename ${curdir})/$arg
+base=$(basename $file .tex)
+echo file=${file}
+mod=$(basename $(dirname $(dirname ${coursedir})))
+mkdir -p out
+pdflatex -jobname=${base} -output-directory out  <<EOF > /dev/null
+\\documentclass[a4paper]{article}
+\def\Mod{$mod}
+\\usepackage[utf8]{inputenc}
+%\\usepackage[T1]{fontenc}
+\\usepackage{times}
+\\def\\CourseDir{${coursedir}}
+\\usepackage{multicol}
+\\usepackage{tikz}
+\\usepackage[catalog,answers,completemulti,noshuffle,box,outsidebox]{automultiplechoice}
+\def\QuestionBaseDir{${questionbasedir}}
+\\usepackage{setlang}
+\\InputIfFileExists{\\CourseDir/builds/packages.tex}{}{}
+\\InputIfFileExists{\\CourseDir/builds/macros.tex}{}{}
+\\InputIfFileExists{\\CourseDir/builds/defaults.tex}{}{}
+\\usepackage[english,dutch,german]{babel}
+\\begin{document}
+\\AMCboxDimensions{shape=oval,width=2ex,height=2.5ex}
+\\begin{center}{\\Large\\bfseries{\textsc{\\Mod:} ${file}}}\\end{center}
+
+\\hrule\\vspace{.5\\baselineskip}
+
+%\\subsection*{EN}
+\\SetLang{EN}
+\\input{\\CourseDir/questions/${file}}
+\\end{document}
+
+EOF
+if [ -f out/${base}.pdf ] ; then
+    mv out/${base}.pdf .
+    echo created new ${base}.pdf
+    exit 0
+else
+    echo errors, see log.
+    cat out/${base}.log
+    echo errors, see log.
+    exit 1
+fi
+#rm -fr out
+#done
+

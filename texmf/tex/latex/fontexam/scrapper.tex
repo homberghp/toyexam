@@ -1,0 +1,23 @@
+\documentclass[oneside]{article}
+\usepackage{csvsimple}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage[a4paper,scale={.9,.85}]{geometry}
+\pagestyle{fancy}
+\usepackage{times}
+\begin{document}
+\providecommand\exam{Please define exam name in ./setup.tex}
+\def\footrulewidth{1pt}
+\cfoot{\exam}
+\lfoot{\sf{}SEBI Scrap paper} 
+\rfoot{\sf{}Hand in at end of exam}
+\csvnames{my names}{id=\id,surname=\surname,name=\name}
+\csvreader[my names]{students.csv}{}{%
+  \lhead[\Huge\sf\name\ \surname]{\Huge\sf\name\ \surname}
+  \rhead[\Huge\sf\id]{\Huge\sf\id}
+  {\color{white}Hello}
+  \clearpage
+}
+
+\end{document}

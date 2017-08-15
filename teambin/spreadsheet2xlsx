@@ -1,0 +1,19 @@
+#!/bin/bash
+if [[  $#  < 1 ]]; then
+   echo usage $0 file
+   exit 1;
+fi
+ftype=$(mimetype -b $1)
+case ${ftype} in
+   application/vnd.ms-excel)
+	fbase=$(basename $1 .xls)
+	unoconv -d spreadsheet -f xlsx  -o ${fbase}.xlsx $1
+	;;
+   application/vnd.oasis.opendocument.spreadsheet)
+       fbase=$(basename $1 .ods)
+	unoconv -d spreadsheet -f xlsx  -o ${fbase}.xlsx $1
+	;;
+    *)
+	echo spreadsheet type for file $1 [${ftype}], no conversion needed or possible
+	;;
+esac

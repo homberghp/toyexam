@@ -1,0 +1,95 @@
+#!/usr/bin/perl -w
+
+
+
+sub digits;
+sub field;
+sub checkbox;
+sub preamble;
+sub trailer;
+
+preamble();
+digits('PCNnummer','879417');
+field('Naam','Pieter van den Hombergh');
+field('Instituutorganisatieonderdeel','FTHenL');
+field('Telefoon','08850 79417');
+field('Afleveradres','Tegelsweg 255, 5912 BG, Venlo K 0.84'); 
+digits('Kostenplaats','047320');
+digits('BU','00047');
+digits('Product','200');
+field('OmschrijvingRows','Individueel tentamen\n\nSorteren op achternaam = bestandsnaamvolgorde');
+field('Email','p.vandenhombergh@fontys.nl');
+field('Project vrij in te vullen','Auto Multiple Choice');
+field('Datum aanlevering','2016-05-19');
+field('Datum gereed 1','2016-06-01');
+field('Naam ontvanger in blokletters','Angelique Bakkers');
+field('Aantal originelen 2Row1','60');
+field('Oplage 3Row1','1');
+field('Opdracht 1 ToetscodeRow1','MOD2T1I15');
+field('OmschrijvingRow1_2','Tentamen MOD2 2016-06-01');
+checkbox(4,6,7,9,10);
+trailer();
+exit(0);
+
+sub digits {
+    my @params=@_;
+    my $prefix=$params[0];
+    my $ds=$params[1];
+    my (@parts) = split//,$ds;
+    my $pos;
+    for ($i =0; $i <= $#parts; $i++) {
+	$pos=$i+1;
+	print qq(<<
+/V ($parts[$i])
+/T (${prefix}${pos})
+>> 
+);
+    }
+}
+
+sub checkbox{
+    my @params=@_;
+    for ($i =0; $i <= $#params; $i++) {
+    print qq(<<
+/V (Ja)
+/T (Check Box$params[$i])
+>>
+);  
+    }
+}
+
+sub field{
+    my @params=@_;
+    my $key=$params[0];
+    my $value=$params[1];
+    print qq(<<
+/V (${value})
+/T (${key})
+>>
+);
+}
+
+sub trailer{
+print qq(]
+>>
+>>
+endobj 
+trailer
+
+<<
+/Root 1 0 R
+>>
+%%EOF
+);
+}
+
+sub preamble{
+print qq(%FDF-1.2
+%âãÏÓ
+1 0 obj 
+<<
+/FDF 
+<<
+/Fields [
+);
+}

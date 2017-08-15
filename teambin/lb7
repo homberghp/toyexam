@@ -1,0 +1,11 @@
+#!/bin/bash
+mkdir -p out
+pdflatex -jobname=$(basename $(pwd))-7in -output-directory out  <<EOF
+\input{lessonbrief-nexus7}
+\input{material}
+EOF
+
+pdflatex -jobname=$(basename $(pwd))-7in -output-directory out  <<EOF
+\input{lessonbrief-nexus7}
+\input{material}
+EOF

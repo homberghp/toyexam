@@ -1,0 +1,24 @@
+#!/bin/bash
+# updates tex stuff and this teambin dir
+# need some help from mac gurus or let mac lovers 
+# install the gnu find and add it to their path.
+svn up -q ${HOME}/teambin
+os=$(uname)
+textree=~/texmf
+case ${os} in
+     Linux)
+	textree=~/texmf
+     ;;
+     Darwin)
+	textree=~/Library/texmf
+     ;;
+esac
+ups="\t${HOME}/teambin"
+cd $textree
+for i in $(find . -type d -name .svn) ; do 
+    svndir=$(dirname $i)
+    svn up  ${svndir} & 
+    ups="$ups\n\t$svndir"
+done
+wait
+echo -e "done updating; visited directories: (\n $ups\n  )"

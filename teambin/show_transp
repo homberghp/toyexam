@@ -1,0 +1,7 @@
+#!/bin/bash
+viewer=$(which pdfpc)
+lang=en
+sset=$(basename $0)
+sset=${sset/show_/}
+filetoshow=$(basename $(pwd))_${sset}_${lang}.pdf
+${viewer} -z ${filetoshow}

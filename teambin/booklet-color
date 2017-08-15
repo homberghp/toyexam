@@ -1,0 +1,9 @@
+#!/bin/bash
+# echo count=$#
+# n=1
+# for i in "$@"; do
+#     echo "${n}: '$i'"
+#     n=$(($n+1))
+# done
+# exit 1
+scp "$@" osirix:/var/spool/booklet-color/

@@ -1,0 +1,12 @@
+#!/bin/bash
+mkdir -p out
+if [[ ! -e setup.tex ]] ; then
+    echo please create setup.tex defining "\\exam"
+fi
+# runs pdflatex to create pdf from simple questions
+pdflatex -jobname=scrappaper -output-directory out  <<EOF
+\input{setup.tex}
+\input{scrapper}
+EOF
+# copy result
+cp out/*.pdf .

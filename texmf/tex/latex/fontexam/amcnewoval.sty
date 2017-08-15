@@ -1,0 +1,37 @@
+\usepackage{tikz}
+% although the tikz code below uses the rectangle command, the outcome 
+% looks very much like a circle in stead of the oblong oval you
+% expect (if height > width).
+% Code form automultiplechoice.dtx svn version 1287.
+% I commented out the rendering code in the AMC@shape@oval code
+% and replaced it with a usebox.
+% The blob of ink (actually at the moment the outline only) is
+% produced in the savebox command, in which all parameters are replace
+% or removed. 
+\AMCboxDimensions{shape=oval,width=2.2ex,height=2.8ex}
+\newsavebox\amcoval
+\AMC@new@savebox{\AMC@ovalbox@R}
+\AMC@new@savebox{\AMC@ovalbox@RF}
+
+\savebox{\amcoval}{\begin{tikzpicture}%
+    \useasboundingbox (-0.5\AMC@boxedwidth,0.5\AMC@boxedheight)%
+    rectangle (0.5\AMC@boxedwidth,-0.5\AMC@boxedheight);%
+    \draw[line width=\AMC@boxedrule,rounded corners=\AMC@oval@radius]%
+    (-0.5\AMC@boxedwidth,0.5\AMC@boxedheight) %
+    rectangle (0.5\AMC@boxedwidth,-0.5\AMC@boxedheight);%
+    \draw (0,0) node {\phantom{A}};
+  \end{tikzpicture}}
+% the oval command still uses tracebox, which is needed for amc,
+% but renders the 'box' using a pre-rendered  savebox.
+\providecommand\AMC@shape@oval[5]{%
+\AMC@tracebox{#3}{#4}{\usebox{\amcoval}
+% \begin{tikzpicture}%
+% \useasboundingbox (-0.5\AMC@boxedwidth,0.5\AMC@boxedheight)
+%   rectangle (0.5\AMC@boxedwidth,-0.5\AMC@boxedheight);
+% \draw[#1,fill=#2,line width=\AMC@boxedrule,rounded corners=\AMC@oval@radius]
+%   (-0.5\AMC@boxedwidth,0.5\AMC@boxedheight)
+%   rectangle (0.5\AMC@boxedwidth,-0.5\AMC@boxedheight);
+% \draw[#1] (0,0) node {#5};
+% \end{tikzpicture}
+}%
+}

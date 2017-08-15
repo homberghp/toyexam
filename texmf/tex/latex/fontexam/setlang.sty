@@ -1,0 +1,145 @@
+%%
+%% This sty file provides the definitions for
+%% the language specifying macros.
+%% It also provides the subject macro to process
+%% the exams based on a csv input which defines the candidate's exam
+%% language in a \lang column. This value is passed to the subject
+%% macro as first and only parameter.
+\usepackage{etoolbox}
+\usepackage{makecmds}
+\provideenvironment{questionouverte}[2][0pt]{%
+  \AMCtype@multifalse\ouverte@vs=#1%
+  \ifAMC@qbloc\noindent\begin{minipage}{\linewidth}\fi%
+  \AMCbeginQuestion{\AMC@qaff}{}\ifAMC@affichekeys\ \textbf{\texttt{[#2]}}\fi}%
+{\vspace*{\ouverte@vs}\ifAMC@qbloc\end{minipage}\vspace{3ex}\fi}
+
+
+\def\AMC@loc@EN{
+  \def\AMC@loc@draft{Draft}
+  \def\AMC@loc@message{For your examination, preferably print
+    documents compiled from auto-multiple-choice.}
+  \def\AMC@loc@qf##1{\textbf{Quest. ##1:}}
+  \def\AMC@loc@q##1##2{\textbf{Quest ##1} ##2}
+  \def\AMC@loc@corrected{Corrected}
+  \def\AMC@loc@catalog{Catalog}
+  \def\AMC@loc@none{None of these answers are correct.}
+}
+\def\ExamLang{EN}
+\definecolor{dred}{rgb}{0.5,0,0}
+\definecolor{dgreen}{rgb}{0,.5,0}
+\definecolor{dblue}{rgb}{0,0,0.5}
+
+\newcommand{\SetLang}[1]{
+  \def\ExamLang{#1}
+  \ifthenelse{\equal{#1}{DE}}{\selectlanguage{german}%
+    \AMC@loc@DE%
+    \def\Quest{Frage}%
+    % \def\AMCotextGoto{\par{\bf\emph{%
+    %   Schreiben Sie die Antwort auf das separate Antwortblatt}}}%
+
+  }{}
+  \ifthenelse{\equal{#1}{NL}}{\selectlanguage{dutch}}{%
+    \AMC@loc@NL%
+    \def\Quest{Pruts}%
+    % \def\AMCotextGoto{\par{\bf\emph{%
+    %       Schrijf het antwoord op het antwoordblad}}}%
+
+  }{}
+  \ifthenelse{\equal{#1}{EN}}{\selectlanguage{english}%
+    \AMC@loc@EN%
+    \def\Quest{Quest.}%
+    % \def\AMCotextGoto{\par{\bf\emph{%
+    %       \color{dblue}Please write the answer on the separate answer sheet.}}}%
+  }{}
+\providecommand\AMCotextGoto{\par{\bf\emph{%
+      \EN{Please write the answer on the separate answer sheet.}%
+      \NL{Schrijf het antwoord op het antwoordblad.}%
+      \DE{Schreiben Sie die Antwort auf das separate Antwortblatt.}%
+    }}}
+\def\AMC@loc@none{\textit{\DE{Keine der Antworten ist richtig.}%
+  \NL{Geen van de antwoorden is juist.}%
+  \EN{None of these answers is correct.}}%
+}%
+\def\Quest{\NL{Vraag}\DE{Frage}\EN{Quest.}}
+
+\def\AMC@loc@qf##1{\makebox[3em]{\textbf{\scriptsize\sffamily{\Quest \hfill{}##1:}}}}
+\def\AMC@loc@q##1##2{\textbf{\Quest{} ##1:}##2}
+\def\MoreChoicesPossible{\textbf{%
+    \DE{Wähle ALLE richtige Antworten.}%
+    \NL{Kies ALLE juiste antwoorden.}%
+    \EN{Choose ALL correct answers.}}\ }
+}
+% rendering lang dependent.
+% \newcommand\NL[1]{\ifthenelse{\equal{\ExamLang}{NL}}{\color{dred}#1\color{black}}{}}
+% \newcommand\DE[1]{\ifthenelse{\equal{\ExamLang}{DE}}{\color{dgreen}#1\color{black}}{}}
+% \newcommand\EN[1]{\ifthenelse{\equal{\ExamLang}{EN}}{\color{dblue}#1\color{black}}{}}
+
+\newcommand\NL[1]{\ifthenelse{\equal{\ExamLang}{NL}}{#1}{}}
+\newcommand\DE[1]{\ifthenelse{\equal{\ExamLang}{DE}}{#1}{}}
+\newcommand\EN[1]{\ifthenelse{\equal{\ExamLang}{EN}}{#1}{}}
+
+\@ifpackageloaded{listings}{
+  \newcommand\ResetCounters{%
+    \setcounter{figure}{0}%
+    \setcounter{lstlisting}{0}%
+    \setcounter{table}{0}%
+  }%
+}{%
+  \newcommand\ResetCounters{%
+    \setcounter{figure}{0}%
+    \setcounter{table}{0}%
+  }%
+}
+\def\Quest{Quest}
+
+\def\AMC@loc@qf#1{\makebox[3em]{\textbf{\scriptsize\sffamily{\Quest \hfill{}#1:}}}}
+\def\AMC@loc@q#1#2{\textbf{\Quest{} #1:}#2}
+%% do not indent paragraphs.
+\parindent0pt
+
+\newenvironment{opengroup}[1]{%
+  \noindent%
+  \textbf{\ifAMC@affichekeys\ [\texttt{#1}]\fi}%
+}%
+{\hrule%
+  \vspace{1ex}%
+}
+% \newif\AMCAnswers\AMCAnswersfalse
+% \ifAMC@correc\AMCAnswerstrue\else\AMCAnswersfalse\fi
+\newtoggle{AMCAnswers}
+\ifAMC@correc\toggletrue{AMCAnswers}\else\togglefalse{AMCAnswers}\fi
+
+%% open answer
+%% params: height of minipage
+%% the text is effectively hidden in exam mode by making the
+%% foreground  colour white.
+\newenvironment{openanswer}[1]{
+  \par
+
+  \begin{minipage}[t][#1]{\textwidth}
+      Write your answer in this box.\parindent0pt
+      \hrule
+
+      \vspace{\baselineskip}
+      \Large
+    \iftoggle{AMCAnswers}{
+      \color{red}
+    }{
+      \color{white}
+    }
+    
+  }%
+{%
+\end{minipage}
+}
+
+\newcommand\answerGraphics[3]{
+  \iftoggle{AMCAnswers}{%
+    \includegraphics[width=#1]{#3}
+  }{
+    \makebox[#1]{\rule[0pt]{0pt}{#2}}
+  }
+}
+
+% check for overriding file in parent of project
+\InputIfFileExists{\CourseDir/builds/setlang.tex}{}{}

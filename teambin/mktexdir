@@ -1,0 +1,14 @@
+#!/bin/bash
+if [ $# -lt 1 ]; then
+   echo give dir name please
+   exit 1
+fi
+dir=$1
+if [ ! -d ${dir} ]; then 
+    svn mkdir ${dir}
+fi
+
+texdirprops=$(dirname $0)/texdirprops
+svn propset svn:ignore -F  ${texdirprops} ${dir}
+
+

@@ -1,0 +1,12 @@
+#!/bin/bash
+filetype=sheets
+if [ shift ] ; then
+   filetype=$0
+fi
+
+if [ -f *${filetype}*.pdf ]; then
+    file=*${filetype}*.pdf
+    pdfpc -z 
+else
+    echo cannot find file with ${filetype}
+fi

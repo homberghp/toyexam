@@ -1,0 +1,51 @@
+%% packages typical for exams that need to show source code listings.
+%% It is good practice to not copy the program code into the latex
+%% files, but instead to use \lstinputlisting commands to include the
+%% source code. This avoids syntax clashes between latex and source code.
+\usepackage{listings}
+\usepackage{times}
+\usepackage{textcomp}
+\usepackage{xcolor}  
+\usepackage{caption}
+\usepackage{tikz}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+\definecolor{darkblue}{rgb}{0,0,.2}
+\definecolor{darkgreen}{rgb}{0,0.2,0}
+%% these listing settings define a nice box with a caption around each
+%% listing.
+
+\lstset{
+  aboveskip={1.5\baselineskip},
+  basicstyle=\footnotesize\ttfamily,
+  breaklines=true,
+  columns=fixed,
+  commentstyle=\color[rgb]{0,0.2,0},
+  extendedchars=true,
+  frame=t,
+  framexbottommargin=4pt,
+  framexleftmargin=17pt,
+  framexrightmargin=5pt,
+  identifierstyle=\ttfamily,
+  keywordstyle=\color{darkblue}\textbf,
+  language=java,
+  numbersep=5pt,
+  % numberstyle=\tiny,
+  prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+  showspaces=false,
+  showstringspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  stringstyle={\color{darkgreen}\ttfamily\textbf},
+  tabsize=4,
+  upquote=true,
+}
+\DeclareCaptionFont{black}{\color{black}}
+\DeclareCaptionFormat{listing}{\colorbox[gray]{.9}{\parbox{\textwidth}{\hspace{15pt}#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,%
+  labelfont=black,%
+  textfont=black,%
+  singlelinecheck=false,%
+  margin=0pt,%
+  font={bf,footnotesize}}
+
+%% end of file

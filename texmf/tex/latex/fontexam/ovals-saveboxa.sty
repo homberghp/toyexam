@@ -1,0 +1,60 @@
+\usepackage{fancybox}
+
+\renewcommand\AMC@boxedchar[4]{\AMC@LR{\hspace{0pt}%
+  {\ifx\@empty#2\@empty \def\AMC@boxcolor{black}\fi%
+   \ifAMC@correc\def\AMC@boxcolor{black}\fi%
+   \lower\AMC@boxeddown\hbox{\csname AMC@shape@\AMC@shapename\endcsname%
+     {\AMC@boxcolor}%
+     {#4}{#2}{#3}{\AMCchoiceLabelFormat{#1}}}}}%
+}
+
+
+\newcommand\AMC@shapeprepare@square{}
+\renewcommand\AMC@shape@square[5]{%
+  \fboxsep=\z@\fboxrule=\AMC@boxedrule%
+  \fcolorbox{#1}{\ifx\@empty#2\@empty white\else #1\fi}%
+  {\vbox to \AMC@boxedheight{\AMC@tracepos{#3}{#4}\vfill%
+      \hbox to \AMC@boxedwidth{\hfill{\textcolor{#1}{#5}}\hfill}\vfill}%
+    \AMC@tracepos{#3}{#4}}}
+\newsavebox\AMC@oval@box
+\newsavebox\AMC@oval@fbox
+\newcommand\AMC@shapeprepare@oval{%
+  \savebox{\AMC@oval@box}{%
+\begin{tikzpicture}%
+\useasboundingbox (-0.5\AMC@boxedwidth,0.5\AMC@boxedheight)
+  rectangle (0.5\AMC@boxedwidth,-0.5\AMC@boxedheight);
+\draw[\AMC@boxcolor,fill=white,line width=\AMC@boxedrule,rounded corners=\AMC@oval@radius]
+  (-0.5\AMC@boxedwidth,0.5\AMC@boxedheight)
+  rectangle (0.5\AMC@boxedwidth,-0.5\AMC@boxedheight);
+\end{tikzpicture}}%
+  \savebox{\AMC@oval@fbox}{%
+\begin{tikzpicture}%
+\useasboundingbox (-0.5\AMC@boxedwidth,0.5\AMC@boxedheight)
+  rectangle (0.5\AMC@boxedwidth,-0.5\AMC@boxedheight);
+\draw[\AMC@boxcolor,fill=\AMC@boxcolor,line width=\AMC@boxedrule,rounded corners=\AMC@oval@radius]
+  (-0.5\AMC@boxedwidth,0.5\AMC@boxedheight)
+  rectangle (0.5\AMC@boxedwidth,-0.5\AMC@boxedheight);
+\end{tikzpicture}}%
+}
+\renewcommand\AMC@shape@oval[5]{%
+\AMC@tracebox{#3}{#4}{\boxput*(0,0){\textcolor{#1}{#5}}{\ifx\@empty#2\@empty\usebox{\AMC@oval@box}\else\usebox{\AMC@oval@fbox}\fi}}%
+}
+\newcommand\AMCboxStyle[1]{%
+  \setkeys{AMCdim}{#1}%
+  \ifnum\AMC@boxedwidth<\AMC@boxedheight%
+    \AMC@oval@radius=\AMC@boxedwidth\divide\AMC@oval@radius\tw@%
+  \else%
+    \AMC@oval@radius=\AMC@boxedheight\divide\AMC@oval@radius\tw@%
+  \fi%
+  \csname AMC@shapeprepare@\AMC@shapename\endcsname%
+}
+
+% AMCdim -> AMCbox
+
+\renewcommand\AMCboxColor[1]{\AMCboxStyle{color=#1}}
+\define@key{AMCdim}{color}{\def\AMC@boxcolor{#1}}
+
+\let\AMCboxDimensions=\AMCboxStyle
+
+% rajouter color=black dans AMC@binaryBoxes
+

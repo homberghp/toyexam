@@ -1,0 +1,38 @@
+#!/bin/bash
+if [[ $# < 1 ]]; then
+   echo 'usage <filename>.java'
+fi
+sourcepath=.
+if [[ -d ./src ]]; then
+    sourcepath=./src
+fi
+
+CLASSES=./.classes
+mkdir -p ${CLASSES}
+file=$1
+if [[ ${file:0:4} == src/ ]]; then
+    file=${file:4}
+fi
+classname=$(basename $file .java)
+jpath=$(dirname $file)
+if [[ ${sourcepath} == ./src ]] ; then
+    file=./src/$file
+fi
+classfile=${CLASSES}/$jpath/${classname}.class
+classname=${jpath/\//\.}.$classname
+# echo file = $file, classfile = $classfile
+if [[ -f $file && $file == *.java ]]; then
+#    echo found java file $file
+    if [[ ! -f $classfile || ${classfile} -ot ${file} ]]; then
+	javac -cp ${CLASSES} -d ${CLASSES} -sourcepath ${sourcepath} ${file}
+	if [[ $? > 0 ]]; then 
+	    echo compilation of $file failed; see error messages above.
+	    exit 1
+	fi
+    fi
+else
+    echo file $file not found.
+    exit 1
+fi
+
+java -cp ${CLASSES} ${classname}

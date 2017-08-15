@@ -1,0 +1,15 @@
+%%
+%% Set commands and options such that exam is rendered as catalog.
+%%
+%% provide package and options 
+\providecommand\coverpage{}
+\providecommand\CatalogOptions{completemulti,answers,catalog,noshuffle,noshufflegroups,calibration,outsidebox}
+%\providecommand\AutoMCWithOptions{\usepackage[completemulti,outsidebox,box]{automultiplechoice}}
+%% use limited set of students
+\providecommand\studentsfile{catalogstudents.csv}
+%% no shuffle
+\providecommand\setshuffle\shufflefalse
+%% do as defined for default exam file (typically source.tex).
+%% end of settings
+%% put workhorse to work.
+\input{exampreamble}

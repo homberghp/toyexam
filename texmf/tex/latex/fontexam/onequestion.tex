@@ -1,0 +1,39 @@
+%% Example source file AMC exam
+%% with fontys Venlo Specific Includes.
+%% $Id$
+
+%% CourseDir is the absolute path to the parent dir of
+%% questions/... and builds/.
+%% The \ProcessExam at the end assumes the following substructure
+%% <CourseDir>
+%% ├── builds / (including exampreamble, default and optional
+%% |             macros.tex and packages.tex)
+%% │   ├── <ExamInstance>, e.g. 20120628
+%% │
+%% └── questions, and resources e.g.
+%%     ├── figures
+%%     ├── q1h01
+
+\def\CourseDir{../..}
+%% The instance directory of this exam.
+\def\ExamInstance{catalog}
+\input{oneqpreamble}
+%\usepackage{ovals-saveboxa}
+\AMCboxDimensions{shape=oval,width=2ex,height=2.5ex}
+%% random seed used to randomise.
+% use different random prime for each different exam.
+\def\RandomSeed{356146123}
+%% all exams of the same module will differ in at least date and time.
+\def\examdate{Catalog \today}
+
+%% provided are one a two colum forms. uncomment one of the next two lines.
+\def\FormType{onecolumnform}
+%\def\FormType{twocolumnform}
+
+
+%% AMC settings for 2 points per questions 
+%% for other options or score dependent on question see AMC doc.
+\scoringDefaultM{haut=2}
+\scoringDefaultS{mz=2}
+%%  set the machinery to work.
+\ProcessExam

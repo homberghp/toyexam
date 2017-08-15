@@ -1,0 +1,42 @@
+#!/bin/bash
+# env should have $EXAMMODULE and $SVNBASE
+## arguments:
+# @task name of dir containing task and solution
+# @taskproject project dir under @task/solution/ 
+function doexports() {
+    local TASK=$1
+    local TASK_PROJECT=$2 
+    local EXPORT_TARGET=$2
+    if [ $# -gt 2 ] ; then EXPORT_TARGET=$3; fi
+
+    REPOS=${SVNBASE}/${MODULE}/svnroot/trunk/45_assessment/questions
+    svn export --force ${REPOS}/${TASK}/solution/${TASK_PROJECT} examsolution/${EXPORT_TARGET}
+    for i in $(find . -name project.xml -type f); do
+	sed -i  "s/${TASK_PROJECT}/${EXPORT_TARGET}/" $i
+    done
+}
+
+function clean_slate(){
+    rm -fr examsolution examproject
+}
+
+function nb_solution_to_examproject(){
+    for i in  $(find examproject/ -name project.xml); do
+	sed -i 's/:: solution/:: examproject/i' $i;
+    done
+}
+
+function stripsolution(){
+    ant -f /home/prepareassessment/config/build.xml do${PROJECTTYPE}
+}
+
+function fix_task_prefix(){
+    
+    local PREFIX_OLD=TASK_1
+    local TASK_PROJECT=$1
+    local PREFIX_NEW=$2
+    for i in $(grep -rl ${PREFIX_OLD} examsolution/${TASK_PROJECT}/) ; do
+	sed -i s/${PREFIX_OLD}/${PREFIX_NEW}/g ${i}
+    done
+
+}

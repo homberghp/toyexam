@@ -1,0 +1,8 @@
+#!/bin/bash
+echo $0
+DIR=$(dirname $0)
+echo ${DIR}
+RESOURCES=${DIR}/SVNJAVAPROPSET
+echo svn update
+echo svn propset svn:ignore -F ${RESOURCES} . --recursive
+#svn ci -m'svn ignore updated ' .

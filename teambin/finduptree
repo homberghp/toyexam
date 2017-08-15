@@ -1,0 +1,19 @@
+#!/bin/bash
+## Finds a resource searching upward (only) in a directory tree.
+##
+## @param resource (file or dir) to find
+## @return empty string if not found, 
+##     the path to the resource if found as an absolute path
+function findUpTree(){
+   local tofind=$1
+   local found=''
+   local dir=$(pwd)
+   while [  ! $dir = "/" ] ; do
+   	 if [ -e ${dir}/${tofind} ]; then
+	     found=${dir}/${tofind}
+	     break
+	 fi
+	 dir=$(dirname ${dir})
+   done
+   echo -n ${found}
+}

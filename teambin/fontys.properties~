@@ -1,0 +1,21 @@
+
+field('Naam','Pieter van den Hombergh');
+digits('Kostenplaats','047320');
+digits('BU','00047');
+digits('Product','200');
+digits('PCNnummer','879417');
+field('Instituutorganisatieonderdeel','FTHenL');
+field('Telefoon','08850 79417');
+field('Afleveradres','Tegelsweg 255, 5912 BG, Venlo K 0.84'); 
+field('OmschrijvingRows','Individueel tentamen\n\nSorteren op achternaam = bestandsnaamvolgorde');
+field('Email','p.vandenhombergh@fontys.nl');
+field('Project vrij in te vullen','Auto Multiple Choice');
+field('Datum aanlevering','2016-05-19');
+field('Datum gereed 1','2016-06-01');
+field('Naam ontvanger in blokletters','Angelique Bakkers');
+field('Aantal originelen 2Row1','60');
+field('Oplage 3Row1','1');
+field('Opdracht 1 ToetscodeRow1','MOD2T1I15');
+field('OmschrijvingRow1_2','Tentamen MOD2 2016-06-01');
+
+checkbox(4,6,7,9,10);

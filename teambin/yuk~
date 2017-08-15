@@ -1,0 +1,15 @@
+#!/bin/bash
+function findUpTree(){
+   local tofind=$1
+   local found=''
+   local dir=$(pwd)
+   while [ "$found" -ne "F" -a $dir -ne "/" ] ; do
+   	 if [ -e ${dir}/${tofind} ]; then
+	     found=${dir}/${tofind}
+	     echo -n $found
+	     return
+	 fi
+	 dir=$(directory ${dir})
+   done
+   echo -n ''
+}

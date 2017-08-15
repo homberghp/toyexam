@@ -1,0 +1,34 @@
+#!/bin/bash
+# filetype=transp
+# if [ $# -gt 0 ] ; then
+#    filetype=$1
+# fi
+
+
+# set $(ls *${filetype}*.pdf) >> /dev/null
+# if [ $# -gt 0 ]; then
+#     file=$1
+#     echo "file = [$file]"
+#     if [[ -f ${file} ]]; then
+# 	pdfpc -z $file
+#     else
+# 	echo cannot find file with ${file}
+#     fi
+# fi
+
+for i in transp1610 transp sheets1610 sheets; do
+    set $(ls *${i}*.pdf)
+    file=$1
+    if [[ ! -f ${file} ]]; then
+	echo tried $file
+	continue
+    else
+	echo found $file
+	pdfpc -z $file
+	exit 0
+    fi
+done
+else
+    echo cannot find file with ${file}
+fi
+    

@@ -1,0 +1,54 @@
+%% Example source file AMC exam
+%% with fontys Venlo Specific Includes.
+%% $Id$
+
+%% CourseDir is the absolute path to the parent dir of
+%% questions/... and builds/.
+%% The \ProcessExam at the end assumes the following substructure
+%% <CourseDir>
+%% ├── builds / (including exampreamble, default and optional
+%% |             macros.tex and packages.tex)
+%% │   ├── <ExamInstance>, e.g. 20120628
+%% │
+%% └── questions, and resources e.g.
+%%     ├── figures
+%%     ├── q1h01
+%%     ...
+%% when your exam questions input files (such as source code,
+%% verbatim files, figures or tables), prefix the file name to be
+%% input with "\QuestionBaseDir". Example: in some exams you may have
+%% a common figures dir. Including such image into an exam question
+%% can be done with
+%% \includegraphics[width=140mm]{\QuestionBaseDir/figures/ExcludingGuards}
+%% (example from a mod2 exam).
+%% If you keep question and figures in the same dir, say state, then
+%% adapt the file path accordingly as in
+%% \QuestionBaseDir/state/ExcludingGuards.
+
+
+\providecommand\ProcessorFile{exampreamble}
+\def\CourseDir{\string~/modulerepos/databases/exam}
+%% The instance directory of this exam.
+\def\ExamInstance{20140117}
+\input{\ProcessorFile}
+%% random seed used to randomise.
+%% use different random prime for each different exam.
+\def\RandomSeed{356146123}
+%% all exams of the same module will differ in at least date and time.
+\def\examdate{\NL{17 januari 2014}%
+  \DE{17. Januar 2014}%
+  \EN{January 17$^{th}$ 2014}} 
+\def\examtime{14:00-15:00}
+\def\examtype{\EN{Exam}\NL{Tentamen}\DE{Klausur}}
+
+%% provided are one a two colum forms. uncomment one of the next two lines.
+\def\FormType{onecolumnform}
+%\def\FormType{twocolumnform}
+
+
+%% AMC settings for 2 points per questions 
+%% for other options or score dependent on question see AMC doc.
+\scoringDefaultM{haut=2}
+\scoringDefaultS{mz=2}
+%%  set the machinery to work.
+\ProcessExam

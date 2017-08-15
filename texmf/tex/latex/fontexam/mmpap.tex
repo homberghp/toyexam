@@ -1,0 +1,24 @@
+\documentclass{scrartcl}
+\usepackage{savetrees}
+%%www.ctan.org/tex-archive/help/Catalogue/entries/pgf.html
+\usepackage{tikz}
+ 
+\begin{document}
+ 
+\begin{tikzpicture}
+	%
+	%% Orangen Hintergrund
+	\fill[orange!20] (0,0) rectangle (17,26);
+	%
+	%% Millimeterlinien im leichten blau
+	\draw[blue!50,step=1mm,very thin] (0,0) grid (17,26);
+	%
+	%% .5cm Linien
+	\draw[step=5mm,thin] (0,0) grid (17,26);
+	%
+	%% 1.0cm Linien
+	\draw[step=10mm,thick] (0,0) grid (17,26);
+	%
+\end{tikzpicture}
+ 
+\end{document}

@@ -1,0 +1,34 @@
+#!/bin/bash
+# cleanup program.
+# cleans dir from latex, netbeans, maven or bluej cruft.
+# tries to magically detect what to do.
+# depends on ant and mvn in path for netbeans projects.
+if [ -d ./nbproject ]; then
+    echo assuming default netbeans project
+    ant clean
+    exit 0
+fi
+
+if [ -f pom.xml ]; then
+    echo assuming maven  project
+    rm -fr ./target
+    exit 0
+fi
+
+if [ -f *.aux -o -f *.log ]; then 
+    echo assuming latex dir
+    rm -fr *.aux *.log *.lof *.lot *.lol *.snm *.nav *.toc *.out *.vrb *.blg doc_*.pdf \
+	*.bbl *.svt *.bbl *.upa *.upb *.amc *.fls *.dep *.fls *.~
+    exit 0
+fi
+
+if [ -f package.bluej ]; then 
+    find . -name "*.ctxt" -exec rm {} \;
+    find . -name "*.class" -exec rm {} \;
+    exit 0
+fi
+
+
+    
+
+    

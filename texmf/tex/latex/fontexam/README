@@ -1,0 +1,24 @@
+# These files and this directory come from 
+# https://www.fontysvenlo.org/svnp/879417/fontexam/trunk
+# This directory contains a set of files used in my standard fontys exam.
+# Best results are obtained when this directory resides in the TEXINPUT path
+# or in the standard tex lookup path. I my ubuntu+texlive installation I chose the latter, meaning it is in
+
+# /usr/share/texmf/tex/latex/fontexam
+# by
+sudo svn co https://www.fontysvenlo.org/svnp/879417/fontexam/trunk /usr/share/texmf/tex/latex/fontexam
+
+
+# Once you've done that run texhash as root.
+# sudo texhash
+
+# This allows you to create a mc exam with little effort and 
+# duplication of code (DRY principle).
+
+
+# Under the repository svn+ssh://osiris.fontysvenlo.org/home/modules/toyexam
+# you find a set of questions of a toy exam and some exam examples.
+# please use that directory to share your problems and solutions.
+# You are invited to experiment and share your findings.
+
+

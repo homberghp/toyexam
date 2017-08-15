@@ -1,0 +1,20 @@
+#!/bin/bash
+svn up ${HOME}/teambin
+os=$(uname)
+textreebase=~/texmf
+case ${os} in
+     Linux)
+     ;;
+     Darwin)
+	textreebase=~/Library/texmf
+	;;
+esac
+
+mkdir -p ${textreebase}/tex/latex ${textreebase}/bibtex/bib
+# initial checkout first two for teachers, but not in a confidential sense.
+svn co https://www.fontysvenlo.org/svnp/879417/fontysstyle/trunk ${textreebase}/tex/latex/fontysstyle
+svn co https://www.fontysvenlo.org/svnp/879417/fontexam/trunk ${textreebase}/tex/latex/fontexam
+svn co https://www.fontysvenlo.org/svnp/879417/sebivenlo/trunk/sebivenlo ${textreebase}/tex/latex/sebivenlo
+
+# shared bibliography
+svn co https://www.fontysvenlo.org/svnp/879417/sebivenlobib/trunk ${textreebase}/bibtex/bib/sebivenlobib

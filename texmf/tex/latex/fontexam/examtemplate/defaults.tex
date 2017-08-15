@@ -1,0 +1,31 @@
+%% In this file you set your defaults to a set of exams.
+%% The file lives in the parent directory of all exam instances for
+%% this course.
+%% The names of most defines should be enough hint to their values.
+\def\examdate{%
+  \NL{2 November 2012}
+  \DE{2. November 2012}%
+  \EN{November 2$^{nd}$ 2012}%
+}
+\def\examtime{11:30-13:30}
+\def\examtitle{PRO3: Java Concurrency}
+\def\examtype{\EN{Exam}\NL{Examen}\DE{Klausur}}
+\def\examcode{PRO3\_I08}
+\def\Subtitle{PRO3 : Reactive systems and Design Patterns}
+\def\Doelgroep{TIKA}
+%% The number of mc questions
+\def\amccount{0}
+%% the max total points for the mc questions
+\def\amcpoints{0}
+%% The number of open questions
+\def\amcopencount{0}
+%% The max total points for the open questions
+\def\amcopenpoints{0}
+\def\Lecturer{Pieter~van~den~Hombergh}
+% one column answer form
+\def\FormType{onecolumnform}
+%% If the file below exists, it might overwrite the points and counts
+%% above. There is a script called "countpoints.pl" that reads the 
+%% point definitions from the sources and included files.
+
+\InputIfFileExists{questioncount.tex}{}{}

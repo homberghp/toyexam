@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [[ copies != $(basename $(pwd)) ]]; then
+    echo you must be in the copies dir.
+    exit 1
+fi
+examname=$(basename $(readlink -f  ..))
+echo ${examname}
+cd ..
+mv copies ${examname}
+zip -r ${examname}{.zip,}
+mv ${examname} copies
+cd copies
+
+
+

@@ -1,0 +1,61 @@
+%% exam preamble, specific to Fontys Venlo usage. Normally no need to edit.
+%% $Id$
+%% Version 0.1
+%%
+%% the commands \AutoExamOptions and \ProcessExam commands can be
+%% 'overwritten'.
+%% This allows to create a catalog and set exam specific options for
+%% the automultiplechoice package.
+%% The defaults are: box, complemulti outsidebox, box and separateanswersheet
+
+%% It is generic enough to place it in the general toolkit.
+%% Under the assumption that all exams of a module have the same
+%% form, this file can therefor be used for all exams.
+%% 
+%% provide commands so they can be preset (overridden if you will) in
+%% a catalog preamble.
+
+
+\providecommand\InstanceOptions{}
+\providecommand\CatalogOptions{}
+\providecommand\AutoExamOptions{completemulti,separateanswersheet,outsidebox,box,storebox,automarks}
+\providecommand\AutoMCWithOptions{\usepackage[\AutoExamOptions,\CatalogOptions,\InstanceOptions]{automultiplechoice}}
+
+%% pick up some exam specific files
+%% Check if there are any overrides for some setting in LaTeX working directory.
+\InputIfFileExists{coursedir.tex}{}{}
+%% default document class for the exams
+\documentclass[a4paper]{article}
+%\usepackage{etoolbox}
+%% UTF encode files to allow umlauts in names etc.
+\usepackage[utf8]{inputenc}
+%%\usepackage[utf8]{luainputenc}
+\usepackage[T1]{fontenc}
+
+%% This will typically have tweaks that may differ per module or even 
+%% production type (think catalog).
+\usepackage{tikz}
+\usepackage{xcolor}
+\AutoMCWithOptions
+%% Automatic includes, if present.
+
+%% If you have need special packages you want to reuse for all 
+%% exams for this module put it in \CourseDir/builds/packages.tex.
+%% This will be picked up automatically script included at the end.
+\InputIfFileExists{\CourseDir/builds/packages.tex}{}{}
+
+%% If you have any special macros you want to reuse for all
+%% exams for this module put them in \CourseDir/builds/macros.tex.
+%% This will be picked up automatically script included at the end.
+\InputIfFileExists{\CourseDir/builds/macros.tex}{}{}
+
+%% If some defs (title, code, teacher etc) are the same for all your
+%% exams, put them in \CourseDir/builds/defaults.tex.
+\InputIfFileExists{\CourseDir/builds/defaults.tex}{}{}
+\def\InstanceDir{\CourseDir/builds/\ExamInstance}
+\InputIfFileExists{\InstanceDir/questioncount.tex}{}{}
+
+%% Picks up the file from the default LaTeX path.
+%% on my (HOM) ubuntu installation  this file resides in (as in
+%% checked out into) directory /usr/share/texmf/tex/latex/fontexam/
+\providecommand\ProcessExam{\input{processExamsWithCsv}}

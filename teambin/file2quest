@@ -1,0 +1,8 @@
+#!/bin/bash
+element=general
+if [ $# -gt 0 ] ; then 
+    element=$1
+fi
+pscript=$(dirname $(readlink -f $0))/file2quest.pl
+find ../../questions/ -maxdepth 2 -name "*.tex"| sort| $pscript ${element}
+

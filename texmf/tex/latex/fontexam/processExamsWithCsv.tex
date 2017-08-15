@@ -1,0 +1,30 @@
+%% document class and amc stuff must be included in source.tex
+%% UTF encode files to allow umlauts in names etc.
+%% real exam shuffles.
+\providecommand\setshuffle\shuffletrue
+
+\usepackage{times}
+%%
+\usepackage[english,dutch,german]{babel}
+\author{\Lecturer}
+\usepackage{csvsimple}
+\usepackage{setlang}
+\newif\ifshuffle
+\setshuffle
+\input{\FormType}
+\def\QuestionBaseDir{\CourseDir/questions}
+\def\ExamBaseDir{\CourseDir/builds}
+\def\ExamInstanceDir{\ExamBaseDir/\ExamInstance}
+\providecommand\studentsfile{\ExamInstanceDir/students.csv}
+\newcommand\inputQ[1]{\input{\QuestionBaseDir/#1}}
+\input{shortopen}
+% produce a cover or front page with logo and student ID.
+\input{coverpagecsv}
+\begin{document}
+\AMCboxStyle{shape=oval,width=2ex,height=3ex}
+\AMCrandomseed{\RandomSeed}
+\typeout{processExamsWithCsv uses instance dir \ExamInstanceDir}
+\input{\ExamInstanceDir/questions.tex}
+\InputIfFileExists{\ExamInstanceDir/openquestions.tex}{}{}
+\csvreader[head to column names]{\studentsfile}{}{\subject{\lang}}
+\end{document}

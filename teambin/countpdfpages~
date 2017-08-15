@@ -1,0 +1,11 @@
+#!/usr/bin/perl -w
+my $psum=0;
+my $ssum=0;
+my ($dumm,$pc);
+OPEN PDFP, "for i in s*.pdf; do echo -n \${i}; pdfonfi \${i} | grep -E '^Pages:'|" or die "cannot open \n";
+
+while(<PDFP>){
+  chomp;
+  ($dummy,$pc) = split /:\s*/;
+  print qq($pc\n);
+}

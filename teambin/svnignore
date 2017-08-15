@@ -1,0 +1,25 @@
+#!/bin/bash
+SCRIPTDIR=$(dirname $0)
+IGNOREPATTERNS=${SCRIPTDIR}/SVNTEXPROPSET
+if [ $# -gt 0 ]; then 
+    pat=$1
+    case ${pat} in
+	tex)
+	    IGNOREPATTERNS=${SCRIPTDIR}/SVNTEXPROPSET
+	    ;;
+	nb)
+	    IGNOREPATTERNS=${SCRIPTDIR}/SVNNBPROPSET
+	    ;;
+	bluej)
+	    IGNOREPATTERNS=${SCRIPTDIR}/SVNBLUEJPROPSET
+	    ;;
+    esac
+else
+    echo "tell me what to ignore: tex, nb or bluej"
+    exit 1
+fi
+
+echo using ${IGNOREPATTERNS} to configure
+svn propset svn:ignore -F ${IGNOREPATTERNS} . --recursive
+echo new properties are:
+svn proplist -v .

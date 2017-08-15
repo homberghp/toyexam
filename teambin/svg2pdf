@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ $# -lt 1 ]; then
+    echo "Usage $0 <filename>[.svg] " 
+    exit 1
+fi   
+file=$(basename $1)
+file=${file/.svg/}
+echo "file is now $file"
+
+inkscape -z -A ${file}.{pdf,svg}

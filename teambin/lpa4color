@@ -1,0 +1,4 @@
+#!/bin/bash
+printer=$(basename $0)
+printer=${printer:2}
+scp "$@" osirix:/var/spool/${printer}

@@ -1,0 +1,52 @@
+%%
+%% This sty file provides the definitions for
+%% the language specifying macros.
+%% It also provides the subject macro to process
+%% the exams based on a csv input which defines the candidate's exam
+%% language in a \lang column. This value is passed to the subject
+%% macro as first and only parameter.
+
+\def\ExamLang{EN}
+\newcommand{\SetLang}[1]{
+  \def\ExamLang{#1}
+  \ifthenelse{\equal{#1}{DE}}{\selectlanguage{german}%
+    \def\Quest{Frage}%
+  }{}
+  \ifthenelse{\equal{#1}{NL}}{\selectlanguage{dutch}}{%
+    \def\Quest{Vraag}%
+  }{}
+  \ifthenelse{\equal{#1}{EN}}{\selectlanguage{british}%
+    \def\Quest{Question}%
+  }{}
+}
+\newcommand\NL[1]{\ifthenelse{\equal{\ExamLang}{NL}}{#1}{}}
+\newcommand\DE[1]{\ifthenelse{\equal{\ExamLang}{DE}}{#1}{}}
+\newcommand\EN[1]{\ifthenelse{\equal{\ExamLang}{EN}}{#1}{}}
+\def\Quest{Quest}
+
+\def\AMC@loc@qf#1{\makebox[3em]{\textbf{\scriptsize\sffamily{\Quest \hfill{}#1:}}}}
+\def\AMC@loc@q#1#2{\textbf{\Quest{} #1:}#2}
+
+\newcommand{\subject}[1]{
+\typeout{creating exam for Language=#1}
+\cfoot[\textbf{\examcode}{} \surname,\name{} (\id), date%
+\examdate]{\textbf{\examcode}{} \surname,\name{} (\id) date \examdate}
+  \begin{examcopy}[1]
+    \SetLang{#1}
+    \ifthenelse{\equal{#1}{DE}}{\def\Quest{Frage}}{}
+    \ifthenelse{\equal{#1}{NL}}{\def\Quest{Vraag}}{}
+    \ifthenelse{\equal{#1}{EN}}{\def\Quest{Question}}{}
+    \def\AMC@loc@qf##1{\makebox[3em]{\textbf{\scriptsize\sffamily{\Quest \hfill{}##1:}}}}
+    \def\AMC@loc@q##1##2{\textbf{\Quest{} ##1:}##2}
+    \coverpage
+%    \shufflegroup{general}
+    \insertgroup{general}
+    \AMClabel{lastpage}
+    \clearpage    
+    \AnswerFormHeadAlt
+    \begin{multicols}{\Columns}
+      \AMCform
+    \end{multicols}
+  \end{examcopy}%
+}
+

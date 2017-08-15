@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo remove all latex disposables
+
+rm -f  *.amc *.aux *.lo? *~ *.out *.toc *.snm *.nav *.vrb *.bbl *.blg *.url *.up? *.xy
+rm -f $(basename $(pwd))*.pdf
+rm -fr ./out
+
+for i in *.pdf ; do
+    if [[ -e $(basename $i .pdf).tex ]] ; then
+	rm -f $i
+	echo removed $i
+    fi
+done
+       
+

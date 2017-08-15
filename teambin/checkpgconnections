@@ -1,0 +1,4 @@
+#!/bin/bash
+cat - <<EOF | psql -X postgres
+SELECT datname,usename,pid,client_addr,waiting,query_start,query FROM pg_stat_activity;
+EOF

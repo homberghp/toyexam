@@ -1,0 +1,15 @@
+#!/bin/bash
+name=$(basename $(cd ../; pwd))
+mkdir -p out
+for i in 1 2 ; do
+pdflatex -jobname=${name} -output-directory out <<EOF > /dev/null
+\documentclass[10pt,twoside]{article}
+\usepackage[utf8]{inputenc}
+\providecommand\StudentId{}
+\providecommand\StickNr{EN}
+\providecommand\ExamTitle{${name}}
+\input assessmentdoctest_en
+EOF
+done
+mv out/${name}.pdf . || cat out/${name}.log
+

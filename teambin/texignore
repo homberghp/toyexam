@@ -1,0 +1,4 @@
+#!/bin/bash
+DIR=$(dirname $0)
+RESOURCES=${DIR}/SVNTEXPROPSET
+svn propset svn:ignore -F ${RESOURCES} . --recursive
