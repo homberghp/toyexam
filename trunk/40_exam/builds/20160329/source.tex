@@ -1,62 +1,3 @@
-# toyexam
-auto multiple choice example exam
-
-This shared stuff is an example of how to maintain your exam questions as
-a set of files in file system and some conventions that make it easy to reuse
-these questions or variants thereof without having to go into copy and paste mode.
-
-
-The conventions are as follows:
-
-The exam questions and the exam instances are sibling directories with  course
-specific directory as the common parent. For the toy exam that would be:
-
-```bash
-../../trunk/40_exam/
-├── builds
-│   ├── 20140401
-│   ├── 20140402
-│   ├── 20160329
-│   ├── blindexam
-│   ├── exam1
-│   ├── exam2
-│   ├── exam3
-│   ├── luaexam
-│   └── matrixquestion
-└── questions
-    ├── code
-    │   └── ExamCode
-    │       └── src
-    │           └── racingsequence
-    │               ├── r1
-    │               ├── r2
-    │               ├── r3
-    │               └── r4
-    ├── figures
-    ├── geography
-    ├── history
-    ├── java
-    ├── math
-    └── multiset
-```
-
-Our local convention is to have the exam stuff under 40_exam.
-
-Every exam instance lives in a directory of its own, convention is to use the exam date in iso 8601 date format.
-Example 20160329 for 29th of march 2016.
-
-The exam itself (the files we version) consist of three files:
-questions.tex  source.tex     students.csv   
-
-The name of the `students.csv` file should give enough clue to its purpose.
-The `source.tex` file is the one that is to be processed by AMC. The most important thing it does is define where all the stuff is. This is in the line starting with `\def\CourseDir`.
-The remainder should be clear from the names of the defined variables.
-
-The secret ingredient is the processor file, which in this case is `exampreamble`.
-`exampreamble` is one of a set of latex files used in our installation. For convenience and as convention we put them in a directory under ~/texmf/tex/latex which is the texlive location to
-lookup files that are not in the local directory. exam
-
-```latex
 %% Example source file AMC exam
 %% with fontys Venlo Specific Includes.
 %% $Id$
@@ -80,7 +21,7 @@ lookup files that are not in the local directory. exam
 %% └── questions              Question base dir
 %%     ├── [figures]          Figures to include in exams
 %%     ├── [tables]           Tables
-%%     ├── [code]             source code (e.g. java)
+%%     ├── [code]             source code (e.g. java) 
 %%     ├── [subject1]         questions on subject (dir name is up to
 %%                            author. avoid spaces though ;-))
 %%     ├── [subject2]          ,,
@@ -105,11 +46,10 @@ lookup files that are not in the local directory. exam
 \def\FormType{onecolumnform}
 %\def\FormType{twocolumnform}
 
-%% AMC settings for 2 points per questions
+%% AMC settings for 2 points per questions 
 %% for other options or score dependent on question see AMC doc.
 \scoringDefaultM{haut=2}
 \scoringDefaultS{mz=2}
 %%  set the machinery to work.
 \ProcessExam
 
-```
