@@ -5,7 +5,7 @@ This shared stuff is an example of how to maintain your exam questions as
 a set of files in file system and some conventions that make it easy to reuse
 these questions or variants thereof without having to go into copy and paste mode.
 
-a video will be on [Youtube](https://youtu.be/fiuq-Ek1uNo).
+a video will be on [Youtube](https://youtu.be/fiuq-Ek1uNo)
 
 The conventions are as follows:
 
