@@ -1,9 +1,0 @@
-\def\AMCotextGoto{\par{\bf\emph{%
-      \EN{Please write the answer on the separate answer sheet.}%
-      \NL{Schrijf het antwoord op het separated antwoordblad}%
-      \DE{Schreibe die Antwort auf das separate Antwortblatt }}}}
-\newcommand\shortanswer[2]{\AMCOpen{lineup=true,hspace=.5mm,foregroundcol=white,backgroundcol=white,lineheight=0mm,boxmargin=0mm,answer={#1},question={\color{white}#2}}{%
-%    \wrongchoice[W]{w}\scoring{0}\wrongchoice[P]{p}\scoring{1}%
-    \correctchoice[\color{white}C]{c}\scoring{2}}%
-}
-\newcommand\Code[1]{\texttt{\textbf{#1}}}

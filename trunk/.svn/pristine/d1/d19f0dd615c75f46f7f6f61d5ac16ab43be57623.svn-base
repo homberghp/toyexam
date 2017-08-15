@@ -1,8 +1,0 @@
-\begin{questionmultx}{math-sqrt2}
-  \FPeval\VQa{trunc(5+random*15,0)}
-  \FPeval\VQs{VQa^0.5}
-  Compute $\sqrt{\VQa}$ and round it with two digits after period.
-
-  \AMCnumericChoices{\VQs}{digits=3,decimals=2,sign=true,
-                 borderwidth=0pt,backgroundcol=lightgray,approx=5}
-\end{questionmultx}

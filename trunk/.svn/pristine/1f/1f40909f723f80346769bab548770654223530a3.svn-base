@@ -1,9 +1,0 @@
-%% short open question 
-%% this variant removes all marks from the separate answer sheet.
-\begin{question}{geopraphy-netherlands3}
-  In what city of the Netherlands is the governement seated?
-
-  \AMCOpen{lines=5,lineup=true,dots=true,question={eu4},answer={{\Large\color{green}\sf{}The
-      Hague}},backgroundcol=white,foregroundcol=white}{\wrongchoice[W]{w}\scoring{0}\correctchoice[C]{c}\scoring{2}}
-  
-\end{question}

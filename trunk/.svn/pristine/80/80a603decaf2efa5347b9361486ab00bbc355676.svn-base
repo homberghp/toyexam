@@ -1,3 +1,0 @@
-%\def\Code#1{\lstinline{#1}}
-% interval left closed, right open rendered as [ x ,y )
-\def\AMCIntervalFormat#1#2{[#1,\,#2)}

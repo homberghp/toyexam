@@ -1,9 +1,0 @@
-sheets_en.pdf :     ../sheetbase.tex \
-	   pagetitle.tex \
-	   material.tex \
-	     introduction.tex 
-
-handoutsheets_en.pdf : 
-
-handout_en.pdf : 
-
