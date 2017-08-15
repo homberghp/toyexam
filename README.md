@@ -54,7 +54,8 @@ The remainder should be clear from the names of the defined variables.
 
 The secret ingredient is the processor file, which in this case is `exampreamble`.
 `exampreamble` is one of a set of latex files used in our installation. For convenience and as convention we put them in a directory under ~/texmf/tex/latex which is the texlive location to
-lookup files that are not in the local directory. exam
+lookup files that are not in the local directory. `eampreamble` itself inputs some other stuff, based on the defined names.
+
 
 ```latex
 %% Example source file AMC exam
@@ -113,3 +114,21 @@ lookup files that are not in the local directory. exam
 \ProcessExam
 
 ```
+
+To make this all work, make sure you have a copy or a symlink to the fontexam directory as child of your personal ~/tex,f/tex/latex directory.
+Also make sure that the teambin directory is mentioned in your PATH environment variable. Easiest is to add a statement to that effect to
+your ~/.bashrc script like so: `export PATH=${HOME}/bin:${HOME}/teambin:$PATH`
+
+To test if things work, go to one of the question directories, like `...40_exam/questions/math` and try the command `onequestion-en graph`. This should render the graph.tex question.
+This is the way we test question when authoring them.
+
+As a next test, go to `...40_exam/builds/20160329` and try `pdflatex source` there. This should produce a pdf of an exam, with as many pages as needed for your students.
+
+To produce the exam with AMC, a few extra steps are needed.
+. start AMC
+. create a new empty exam
+. go to the directory where the exam is created and link the `source.tex` file to `...40_exam/builds/20160329/source.tex`
+with the command `ln -sf ...40_exam/builds/20160329/source.tex source.tex`. while you are at it, do the same for the students.csv file.
+`ln -sf  ...40_exam/builds/20160329/students.csv students.csv`
+
+Then in the AMC GUI you can create the exam.
