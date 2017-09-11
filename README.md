@@ -116,7 +116,7 @@ lookup files that are not in the local directory. `eampreamble` itself inputs so
 
 ```
 
-To make this all work, make sure you have a copy or a symlink to the fontexam directory as child of your personal ~/tex,f/tex/latex directory.
+To make this all work, make sure you have a copy or a symlink to the fontexam directory as child of your personal ~/texmf/tex/latex directory.
 Also make sure that the teambin directory is mentioned in your PATH environment variable. Easiest is to add a statement to that effect to
 your ~/.bashrc script like so: `export PATH=${HOME}/bin:${HOME}/teambin:$PATH`
 
