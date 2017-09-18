@@ -11,7 +11,7 @@ EXAMDIR=40_exam
 curdir=$(pwd)
 coursedir=${curdir}
 while [  "${coursedir}" != "/" -a -d ${coursedir} ] ; do
-    if [ $(basename ${coursedir}) = ${EXAMDIR}  ] ; then
+    if [[ -d ${coursedir}/questions && -d ${coursedir}/builds ]] ; then
 	break;
     fi
     coursedir=$(dirname ${coursedir})
