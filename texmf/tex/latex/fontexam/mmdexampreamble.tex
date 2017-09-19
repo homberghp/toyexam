@@ -1,0 +1,40 @@
+% \documentclass[a4paper]{article}
+\documentclass[a4paper,pdfsize=pdflatex,div=16]{scrartcl}
+\usepackage{amsfonts}
+\setlength{\parindent}{0pt}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[box,insidebox]{automultiplechoice} %(outsidebox,insidebox)
+% \usepackage[box,separateanswersheet,outsidebox]{automultiplechoice} %(outsidebox,insidebox)
+\usepackage{tikz}
+\pgfmathsetseed{2056}
+\newcommand{\spce}{\underline{\hspace{.7in}}}
+\def\QuestionBaseDir{\CourseDir/questions}
+\def\ExamBaseDir{\CourseDir/builds}
+\def\ExamInstanceDir{\ExamBaseDir/\ExamInstance}
+\newcommand\inputQ[1]{\input{\QuestionBaseDir/#1}}
+
+%% If you have need special packages you want to reuse for all 
+%% exams for this module put it in \CourseDir/builds/packages.tex.
+%% This will be picked up automatically script included at the end.
+\InputIfFileExists{\CourseDir/builds/packages.tex}{}{}
+
+%% If you have any special macros you want to reuse for all
+%% exams for this module put them in \CourseDir/builds/macros.tex.
+%% This will be picked up automatically script included at the end.
+\InputIfFileExists{\CourseDir/builds/macros.tex}{}{}
+
+%% If some defs (title, code, teacher etc) are the same for all your
+%% exams, put them in \CourseDir/builds/defaults.tex.
+\InputIfFileExists{\CourseDir/builds/defaults.tex}{}{}
+\def\InstanceDir{\CourseDir/builds/\ExamInstance}
+
+\providecommand\Lecture{PLease define Lecture in source.tex}
+\begin{document}
+\AMCboxStyle{shape=oval,size=2.5ex,rule=0.5pt,color=black}
+\AMCrandomseed{\RandomSeed}
+\def\AMCformQuestion#1{\vspace{\AMCformVSpace}\par {\sc Question #1:} }    
+\setdefaultgroupmode{withoutreplacement}
+
+\small
+\def\ProcessExam{\input{processmmd2exam}}

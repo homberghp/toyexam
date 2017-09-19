@@ -1,0 +1,45 @@
+\small
+\InputIfFileExists{\ExamInstanceDir/questions.tex}{}{\typeout{Cannot find file questions.tex}}
+
+%% here a default value for the candidate count is set. Overwrite with \def in source.tex
+\providecommand\candidateCount{2}
+%% here the number of copies is picked up
+\onecopy{\candidateCount}{    
+
+  %%% beginning of the test sheet header: \Cecture is defined in source.tex, defaults in both mddexampreamble and ../defaults.tex
+  {\centering\fbox{\large\bfseries Lecture: \Lecture}
+
+  }
+  \namefield{%
+    \begin{minipage}{.6\textwidth}
+      Full Name (in Arabic):\dotfill\par
+      \vspace{0.2cm}
+      Group:\makebox[1cm]{\dotfill}
+      Date:\dotfill\par
+      \vspace{0.5cm}
+      Please encode your \textbf{student ID number} on the right$\longrightarrow{}$\par
+      \vspace{0.5cm}
+      Duration: \textbf{5 minutes}\par
+      \vspace{0.5cm}
+      Choose the most correct answer by filling the circle completely with your pencil. Use a rubber to erase any wrong answers.
+    \end{minipage}
+    \hfill
+    \begin{minipage}{.4\textwidth}
+      \raggedleft\AMCcode{etu}{3} %number of digits for id number
+    \end{minipage}
+  }
+  \rule{\linewidth}{0.5pt}
+  \vspace{1ex}
+
+  %%% end of the header
+  \shufflegroup{general}
+  \insertgroup{general}
+
+
+}
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
